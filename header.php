@@ -61,7 +61,28 @@
 <div id="container" class="hfeed">
 <?php do_action( 'before' ); ?>
 	<div id="header">
+		<!-- Inicio del div que contiene el tiempo junto con el menu header -->
+		<div>
+			<!-- Div para la fecha y la temperatura -->
+			<div>
+				<?php 
+					print obtenFechaEspaniol();
+				?>
+			</div><!-- Fin div de la fecha y temperatura -->
+		<?php
+			wp_nav_menu( array( 'theme_location' => 'header', 'sort_column' => 'menu_order', 'container_class' => 'header_nav', 'container_class' => 'menu_header' ) );
+		?>
+		</div><!-- Fin del div que contiene el tiempo actual junto con el menu header -->
+		
 		<div id="masthead" role="banner">
+			<!-- Llamado al search form -->
+			<?php get_search_form(); ?>
+			<!-- Fin del llamado al search form -->
+			<!-- Inicio del menu de Redes sociales -->
+			<?php
+			wp_nav_menu( array( 'theme_location' => 'socialNetwork', 'sort_column' => 'menu_order', 'container_class' => 'social_nav', 'container_class' => 'menu_social' ) );
+			?>
+			<!-- Fin del menu de redes sociales -->
 			<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
 			<<?php echo $heading_tag; ?> id="site-title">
 				<span>

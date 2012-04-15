@@ -61,6 +61,14 @@ function coraline_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Navigation', 'coraline' ),
 	) );
+	
+	register_nav_menus( array(
+		'header' => __( 'Header Navigation', 'coraline' ),
+	) );
+	
+	register_nav_menus( array(
+		'socialNetwork' => __( 'SocialNetwork Navigation', 'coraline' ),
+	) );
 
 	// This theme allows users to set a custom background
 	add_custom_background();
@@ -657,4 +665,98 @@ function coraline_set_full_content_width() {
 	$layout = coraline_current_layout();
 	if ( strstr( $layout, 'three-column' ) )
 		$content_width = 990;
+}
+
+/**
+ *Función que obtiene la fecha actual y la traduce en español
+ */
+function obtenFechaEspaniol()
+{
+	date_default_timezone_set("America/Mexico_City");
+	/*$fecha = date("l, d k F k Y");*/
+	$dia = date("l");
+	switch ($dia){
+		case "Sunday":
+			$dia = "Domingo";
+			break;
+		
+		case "Monday":
+			$dia = "Lunes";
+			break;
+		
+		case "Tuesday":
+			$dia = "Martes";
+			break;
+		
+		case "Wednesday":
+			$dia = "Miércoles";
+			break;
+			
+		case "Thursday":
+			$dia = "Jueves";
+			break;
+			
+		case "Friday":
+			$dia = "Viernes";
+			break;
+		
+		case "Saturday":
+			$dia = "Sábado";
+			break;
+	}
+	
+	$diaNumero = date("d");
+	$mes = date("F");
+	switch ($mes){
+		case "January":
+			$mes = "Enero";
+			break;
+			
+		case "February":
+			$mes = "Febrero";
+			break;
+		
+		case "March":
+			$mes = "Marzo";
+			break;
+			
+		case "April":
+			$mes = "Abril";
+			break;
+		
+		case "May":
+			$mes = "Mayo";
+			break;
+		
+		case "June":
+			$mes = "Junio";
+			break;
+		
+		case "July":
+			$mes = "Julio";
+			break;
+			
+		case "August":
+			$mes = "Agosto";
+			break;
+			
+		case "September":
+			$mes = "Septiembre";
+			break;
+			
+		case "October":
+			$mes = "Octubre";
+			break;
+			
+		case "November":
+			$mes = "Noviembre";
+			break;
+			
+		case "December":
+			$mes = "Diciembre";
+			break;
+	}
+	
+	$anio = date("Y");
+	return $dia . ", " . $diaNumero . " de " . $mes . " de " . $anio;
 }
