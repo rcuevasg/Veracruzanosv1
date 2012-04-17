@@ -47,6 +47,8 @@
 	 */
 	if ( is_singular() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
+		
+	include "weather.php";
 
 	/* Always have wp_head() just before the closing </head>
 	 * tag of your theme, or you will break many plugins, which
@@ -68,7 +70,33 @@
 				<?php 
 					print obtenFechaEspaniol();
 				?>
+				
+				<!-- Div del clima -->
+				<div class="weather">
+						<h3>Temperatura Actual por Ciudad</h3>
+	                	<form action="#">
+	                    	<div class="weather_info" id="weather_info"></div>
+	                        <div class="select_city">
+	                        	<select id="select01" onchange = "getTemps(this);">
+	                        		<option value="0">Cambiar Ciudad </option>
+	                        		<option value="veracruz">Veracruz </option>
+	                        		<option value="jalapa">Xalapa </option>
+	                        		<option value="tuxpan">Tuxpan </option>
+	                        		<option value="cordoba+veracruz">C&oacute;rdoba </option>
+	                        		<option value="poza+rica">Poza Rica </option>
+	                        		<option value="orizaba+veracruz">Orizaba </option>
+	                        		<option value="coatzacoalcos">Coatzacoalcos </option>
+									<option value="minatitlan">Minatitl&aacute;n </option>
+	                        	</select>
+	                        	<script type= "text/javascript">getTempsInit();</script>
+	                        </div>
+							<!--<div id = "weather_details"></div>-->
+	                    </form>
+	                </div>
+				<!-- Fin del div del clima -->
+				
 			</div><!-- Fin div de la fecha y temperatura -->
+			
 		<?php
 			wp_nav_menu( array( 'theme_location' => 'header', 'sort_column' => 'menu_order', 'container_class' => 'header_nav', 'container_class' => 'menu_header' ) );
 		?>
