@@ -10,7 +10,18 @@ get_header(); ?>
 		<div id="content-container">
 			<div id="content" role="main">
 
-			<?php get_template_part( 'loop', 'index' ); ?>
+			<?php //get_template_part( 'loop', 'index' ); ?>
+			
+			<?php 
+				if (function_exists("WebDevStudio_PhotoCarousel")):
+					print WebDevStudio_PhotoCarousel();
+				endif;
+				
+				if (function_exists("WebDevStudio_BannerCarousel")):
+					print WebDevStudio_BannerCarousel();
+				endif;
+			?>
+			
 			</div><!-- #content -->
 		</div><!-- #content-container -->
 
