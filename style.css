@@ -1,10 +1,10 @@
 /*
 Theme Name: Veracruzanos v1
-Theme URI: http://wordpress.org/extend/themes/coraline/
-Description: A squeaky-clean theme featuring a custom menu, header, background, and layout. Coraline supports 7 widget areas (up to 3 in the sidebar, four in the footer) and featured images (thumbnails for gallery posts and custom header images for posts and pages). It includes styles for print and the Visual Editor, special styles for posts in "Asides" and "Gallery" categories, and has an optional full-width page template that removes the sidebar.
-Author: Automattic
-Author URI: http://automattic.com/
-Version: 1.2
+Theme URI: 
+Description: News theme for Veracruzanos.info
+Author: Raul Cuevas / Florencia Rosenfeld
+Author URI: 
+Version: 0.1
 Tags: black, blue, brown, pink, purple, red, white, dark, light, one-column, two-columns, three-columns, left-sidebar, right-sidebar, flexible-width, custom-background, custom-header, custom-menu, editor-style, theme-options, sticky-post, microformats, rtl-language-support, translation-ready, full-width-template, featured-image-header, featured-images, post-formats
 License: GNU General Public License
 License URI: license.txt
@@ -14,7 +14,29 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 
-/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+/* Table of Contents
+==================================================
+	#Global Reset
+	#Structure
+	#Font-face
+	#Typography
+	#Links
+	#Header
+	#Navigation Bar
+	#Content
+	#Attachments
+	#Images and Galery
+	#Sidebar
+	#Widget
+	#Comments
+    #Footer
+	#Print Style
+	#IE
+*/
+
+
+/* Reset default browser CSS. 
+Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
 
 html, body, div, span, applet, object, iframe,
@@ -79,6 +101,7 @@ body {
 #container {
 	clear: both;
 	margin: 0 auto;
+	background: #fff;
 }
 body.no-sidebars #container,
 .full-width #container,
@@ -112,7 +135,7 @@ body.no-sidebars #primary {
 
 /* 2-column layouts */
 .two-column #container {
-	max-width: 770px;
+	max-width: 980px;
 }
 .two-column #content {
 	width: 64.99%;
@@ -253,13 +276,27 @@ body.no-sidebars #content {
 }
 
 
+
+/* =Font Face
+----------------------------------------------- */
+
+@font-face {
+	font-family: 'agenda-light';
+	src: url('fonts/agenda-light.eot?#iefix') format('embedded-opentype'), 
+	     url('fonts/agenda-light.woff') format('woff'), 
+	     url('fonts/agenda-light.ttf')  format('truetype'),
+	     url('fonts/agenda-light.svg#svgFontName') format('svg');
+}
+
+
+
 /* =Typography
 ----------------------------------------------- */
 
 body, input, textarea {
 	color: #333;
-	font: 14px Georgia, "Bitstream Charter", serif;
-	line-height: 1.7;
+	font: 13px Arial;
+	line-height: 1.7em;
 }
 
 /* Headings */
@@ -269,9 +306,11 @@ h1, h2, h3 {
 	font-weight: bold;
 	text-rendering: optimizelegibility;
 }
+
 h1 {
 	letter-spacing: -0.03em;
 }
+
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -367,7 +406,10 @@ input[type=text] {
 	padding: 3px;
 }
 
-/* Links */
+
+/* =Links
+----------------------------------------------- */
+
 a {
 	color: #0060ff;
 }
@@ -399,6 +441,29 @@ h1 a:hover, h2 a:hover, h3 a:hover {
 #header {
 	margin: 0 0 28px;
 }
+
+#tophead {
+	background-color: #464646;
+	border-top: #ae262a solid 6px;
+	padding: 0px 20px;
+	width: 940px;
+	float: left;
+}
+
+#box_data {
+	float: left;
+}
+
+#box_data .date,  #box_data .weather{
+	float: left;
+	color: #c7be89;
+	font-size: 0.95em;
+}
+
+#tophead nav {
+	float: right;
+}
+
 #masthead {
 	padding: 28px 0 0 0;
 }
@@ -428,7 +493,8 @@ h1 a:hover, h2 a:hover, h3 a:hover {
 	height: auto;
 }
 
-/* =Menu
+
+/* =Navigation Bar
 ----------------------------------------------- */
 
 #access {
@@ -506,6 +572,39 @@ h1 a:hover, h2 a:hover, h3 a:hover {
 	color: #fff;
 }
 
+/* Navigation */
+
+.navigation {
+	margin: 0 0 1.7em 0;
+	overflow: hidden;
+}
+.navigation a:visited {
+	color: #0060ff;
+}
+.navigation a:visited:hover,
+.navigation a:active,
+.navigation a:hover {
+	color: #df0000;
+}
+.nav-previous {
+	float: left;
+	width: 50%;
+}
+.nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+#nav-above {
+}
+#nav-above,
+.single #nav-below {
+	display: none;
+}
+.paged #nav-above,
+.single #nav-above {
+	display: block;
+}
 
 /* =Content
 ----------------------------------------------- */
@@ -721,7 +820,7 @@ h1 a:hover, h2 a:hover, h3 a:hover {
 }
 
 
-/* =Images
+/* =Images and Galery
 ----------------------------------------------- */
 
 #content img.size-auto,
@@ -765,20 +864,7 @@ img.aligncenter {
 	max-width: 100%;
 }
 
-
-/* =Asides
--------------------------------------------------------------- */
-
-.home #content .aside {
-	border-left: 1px solid #ccc;
-	font-size: 13px;
-	margin: 0;
-	padding: 0 0 0 0.85em;
-}
-
-
-/* =Gallery listing
--------------------------------------------------------------- */
+/* Galery */
 
 .format-gallery .size-thumbnail img {
 	border: 10px solid #eee;
@@ -788,43 +874,16 @@ img.aligncenter {
 	float: left;
 	margin-right: 0.85em;
 }
-.home #content .format-gallery .entry-info {
-}
 
 
-/* =Navigation
+/* =Sidebar
 -------------------------------------------------------------- */
 
-.navigation {
-	margin: 0 0 1.7em 0;
-	overflow: hidden;
-}
-.navigation a:visited {
-	color: #0060ff;
-}
-.navigation a:visited:hover,
-.navigation a:active,
-.navigation a:hover {
-	color: #df0000;
-}
-.nav-previous {
-	float: left;
-	width: 50%;
-}
-.nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
-#nav-above {
-}
-#nav-above,
-.single #nav-below {
-	display: none;
-}
-.paged #nav-above,
-.single #nav-above {
-	display: block;
+.home #content .aside {
+	border-left: 1px solid #ccc;
+	font-size: 13px;
+	margin: 0;
+	padding: 0 0 0 0.85em;
 }
 
 
@@ -1193,30 +1252,9 @@ img.aligncenter {
 }
 
 
-/* =IE6
+/* =IE
 -------------------------------------------------------------- */
 
-#ie6 .two-column #container {
-	overflow: hidden;
-	width: 770px;
-}
-#ie6 .three-column #container {
-	width: 990px;
-}
-#ie6 #content {
-	overflow: hidden;
-}
-#ie6 #main-sidebars {
-	max-width: 450px;
-	width: 45.2%;
-}
-#ie6 .content-sidebar-sidebar #secondary,
-#ie6 .sidebar-sidebar-content #secondary {
-	margin: 0 0 0 4%;
-}
-#ie6 .sidebar-content-sidebar #primary {
-	margin: 0 0 0 -100%;
-}
 #ie8 #branding img {
 	width: auto;
 }

@@ -60,22 +60,23 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="container" class="hfeed">
+<div id="container">
 <?php do_action( 'before' ); ?>
-	<div id="header">
-		<!-- Inicio del div que contiene el tiempo junto con el menu header -->
-		<div>
-			<!-- Div para la fecha y la temperatura -->
-			<div>
-				<?php 
+	<header>
+	
+		<!-- topheader: date and weather -->
+		<section id="tophead">
+	
+			<div id="box_data"><!--div box_data -->
+				<div class="date">
+					<?php 
 					print obtenFechaEspaniol();
-				?>
-				
-				<!-- Div del clima -->
-				<div class="weather">
-						<h3>Temperatura Actual por Ciudad</h3>
+					?>
+				</div>	
+
+				<div class="weather"><!-- weather -->   
 	                	<form action="#">
-	                    	<div class="weather_info" id="weather_info"></div>
+	                	 	<div class="weather_info" id="weather_info"></div>
 	                        <div class="select_city">
 	                        	<select id="select01" onchange = "getTemps(this);">
 	                        		<option value="0">Cambiar Ciudad </option>
@@ -90,44 +91,46 @@
 	                        	</select>
 	                        	<script type= "text/javascript">getTempsInit();</script>
 	                        </div>
-							<!--<div id = "weather_details"></div>-->
 	                    </form>
-	                </div>
-				<!-- Fin del div del clima -->
-				
-			</div><!-- Fin div de la fecha y temperatura -->
-			
+	                </div><!-- end weather-->
+			</div><!-- end box_data-->
+		<nav>	
 		<?php
 			wp_nav_menu( array( 'theme_location' => 'header', 'sort_column' => 'menu_order', 'container_class' => 'header_nav', 'container_class' => 'menu_header' ) );
 		?>
-		</div><!-- Fin del div que contiene el tiempo actual junto con el menu header -->
+		</nav>	
+		</section><!-- end tophead -->
 		
-		<div id="masthead" role="banner">
-			<!-- Llamado al search form -->
+		<!-- masterhead: logo, social menu and description -->
+		<section id="masthead" role="banner">
+			<!-- Inicio search form -->
 			<?php get_search_form(); ?>
-			<!-- Fin del llamado al search form -->
+			<!-- end search form -->
+			
 			<!-- Inicio del menu de Redes sociales -->
 			<?php
 			wp_nav_menu( array( 'theme_location' => 'socialNetwork', 'sort_column' => 'menu_order', 'container_class' => 'social_nav', 'container_class' => 'menu_social' ) );
 			?>
-			<!-- Fin del menu de redes sociales -->
-			<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
-			<<?php echo $heading_tag; ?> id="site-title">
-				<span>
-					<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-				</span>
-			</<?php echo $heading_tag; ?>>
-			<div id="site-description"><?php bloginfo( 'description' ); ?></div>
-		</div><!-- #masthead -->
+			<!-- end menu redes sociales-->
+			<hgroup role="heading">
+				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
+				<<?php echo $heading_tag; ?> id="site-title">
+						<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				</<?php echo $heading_tag; ?>>
+				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+			</hgroup>
+		</section><!-- #masthead -->
 
-		<div id="access" role="navigation">
+		<nav id="access" role="navigation">
 		  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
-			<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'coraline' ); ?>"><?php _e( 'Skip to content', 'coraline' ); ?></a></div>
+			<div class="skip-link screen-reader-text">
+			<a href="#content" title="<?php esc_attr_e( 'Skip to content', 'coraline' ); ?>"><?php _e( 'Skip to content', 'coraline' ); ?></a>
+			</div>
 			<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
 			<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
-		</div><!-- #access -->
+		</nav><!-- #access -->
 
-		<div id="branding">
+		<section id="branding">
 			<?php
 				// Check to see if the header image has been removed
 				if ( get_header_image() != '' ) :
@@ -147,7 +150,7 @@
 				<?php endif; // end check for featured image or standard header ?>
 			</a>
 			<?php endif; // end check for removed header image ?>
-		</div><!-- #branding -->
-	</div><!-- #header -->
+		</section><!-- #branding -->
+	</header><!-- #header -->
 
-	<div id="content-box">
+	<div id="content-box" role= "main">
