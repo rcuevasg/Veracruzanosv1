@@ -132,26 +132,26 @@
 			<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'container' =>'nav' ) ); ?>
 		</nav><!-- #access -->
 
-		<section id="branding">
+		<!-- <section id="branding">
 			<?php
 				// Check to see if the header image has been removed
-				if ( get_header_image() != '' ) :
+				//if ( get_header_image() != '' ) :
 			?>
-			<a href="<?php echo home_url( '/' ); ?>">
+			<a href="<?php //echo home_url( '/' ); ?>">
 				<?php
 					// The header image
 					// Check if this is a post or page, if it has a thumbnail, and if it's a big one
-					if ( is_singular() &&
-							has_post_thumbnail( $post->ID ) &&
-							( /* $src, $width, $height */ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' ) ) &&
-							$image[1] >= HEADER_IMAGE_WIDTH ) :
+					//if ( is_singular() &&
+					//		has_post_thumbnail( $post->ID ) &&
+							//( /* $src, $width, $height */// $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' ) ) &&
+							//$image[1] >= HEADER_IMAGE_WIDTH ) :
 						// Houston, we have a new header image!
-						echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
-					else : ?>
-					<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
-				<?php endif; // end check for featured image or standard header ?>
+						//echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
+					//else : ?>
+					<img src="<?php //header_image(); ?>" width="<?php //echo HEADER_IMAGE_WIDTH; ?>" height="<?php //echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
+				<?php //endif; // end check for featured image or standard header ?>
 			</a>
-			<?php endif; // end check for removed header image ?>
+			<?php //endif; // end check for removed header image ?>
 		</section><!-- #branding -->
 	</header><!-- #header -->
 
