@@ -41,6 +41,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<link href='http://fonts.googleapis.com/css?family=Enriqueta:400,700|Magra:400,700' rel='stylesheet' type='text/css'>
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
@@ -72,6 +73,7 @@
 					<?php 
 					print obtenFechaEspaniol();
 					?>
+					|
 				</div>	
 
 				<div class="weather"><!-- weather -->   
@@ -94,24 +96,24 @@
 	                    </form>
 	                </div><!-- end weather-->
 			</div><!-- end box_data-->
-		<nav>	
 		<?php
-			wp_nav_menu( array( 'theme_location' => 'header', 'sort_column' => 'menu_order', 'container_class' => 'header_nav', 'container_class' => 'menu_header' ) );
+			wp_nav_menu( array( 'theme_location' => 'header', 'sort_column' => 'menu_order', 'container_class' => 'header_nav', 'container' =>'nav', 'container_class' => 'menu_header' ) );
 		?>
-		</nav>	
 		</section><!-- end tophead -->
 		
 		<!-- masterhead: logo, social menu and description -->
 		<section id="masthead" role="banner">
+			
+			<!-- Inicio del menu de Redes sociales -->
+			<?php
+			wp_nav_menu( array( 'theme_location' => 'socialNetwork', 'sort_column' => 'menu_order', 'container_class' => 'social_nav', 'container_class' => 'menu_social', 'container' =>'nav'  ) );
+			?>
+			<!-- end menu redes sociales-->
+			
 			<!-- Inicio search form -->
 			<?php get_search_form(); ?>
 			<!-- end search form -->
 			
-			<!-- Inicio del menu de Redes sociales -->
-			<?php
-			wp_nav_menu( array( 'theme_location' => 'socialNetwork', 'sort_column' => 'menu_order', 'container_class' => 'social_nav', 'container_class' => 'menu_social' ) );
-			?>
-			<!-- end menu redes sociales-->
 			<hgroup role="heading">
 				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
 				<<?php echo $heading_tag; ?> id="site-title">
@@ -127,7 +129,7 @@
 			<a href="#content" title="<?php esc_attr_e( 'Skip to content', 'coraline' ); ?>"><?php _e( 'Skip to content', 'coraline' ); ?></a>
 			</div>
 			<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
-			<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
+			<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary', 'container' =>'nav' ) ); ?>
 		</nav><!-- #access -->
 
 		<section id="branding">

@@ -21,7 +21,7 @@ function getTemps(elem)  //Sirve para mostrar la temperatura de la ciudad selecc
 	 setCookie('ciudad',sel,30);
 	 setCookie('index',elem.selectedIndex,30);
      var req = getAjax();
-	 var url = "<?php echo get_permalink(131) ?>?sel="+sel;
+	 var url = "<?php echo get_permalink(19) ?>?sel="+sel;
 	 req.onreadystatechange = function()
 	 {
 			if(req.readyState == 4 && req.status ==200)
@@ -55,7 +55,7 @@ function getTempsInit()  //Sirve para mostrar la temperatura de veracruz al inic
 		document.getElementById('select01').options[index].selected = true;
 	 }
      var req = getAjax();
-	 var url = "<?php echo get_permalink(131) ?>?sel="+sel;
+	 var url = "<?php echo get_permalink(19) ?>?sel="+sel;
 	 req.onreadystatechange = function()
 	 {
 			if(req.readyState == 4 && req.status ==200)

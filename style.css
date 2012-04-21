@@ -87,12 +87,17 @@ a img {
 	border: 0;
 }
 
+:focus { -moz-outline-style: none; }
+:-moz-any-link:focus {
+  outline: none;
+}
 
 /* =Structure
 ----------------------------------------------- */
 
 body {
 	padding: 0 3.8%;
+	background-color: #fafafa;
 }
 #header {
 	float: left;
@@ -102,6 +107,8 @@ body {
 	clear: both;
 	margin: 0 auto;
 	background: #fff;
+	border-left: 1px solid #eeeeee;
+	border-right: 1px solid #eeeeee;
 }
 body.no-sidebars #container,
 .full-width #container,
@@ -323,7 +330,7 @@ p {
 	margin-bottom: 1.7em;
 }
 ul, ol {
-	margin: 0 0 1.7em 2.5em;
+	margin: 0 0 0.2em 0.5em;
 }
 ul {
 	list-style: square;
@@ -412,6 +419,7 @@ input[type=text] {
 
 a {
 	color: #0060ff;
+	text-decoration: none;
 }
 a:visited {
 	color: #333;
@@ -419,6 +427,7 @@ a:visited {
 a:active,
 a:hover {
 	color: #df0000;
+    text-decoration: underline;
 }
 h1 a, h2 a, h3 a {
 	color: #000;
@@ -445,7 +454,7 @@ h1 a:hover, h2 a:hover, h3 a:hover {
 #tophead {
 	background-color: #464646;
 	border-top: #ae262a solid 6px;
-	padding: 0px 20px;
+	padding: 2px 20px;
 	width: 940px;
 	float: left;
 }
@@ -460,71 +469,225 @@ h1 a:hover, h2 a:hover, h3 a:hover {
 	font-size: 0.95em;
 }
 
+#weather_info {
+ 	float: left;
+	margin-left: 8px;
+}
+#weather_info img  {
+	display: none;
+}
+
+.select_city {
+ 	float: left;
+ 	margin-left: 6px;
+ 	overflow: hidden;
+ 	width: 100px;
+}
+
+.select_city option {
+	padding: 1px 10px;
+	outline: none;
+}
+
+.select_city select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    color: #ebebeb;
+    padding: 2px 5px 2px 14px;
+	background: transparent url("images/elements/select_down.png") no-repeat left center;
+  	font-size:0.8em;
+  	margin: 0;
+  	text-overflow: ellipsis;
+  	white-space: nowrap;
+  	width: 120px;
+  	 outline: 0;
+  	 cursor: pointer;
+}
+ 
+select:hover, select:focus {
+ outline: 0;
+ border : 0px;
+} 
+
 #tophead nav {
 	float: right;
 }
 
 #masthead {
-	padding: 28px 0 0 0;
+	padding: 25px 0 15px 10px;
+	float: left;
+	width: 970px;
+	position: relative;
 }
+
+hgroup {
+	float: left;
+}
+
 #site-title {
-	font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
-	font-size: 36px;
-	letter-spacing: -0.03em;
+	font-family: 'Enriqueta', serif;
+    font-size: 2.4em;
 	line-height: 42px;
-	text-align: center;
+	text-align: left;
+	letter-spacing: 0.04em;
 }
+
 #site-title a {
-	color: #000;
-	font-weight: bold;
-	text-decoration: none;
+  	background-image: url("images/CSS_sprite.png");
+    background-position: -100px -50px;
+    background-repeat: no-repeat;
+    color: #9D292A;
+    display: block;
+    font-weight: 400;
+    height: 80px;
+    padding-left: 80px;
+    padding-top: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 0px;
 }
+
 #site-description {
-	color: #000;
-	font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
-	font-size: 18px;
+	bottom: 28px;
+	color: #464646;
+	font-family: 'Magra', sans-serif;
+	font-size: 1.5em;
 	margin: 0 0 9px 0;
-	text-align: center;
+	left: 92px;
+	text-align: left;
+	font-weight: normal;
+	position: absolute;
 }
+
 #branding img {
-	border: 1px solid #000;
-	border-width: 3px 0 1px;
 	max-width: 100%;
 	height: auto;
 }
 
+form#searchform {
+	float: right;
+	margin-top: 25px;
+	margin-right: 20px;
+}
+
+form#searchform input#s{
+ 	border: 1px #dfa7ac solid;
+ 	background-color: #fbfbfb;
+ 	width: 180px;
+ 	padding: 4px 0px;
+}
+
+form#searchform input#searchsubmit {
+	padding: 3px 0px;
+	color: #acacac;
+	border: 1px #dfa7ac solid;
+}
 
 /* =Navigation Bar
 ----------------------------------------------- */
 
+/* Nav Menu Header */
+
+nav.menu_header ul li {
+ display: inline;
+ padding: 0px 10px 0px 8px;
+ border-right: 1px solid #676767;
+ letter-spacing: 0px;
+}
+
+nav.menu_header ul li:last-child {
+	border: none;
+}
+
+nav.menu_header ul li a{
+ display: inline;
+ color: #ebebeb;
+}
+
+nav.menu_header ul li a:hover {
+ color: #ffffff;
+}
+
+/* Nav Menu Social */
+
+nav.menu_social {
+ 	float: right;
+ 	background-color: #ebebeb;
+ 	padding: 8px 7px 3px 10px;
+ 	margin-top: 15px;
+}
+
+nav.menu_social li {
+	display: inline;
+}
+nav.menu_social li a {
+	text-indent: -999em;
+	margin-right: 6px;
+	display: block;
+	width: 32px;
+	height: 32px;
+	float: left;
+}
+
+nav.menu_social ul li.facebook a{
+    background-image: url("images/CSS_sprite.png");
+    background-position: -100px -200px;
+    background-repeat: no-repeat;
+}
+
+nav.menu_social ul li.twitter a{
+    background-image: url("images/CSS_sprite.png");
+    background-position: -150px -200px;
+    background-repeat: no-repeat;
+}
+
+nav.menu_social ul li.youtube a{
+    background-image: url("images/CSS_sprite.png");
+    background-position: -200px -200px;
+    background-repeat: no-repeat;
+}
+
+nav.menu_social ul li.rss a{
+    background-image: url("images/CSS_sprite.png");
+    background-position: -250px -200px;
+    background-repeat: no-repeat;
+}
+
+
 #access {
-	border-top: 1px solid #ccc;
+	background-color: #9d292a;
+	border-top: 1px solid #a53a3b;
+	border-bottom: 1px solid #833232;
 	display: block;
 	float: left;
 	margin: 0 auto;
-	padding: 1px 0 0;
+	padding: 0 0;
 	width: 100%;
 }
 #access ul {
-	font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
-	font-size: 13px;
-	font-weight: bold;
+	font-size: 1.1em;
+	font-weight: normal;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 	text-transform: uppercase;
+	letter-spacing: 0.02em;
 }
 #access li {
 	float: left;
 	position: relative;
+	padding: 0em 1.3em 0;
 }
 #access a {
-	color: #000;
+	color: #ffffff;
 	display: block;
 	line-height: 2em;
 	margin: 0 1px 0 0;
-	padding: 0.25em 1em 0;
+    padding: 0.25em 0em 0;
 	text-decoration: none;
+	font-family: 'Magra', sans-serif;
 }
 #access ul ul {
 	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
@@ -555,7 +718,6 @@ h1 a:hover, h2 a:hover, h3 a:hover {
 }
 #access li:hover > a,
 #access ul ul :hover > a {
-	background: #000;
 	color: #fff;
 }
 #access ul ul a:hover {
@@ -568,8 +730,9 @@ h1 a:hover, h2 a:hover, h3 a:hover {
 #access .current-menu-ancestor a,
 #access .current_page_item a,
 #access .current_page_ancestor a {
-	background: #000;
-	color: #fff;
+	color: #ebebeb;
+	border-top: 4px #c7ba6b solid;
+	padding: 0.08em 0em 0;
 }
 
 /* Navigation */
@@ -935,7 +1098,7 @@ img.aligncenter {
 
 /* Search Widget */
 #s {
-	width: 60%;
+	width: 120px;
 }
 
 /* Calendar Widget */
