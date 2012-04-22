@@ -20,6 +20,10 @@ get_header(); ?>
 				if (function_exists("WebDevStudio_BannerCarousel")):
 					print WebDevStudio_BannerCarousel();
 				endif;
+				
+				if (function_exists("WebDevStudio_FeaturedNewsCarousel")):
+					print WebDevStudio_FeaturedNewsCarousel();
+				endif;
 			?>
 			
 			</div><!-- #content -->
