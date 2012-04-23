@@ -24,6 +24,11 @@ get_header(); ?>
 				if (function_exists("WebDevStudio_FeaturedNewsCarousel")):
 					print WebDevStudio_FeaturedNewsCarousel();
 				endif;
+				
+				if (function_exists("WebDevStudio_CategoryNewsCarousel")):
+					print WebDevStudio_CategoryNewsCarousel();
+				endif;
+				
 			?>
 			
 			</div><!-- #content -->
