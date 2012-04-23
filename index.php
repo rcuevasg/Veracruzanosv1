@@ -7,7 +7,6 @@
 
 get_header(); ?>
 
-		<div id="content-container">
 			<div id="content" role="main">
 
 			<?php //get_template_part( 'loop', 'index' ); ?>
@@ -38,7 +37,7 @@ get_header(); ?>
                 </div> <!-- #widget_twitter -->
 			
 			</div><!-- #content -->
-		</div><!-- #content-container -->
-
+<aside>
 <?php get_sidebar(); ?>
+</aside>
 <?php get_footer(); ?>
