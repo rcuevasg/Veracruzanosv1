@@ -31,6 +31,12 @@ get_header(); ?>
 				
 			?>
 			
+				<div id="widget_twitter" class="FC-left">  
+                <?php // The primary sidebar used in all layouts index
+                	if (  ! dynamic_sidebar( 'twitter-index-widget-area' ) ) : ?>
+                    	<?php endif; // end primary widget area ?>
+                </div> <!-- #widget_twitter -->
+			
 			</div><!-- #content -->
 		</div><!-- #content-container -->
 

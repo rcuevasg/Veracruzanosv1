@@ -442,6 +442,17 @@ function coraline_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
+	
+	//Area 8, located at the Index for the Twitter area
+	register_sidebar( array(
+		'name' => __( 'Index area Twitter widget', 'coraline' ),
+		'id' => 'twitter-index-widget-area',
+		'description' => __( 'Area del Twitter en in Index', 'coraline' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<span class="twitter-widget-title">',
+		'after_title' => '</span>',
+	) );
 }
 /** Register sidebars by running coraline_widgets_init() on the widgets_init hook. */
 add_action( 'widgets_init', 'coraline_widgets_init' );
