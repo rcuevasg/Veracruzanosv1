@@ -35,6 +35,25 @@ get_header(); ?>
                 	if (  ! dynamic_sidebar( 'twitter-index-widget-area' ) ) : ?>
                     	<?php endif; // end primary widget area ?>
                 </div> <!-- #widget_twitter -->
+                
+           	<?php
+           		if (function_exists("WebDevStudio_GeneralNews")):
+					print WebDevStudio_GeneralNews(array('categoria' => "zona-norte",
+														'layout' => "2News"));
+														
+					print WebDevStudio_GeneralNews(array('categoria' => "politica-politica",
+														'layout' => "3News"));
+					
+					print WebDevStudio_GeneralNews(array('categoria' => "nacional",
+														'layout' => "1NewSmallPic"));
+														
+					print WebDevStudio_GeneralNews(array('categoria' => "cultura",
+														'layout' => "1NewBigPic"));
+														
+					print WebDevStudio_GeneralNews(array('categoria' => "economia",
+														'layout' => "3TextNews"));
+				endif;
+           	?>
 			
 			</div><!-- #content -->
 <aside>
