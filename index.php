@@ -41,10 +41,19 @@ get_header(); ?>
 					print WebDevStudio_GeneralNews(array('categoria' => "zona-norte",
 														'layout' => "2News"));
 														
+					print WebDevStudio_GeneralNews(array('categoria' => "zona-centro",
+														'layout' => "2News"));
+														
+					print WebDevStudio_GeneralNews(array('categoria' => "zona-sur",
+														'layout' => "2News"));
+														
 					print WebDevStudio_GeneralNews(array('categoria' => "politica-politica",
 														'layout' => "3News"));
 					
 					print WebDevStudio_GeneralNews(array('categoria' => "nacional",
+														'layout' => "1NewSmallPic"));
+														
+					print WebDevStudio_GeneralNews(array('categoria' => "internacional",
 														'layout' => "1NewSmallPic"));
 														
 					print WebDevStudio_GeneralNews(array('categoria' => "cultura",
