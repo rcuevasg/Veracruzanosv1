@@ -18,6 +18,7 @@
 
 			if ( in_array( $current_layout, $feature_widget_area_layouts ) ) :
 		?>
+
 		<div id="main-sidebars">
 
 		<?php if ( is_active_sidebar( 'feature-widget-area' ) ) : ?>
@@ -103,3 +104,4 @@
 			if ( in_array( $current_layout, $feature_widget_area_layouts ) )
 				echo '</div><!-- #main-sidebars -->';
 		?>
+

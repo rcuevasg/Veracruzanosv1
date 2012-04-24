@@ -18,7 +18,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 ==================================================
 	#Global Reset
 	#Structure
-	#Font-face
 	#Typography
 	#Links
 	#Header
@@ -299,19 +298,6 @@ body.no-sidebars #content {
 
 
 
-/* =Font Face
------------------------------------------------ */
-
-@font-face {
-	font-family: 'agenda-light';
-	src: url('fonts/agenda-light.eot?#iefix') format('embedded-opentype'), 
-	     url('fonts/agenda-light.woff') format('woff'), 
-	     url('fonts/agenda-light.ttf')  format('truetype'),
-	     url('fonts/agenda-light.svg#svgFontName') format('svg');
-}
-
-
-
 /* =Typography
 ----------------------------------------------- */
 
@@ -323,10 +309,15 @@ body, input, textarea {
 
 /* Headings */
 h1, h2, h3 {
-	color: #000;
-	font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
-	font-weight: bold;
+	color: #333;
 	text-rendering: optimizelegibility;
+}
+
+h2 {
+	font-family: 'Magra';
+	font-size: 1.1em;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 h1 {

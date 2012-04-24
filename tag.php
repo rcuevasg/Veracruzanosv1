@@ -17,6 +17,7 @@ get_header(); ?>
 				<?php get_template_part( 'loop', 'tag' ); ?>
 			</div><!-- #content -->
 		</div><!-- #content-container -->
-
+<aside>
 <?php get_sidebar(); ?>
+</aside>
 <?php get_footer(); ?>

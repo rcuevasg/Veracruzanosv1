@@ -23,6 +23,7 @@ get_header(); ?>
 
 			</div><!-- #content -->
 		</div><!-- #content-container -->
-
+<aside>
 <?php get_sidebar(); ?>
+</aside>
 <?php get_footer(); ?>
