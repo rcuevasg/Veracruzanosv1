@@ -453,6 +453,17 @@ function coraline_widgets_init() {
 		'before_title' => '<span class="twitter-widget-title">',
 		'after_title' => '</span>',
 	) );
+	
+	//Area 8, En el index entre temas destacados y picadas jarochas, para colocar banner
+	register_sidebar( array(
+		'name' => __( 'Index area Banner 1', 'coraline' ),
+		'id' => 'banner1-index-widget-area',
+		'description' => __( 'Area de banner en Index entre temas destacados y picadas jarochas', 'coraline' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<span class="banner1">',
+		'after_title' => '</span>',
+	) );
 }
 /** Register sidebars by running coraline_widgets_init() on the widgets_init hook. */
 add_action( 'widgets_init', 'coraline_widgets_init' );

@@ -23,6 +23,15 @@ get_header(); ?>
 				if (function_exists("WebDevStudio_FeaturedNewsCarousel")):
 					print WebDevStudio_FeaturedNewsCarousel();
 				endif;
+			?>
+			
+				<div id="widget_twitter" class="FC-left">  
+                <?php // The primary sidebar used in all layouts index
+                	if (  ! dynamic_sidebar( 'banner1-index-widget-area' ) ) : ?>
+                    	<?php endif; // end primary widget area ?>
+                </div> <!-- #widget_twitter -->
+				
+			<?php
 				
 				if (function_exists("WebDevStudio_CategoryNewsCarousel")):
 					print WebDevStudio_CategoryNewsCarousel();
