@@ -454,7 +454,7 @@ function coraline_widgets_init() {
 		'after_title' => '</span>',
 	) );
 	
-	//Area 8, En el index entre temas destacados y picadas jarochas, para colocar banner
+	//Area 9, En el index entre temas destacados y picadas jarochas, para colocar banner
 	register_sidebar( array(
 		'name' => __( 'Index area Banner 1', 'coraline' ),
 		'id' => 'banner1-index-widget-area',
@@ -462,6 +462,17 @@ function coraline_widgets_init() {
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<span class="banner1">',
+		'after_title' => '</span>',
+	) );
+	
+	//Area 10, En el index encuesta
+	register_sidebar( array(
+		'name' => __( 'Index area Encuesta', 'coraline' ),
+		'id' => 'encuesta-index-widget-area',
+		'description' => __( 'Area de encuesta en Index debajo de economia y finanzas', 'coraline' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<span class="encuesta">',
 		'after_title' => '</span>',
 	) );
 }
