@@ -33,9 +33,9 @@ wp_enqueue_script( 'modernizr', get_bloginfo('template_directory').'/js/moderniz
 
 /**
 * My code for jquery PENDIENTE
-
-wp_enqueue_script('mycode', get_bloginfo('template_directory').'/js/mycode.js'); 
 */
+wp_enqueue_script('mycode', get_bloginfo('template_directory').'/js/mycode.js'); 
+
 
 
 

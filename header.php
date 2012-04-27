@@ -43,15 +43,15 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link href='http://fonts.googleapis.com/css?family=Enriqueta:400,700|Magra:400,700' rel='stylesheet' type='text/css'>
 
-<script>
-	$(document).ready(function() {
+<!-- <script>
+	jQuery(function ($j) {
 		$('.WDSCPslideshow').cycle({
 			fx: 'scrollLeft',
 			pager:  '.WDSCPnav',
 			timeout: 0, 
 		});
 	});	 
-</script>
+</script> -->
 
 <?php
 	/* We add some JavaScript to pages with the comment form
