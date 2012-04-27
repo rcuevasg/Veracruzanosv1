@@ -81,9 +81,9 @@ get_header(); ?>
 			
 			
 			<!-- Contenido de la sección policiaca -->
-			<div id='WDSCarouselPoliciaca'>
+			<div id='home_section' class='WDSCarouselPoliciaca'>
 				<div id='WDSCPTitle'>
-					<h2>Policiaca</h2>
+					<h2><a href="">Policiaca</a></h2>
 				</div>
 			<div class='WDSCPslideshow'>
 			<?php
@@ -108,34 +108,34 @@ get_header(); ?>
 		    	if ($step == 1):
     				?>
     				<div class='slide'>
-    					<div>
+    					<div class="featured">
     						<span class='img'>
     							<?php
     							if (!empty($thumbnailsrc)):
     							?>
-    							<img src='<?php print get_bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc ?>&w=200&h=84' border=0 /></span><span  class='title'>
+    							<img src='<?php print get_bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc ?>&w=200&h=115' border=0 /></span><h3>
     							<?php
     							endif;
     							?>
     							<a class='btn_title' href='<?php print get_permalink() ?>'><?php print get_the_title() ?>…</a>
-    						</span>
+    						</h3>
     					</div>
     				<?php
 		    		$step++;
     				$countSlide++;
 		    	elseif ($step == 3):
 		    		?>
-		    			<div>
+		    			<div class="featured f_three">
     						<span class='img'>
     							<?php
     							if (!empty($thumbnailsrc)):
     							?>
-    							<img src='<?php print get_bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc ?>&w=200&h=84' border=0 /></span><span  class='title'>
+    							<img src='<?php print get_bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc ?>&w=200&h=115' border=0 /></span><h3>
     							<?php
     							endif;
     							?>
     							<a class='btn_title' href='<?php print get_permalink() ?>'><?php print get_the_title() ?>…</a>
-    						</span>
+    						</h3>
     					</div>
     				</div>
 		    		<?php
@@ -143,17 +143,17 @@ get_header(); ?>
 		    		$countSlide++;
     			else:
     				?>
-    					<div>
+    					<div class="featured">
     						<span class='img'>
     							<?php
     							if (!empty($thumbnailsrc)):
     							?>
-    							<img src='<?php print get_bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc ?>&w=200&h=84' border=0 /></span><span  class='title'>
+    							<img src='<?php print get_bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc ?>&w=200&h=115' border=0 /></span><h3>
     							<?php
     							endif;
     							?>
     							<a class='btn_title' href='<?php print get_permalink() ?>'><?php print get_the_title() ?>…</a>
-    						</span>
+    						</h3>
     					</div>
     				<?php
 		    		$step++;
