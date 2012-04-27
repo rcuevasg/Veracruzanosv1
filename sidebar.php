@@ -35,7 +35,7 @@
 
 		<div id="primary" class="widget-area" role="complementary">
 		<?php do_action( 'before_sidebar' ); ?>
-			<ul class="xoxo">
+			<ul class="widget_list">
 
 			<?php // The primary sidebar used in all layouts
 			if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
@@ -80,7 +80,7 @@
 			if ( in_array( $current_layout, $secondary_widget_area_layouts ) ) :
 		?>
 		<div id="secondary" class="widget-area" role="complementary">
-			<ul class="xoxo">
+			<ul class="widget_list">
 			<?php // A second sidebar for widgets. Coraline uses the secondary widget area for three column layouts.
 			if ( ! dynamic_sidebar( 'secondary-widget-area' ) ) : ?>
 
