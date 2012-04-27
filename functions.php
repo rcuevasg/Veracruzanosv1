@@ -3,6 +3,41 @@
  * @package WordPress
  * @subpackage Coraline
  */
+ 
+
+
+/**
+ * jquery.js
+ *
+ * Load up jquery-1.7.1.min.js using the WordPress wp_enqueue_script function
+ *
+ */
+
+if( !is_admin()){
+   wp_deregister_script('jquery');
+   wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"), false, '');
+   wp_enqueue_script('jquery');
+}
+
+/**
+* jQuery Cycle*/
+wp_enqueue_script('cycle', get_bloginfo('template_directory').'/js/jquery.cycle.all.js'); 
+
+
+/**
+ * Modernizr.js
+ * Load up modernizr.min.js using the WordPress wp_enqueue_script function PENDIENTE
+ 
+wp_enqueue_script( 'modernizr', get_bloginfo('template_directory').'/js/modernizr-1.6.min.js');
+*/
+
+/**
+* My code for jquery PENDIENTE
+
+wp_enqueue_script('mycode', get_bloginfo('template_directory').'/js/mycode.js'); 
+*/
+
+
 
 /**
  * Set the content width based on the theme's design and stylesheet.
