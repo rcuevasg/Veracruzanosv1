@@ -27,16 +27,16 @@
     				?>
     				<div class='slide'>
     					<div class="featured">
-    						<span class='img'>
     							<?php
     							if (!empty($thumbnailsrc)):
     							?>
-    							<img src='<?php print get_bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc ?>&w=200&h=115' border=0 /></span><h3>
+    							<span class='img'><img src='<?php print get_bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc ?>&w=200&h=115' border=0 /></span>
     							<?php
     							endif;
     							?>
+    							<h3>
     							<a class='btn_title' href='<?php print get_permalink() ?>'><?php print get_the_title() ?>…</a>
-    						</h3>
+    							</h3>
     					</div>
     				<?php
 		    		$step++;
@@ -44,14 +44,14 @@
 		    	elseif ($step == 3):
 		    		?>
 		    			<div class="featured f_three">
-    						<span class='img'>
     							<?php
     							if (!empty($thumbnailsrc)):
     							?>
-    							<img src='<?php print get_bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc ?>&w=200&h=115' border=0 /></span><h3>
+    							<span class='img'><img src='<?php print get_bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc ?>&w=200&h=115' border=0 /></span>
     							<?php
     							endif;
     							?>
+    							<h3>
     							<a class='btn_title' href='<?php print get_permalink() ?>'><?php print get_the_title() ?>…</a>
     						 </h3>
     					</div>
@@ -62,14 +62,14 @@
     			else:
     				?>
     					 <div class="featured">
-    						<span class='img'>
     							<?php
     							if (!empty($thumbnailsrc)):
     							?>
-    							<img src='<?php print get_bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc ?>&w=200&h=115' border=0 /></span><h3>    							<?php
+    							<span class='img'>
+    							<img src='<?php print get_bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc ?>&w=200&h=115' border=0 /></span>    							<?php
     							endif;
     							?>
-    							<a class='btn_title' href='<?php print get_permalink() ?>'><?php print get_the_title() ?>…</a>
+    							<h3><a class='btn_title' href='<?php print get_permalink() ?>'><?php print get_the_title() ?>…</a>
     						</h3>
     					</div>
     				<?php
