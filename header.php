@@ -42,6 +42,17 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link href='http://fonts.googleapis.com/css?family=Enriqueta:400,700|Magra:400,700' rel='stylesheet' type='text/css'>
+
+<script>
+	$(document).ready(function() {
+		$('.WDSCPslideshow').cycle({
+			fx: 'scrollLeft',
+			pager:  '.WDSCPnav',
+			timeout: 0, 
+		});
+	});	 
+</script>"
+
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
