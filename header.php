@@ -51,7 +51,7 @@
 			timeout: 0, 
 		});
 	});	 
-</script>"
+</script>
 
 <?php
 	/* We add some JavaScript to pages with the comment form
