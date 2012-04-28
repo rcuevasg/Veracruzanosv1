@@ -514,6 +514,18 @@ a.title:hover {
 	text-decoration: none;
 }
 
+a.btn_more {
+	background-image: url("images/elements/arrow6px.png");
+    background-position: right 4px;
+    background-repeat: no-repeat;
+    color: #707070;
+    float: right;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.4em;
+    padding-right: 10px;
+}
+
 /* =Header
 ----------------------------------------------- */
 
@@ -761,14 +773,11 @@ nav.menu_social ul li.rss a{
 	font-family: 'Magra', sans-serif;
 }
 #access ul ul {
-	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
 	display: none;
 	float: left;
 	font-weight: normal;
 	position: absolute;
-	top: 29px;
+	top: 33px;
 	left: 0;
 	text-transform: none;
 	z-index: 99999;
@@ -779,20 +788,22 @@ nav.menu_social ul li.rss a{
 	top: 0;
 }
 #access ul ul a {
-	background: #000;
-	color: #eee;
+	background: #acacac;
+	color: #ffffff;
 	line-height: 1em;
 	margin: 0;
+	font-size: 0.9em;
 	padding: .66em .5em .5em 1em;
 	min-width: 180px;
 	height: auto;
+	font-weight: normal;
 }
 #access li:hover > a,
 #access ul ul :hover > a {
 	color: #fff;
 }
 #access ul ul a:hover {
-	background: #222;
+background-color: #ccc;
 }
 #access ul li:hover > ul {
 	display: block;
@@ -1125,6 +1136,48 @@ img.aligncenter {
 /* =Widgets
 ----------------------------------------------- */
 
+/*Simple Featured Widget */
+
+
+#primary .widget_list li.widget-container {
+	margin-bottom: 20px;
+	float: left;
+	width: 268px;
+}
+
+.WebDevStudio_SimpleFeaturedPostWidget .titulo {
+	font-weight: bold;
+	border-bottom: 1px dotted #333;
+	font-size: 1.2em;
+	padding-bottom: 3px;
+	margin-bottom: 5px;
+	color: #666666;
+}
+
+.WebDevStudio_SimpleFeaturedPostWidget .titulo a.btn_cat{
+	font-weight: normal;
+	font-size: 0.8em;
+}
+
+.WebDevStudio_SimpleFeaturedPostWidget h3  {
+	margin-bottom: 5px;
+	font-size: 1.4em;
+}
+
+.WebDevStudio_SimpleFeaturedPostWidget h3 a {
+	color: #222;
+}
+
+.WebDevStudio_SimpleFeaturedPostWidget h3 a:hover {
+	color: #444;
+	text-decoration: none;
+}
+
+.WebDevStudio_SimpleFeaturedPostWidget span small {
+	font-size: 1em;
+	 color: #707070;
+}
+
 #primary .tabberlive ul.tabbernav {
 	font-family: Arial;
 }
@@ -1167,7 +1220,26 @@ img.aligncenter {
 
 #primary .tabbertab .yd_rp_widget li {
     padding: 10px 0;
+    list-style: none;
 }
+
+#primary .tabberlive #wmp_widget-2 ul li {
+	line-height: 1.4em;
+    list-style-image: url("images/elements/bullet_news.png");
+ 	list-style-position: inside;
+    padding: 10px 0;
+     border-bottom: 1px dotted #666666;
+}
+
+#primary .tabberlive #wmp_widget-2 ul li:last-child {
+	border: none;
+}
+
+#primary .tabberlive #wmp_widget-2 ul {
+	margin: 0px 0px 0.5em 1em;
+}
+
+/*Widget twitter content*/
 
 #widget_twitter .widget_twitter {
 	background-color: #005b7f;
@@ -1319,146 +1391,7 @@ box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
 }
 
 
-/* =Comments
------------------------------------------------ */
-
-#comments {
-	word-wrap: break-word;
-}
-#comments h3 {
-	border-bottom: 1px solid #ccc;
-	font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
-	font-size: 13px;
-	font-weight: bold;
-	letter-spacing: 0.025em;
-	margin: 0 0 8px 0;
-	padding: 2px;
-	text-transform: uppercase;
-}
-#comments ol {
-	list-style: none;
-	margin-left: 0;
-}
-#comments ul {
-	list-style: none;
-	margin-left: 0.425em;
-}
-#comments li {
-	position: relative;
-}
-#comments li.pingback {
-	background: #eee;
-	margin: 0 0 1.7em;
-	padding: 0.85em;
-}
-#comments li.pingback + li.pingback {
-	margin-top: -1.65em;
-}
-#comments li.pingback p {
-	font: 12px "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
-	margin: 0;
-}
-#comments ul li {
-	border-left: 1px solid #ccc;
-	border-bottom: none;
-	padding: 0 0 0 0.85em;
-}
-#comments .comment-author {
-	margin: 0 66px 0.85em 0;
-}
-#comments .comment-author cite {
-	font-size: 16px;
-	font-style: normal;
-	font-weight: bold;
-}
-#comments .comment-meta,
-#comments .comment-meta a {
-	color: #888;
-	font: 12px "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
-}
-#comments .comment-meta a:hover {
-	color: #df0000;
-}
-#comments .avatar {
-	border: 1px solid #ccc;
-	padding: 3px;
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-#comments .comment-body {
-	margin-right: 66px;
-}
-#respond input[type=text] {
-	float: left;
-	margin: 0 10px 0 0;
-}
-#respond .comment-form-comment {
-	margin: 0;
-}
-#respond .comment-form-comment label {
-	display: none;
-}
-#respond .form-allowed-tags {
-	color: #888;
-	font-size: 12px;
-}
-#respond .form-allowed-tags code {
-	font-size: 11px;
-}
-.bypostauthor {
-}
-
-
-/* =Footer
------------------------------------------------ */
-
-#footer {
-	padding: 0 0 1.7em;
-}
-#footer .widget-area {
-	float: left;
-	margin: 0 4.04% 0 0;
-	width: 21.9699%;
-}
-.two-column #footer .widget-area {
-	margin: 0 5.19% 0 0;
-	width: 47.4%;
-}
-.two-column #footer #second,
-#footer #fourth {
-	margin: 0;
-}
-#colophon {
-	border-top: 1px solid #ccc;
-	clear: both;
-	color: #888;
-	font-size: 12px;
-	font-style: italic;
-	line-height: 16px;
-	padding: 1.6em 0 0;
-	text-align: center;
-}
-#colophon a {
-	color: #888;
-	text-decoration: none;
-}
-#colophon a:hover {
-	color: #df0000;
-}
-#colophon .generator-link {
-	background: url("images/wordpress.png") no-repeat left center;
-	display: inline-block;
-	margin: 0 0 0 3px;
-	padding-left: 20px;
-}
-#footer img#wpstats {
-	display: block;
-	margin: 0 auto 10px;
-}
-
-
-/* =Plugins
+/* =Plugins Content
 -------------------------------------------------------------- */
 
 #home_section h2 {
@@ -1480,7 +1413,7 @@ box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
 	padding-right: 13px;
 }
 
-#home_section .bottom {
+#home_section .bottom, .WebDevStudio_SimpleFeaturedPostWidget span {
 	border-bottom: 1px dotted #707070;
 	border-top: 1px dotted #707070;
 	width: 100%;
@@ -1652,6 +1585,151 @@ box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
 	text-decoration: none;
 	font-weight: bold;
 }
+
+
+
+
+
+
+
+/* =Comments
+----------------------------------------------- */
+
+#comments {
+	word-wrap: break-word;
+}
+#comments h3 {
+	border-bottom: 1px solid #ccc;
+	font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	letter-spacing: 0.025em;
+	margin: 0 0 8px 0;
+	padding: 2px;
+	text-transform: uppercase;
+}
+#comments ol {
+	list-style: none;
+	margin-left: 0;
+}
+#comments ul {
+	list-style: none;
+	margin-left: 0.425em;
+}
+#comments li {
+	position: relative;
+}
+#comments li.pingback {
+	background: #eee;
+	margin: 0 0 1.7em;
+	padding: 0.85em;
+}
+#comments li.pingback + li.pingback {
+	margin-top: -1.65em;
+}
+#comments li.pingback p {
+	font: 12px "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+	margin: 0;
+}
+#comments ul li {
+	border-left: 1px solid #ccc;
+	border-bottom: none;
+	padding: 0 0 0 0.85em;
+}
+#comments .comment-author {
+	margin: 0 66px 0.85em 0;
+}
+#comments .comment-author cite {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: bold;
+}
+#comments .comment-meta,
+#comments .comment-meta a {
+	color: #888;
+	font: 12px "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+}
+#comments .comment-meta a:hover {
+	color: #df0000;
+}
+#comments .avatar {
+	border: 1px solid #ccc;
+	padding: 3px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#comments .comment-body {
+	margin-right: 66px;
+}
+#respond input[type=text] {
+	float: left;
+	margin: 0 10px 0 0;
+}
+#respond .comment-form-comment {
+	margin: 0;
+}
+#respond .comment-form-comment label {
+	display: none;
+}
+#respond .form-allowed-tags {
+	color: #888;
+	font-size: 12px;
+}
+#respond .form-allowed-tags code {
+	font-size: 11px;
+}
+.bypostauthor {
+}
+
+
+/* =Footer
+----------------------------------------------- */
+
+#footer {
+	padding: 0 0 1.7em;
+}
+#footer .widget-area {
+	float: left;
+	margin: 0 4.04% 0 0;
+	width: 21.9699%;
+}
+.two-column #footer .widget-area {
+	margin: 0 5.19% 0 0;
+	width: 47.4%;
+}
+.two-column #footer #second,
+#footer #fourth {
+	margin: 0;
+}
+#colophon {
+	border-top: 1px solid #ccc;
+	clear: both;
+	color: #888;
+	font-size: 12px;
+	font-style: italic;
+	line-height: 16px;
+	padding: 1.6em 0 0;
+	text-align: center;
+}
+#colophon a {
+	color: #888;
+	text-decoration: none;
+}
+#colophon a:hover {
+	color: #df0000;
+}
+#colophon .generator-link {
+	background: url("images/wordpress.png") no-repeat left center;
+	display: inline-block;
+	margin: 0 0 0 3px;
+	padding-left: 20px;
+}
+#footer img#wpstats {
+	display: block;
+	margin: 0 auto 10px;
+}
+
 
 /* =Print Style
 -------------------------------------------------------------- */
