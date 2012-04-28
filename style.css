@@ -1125,6 +1125,50 @@ img.aligncenter {
 /* =Widgets
 ----------------------------------------------- */
 
+#primary .tabberlive ul.tabbernav {
+	font-family: Arial;
+}
+
+#primary .tabberlive ul.tabbernav li a {
+    background-color: #EBEBEB;
+    padding: 5px 7px;
+	border: none;
+}
+
+#primary .tabberlive ul.tabbernav li.tabberactive a, #primary .tabberlive ul.tabbernav li a:hover  {
+	background-color: #ffffff;
+	color: #AF242F;
+	border: none;
+}
+
+#primary .tabberlive div.tabbertab {
+	margin-top: 4px;
+	border: none;
+}
+
+#primary .tabberlive {
+	 background-color: #EBEBEB;
+	 padding: 10px 0 3px;
+}
+
+#primary .tabbertab a {
+	color: #333;
+	font-size: 1.05em;
+	font-weight: normal;
+	height: 80px;
+	overflow: hidden;
+}
+
+#primary .tabbertab .yd_rp_widget img {
+	width: 62px;
+	height: auto;
+	padding-right: 15px;
+}
+
+#primary .tabbertab .yd_rp_widget li {
+    padding: 10px 0;
+}
+
 #widget_twitter .widget_twitter {
 	background-color: #005b7f;
 	float: left;
