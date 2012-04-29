@@ -1,6 +1,6 @@
 <?php
 /**
- * Template mostrado cuando se carga o se accede a la categoria de videos
+ * Template mostrado cuando se carga o se accede a la categoria de la entrevista
  */
 
 get_header(); ?>
