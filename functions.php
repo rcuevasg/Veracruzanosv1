@@ -512,6 +512,26 @@ function coraline_widgets_init() {
 		'before_title' => '<span class="encuesta">',
 		'after_title' => '</span>',
 	) );
+	//Area 11, En los single
+	register_sidebar( array(
+		'name' => __( 'Sidebar para páginas internas', 'coraline' ),
+		'id' => 'single-sidebar-widget-area',
+		'description' => __( 'Area de sidebar para todas las paginas internas', 'coraline' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<span class="internal_sidebar">',
+		'after_title' => '</span>',
+	) );
+	//Area 12, En los single
+	register_sidebar( array(
+		'name' => __( 'Sidebar para páginas de listados', 'coraline' ),
+		'id' => 'single-sidebar-listado-widget-area',
+		'description' => __( 'Area de sidebar para todas las paginas de listados', 'coraline' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<span class="internal_sidebar_listados">',
+		'after_title' => '</span>',
+	) );
 }
 /** Register sidebars by running coraline_widgets_init() on the widgets_init hook. */
 add_action( 'widgets_init', 'coraline_widgets_init' );

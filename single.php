@@ -25,7 +25,12 @@ get_header(); ?>
 				
 			</div><!-- #content -->
 <aside>
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
+	<div id="single_sidebar" >  
+     	<?php // The primary sidebar used in all internal pages
+        if (  ! dynamic_sidebar( 'single-sidebar-widget-area' ) ) : ?>
+        	<?php endif; // end primary widget area ?>
+     </div> <!-- #single_sidebar -->
 </aside>
 
 <?php get_footer(); ?>
