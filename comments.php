@@ -22,12 +22,12 @@
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
-		<h3 id="comments-title"><?php printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'coraline' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?></h3>
+		<h3 id="comments-title"><?php printf( _n( 'Un comentario en %2$s', '%1$s comentarios en %2$s', get_comments_number(), 'coraline' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?></h3>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<div class="navigation">
-			<div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Older Comments', 'coraline' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'coraline' ) ); ?></div>
+			<div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Ver comentarios anteriores', 'coraline' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Ver comentarios más recientes <span class="meta-nav">&rarr;</span>', 'coraline' ) ); ?></div>
 		</div> <!-- .navigation -->
 		<?php endif; // check for comment navigation ?>
 
@@ -37,8 +37,8 @@
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<div class="navigation">
-			<div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Older Comments', 'coraline' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'coraline' ) ); ?></div>
+			<div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Ver comentarios anteriores', 'coraline' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Ver comentarios más recientes <span class="meta-nav">&rarr;</span>', 'coraline' ) ); ?></div>
 		</div><!-- .navigation -->
 		<?php endif; // check for comment navigation ?>
 
@@ -50,7 +50,7 @@
 		 */
 		if ( ! comments_open() && ! is_page() ) :
 		?>
-		<p class="nocomments"><?php _e( 'Comments are closed.', 'coraline' ); ?></p>
+		<p class="nocomments"><?php _e( 'Los comentarios están cerrados para esta nota.', 'coraline' ); ?></p>
 		<?php endif; // end ! comments_open() ?>
 
 	<?php endif; // end have_comments() ?>

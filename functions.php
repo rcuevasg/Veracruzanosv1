@@ -534,7 +534,7 @@ if ( ! function_exists( 'coraline_posted_on' ) ) :
  * @since Coraline 1.0
  */
 function coraline_posted_on() {
-	printf( __( '<span class="%1$s">Posted on</span> %2$s ', 'coraline' ),
+	printf( __( '%2$s ', 'coraline' ),
 		'meta-prep meta-prep-author',
 		sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
 			get_permalink(),
