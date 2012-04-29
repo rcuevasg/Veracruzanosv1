@@ -18,6 +18,8 @@ get_header(); ?>
 				<?php
 				if (in_category('videos')):
 					include(TEMPLATEPATH.'/single-video.php');
+				elseif (in_category('la-entrevista')):
+					include(TEMPLATEPATH.'/single-la-entrevista.php');
 				endif;
 				?>
 	
