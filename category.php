@@ -174,7 +174,7 @@ get_header(); ?>
 						?>
 						<!-- Iniciamos el div del ultimo listado -->
 						<div >
-							<h3>M&aacute;s notas de <?php single_cat_title( '', false ) ?></h3>
+							<h3>M&aacute;s notas de <?php print single_cat_title( '', false ) ?></h3>
 							<ul>
 							<li><a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a></li>
 						<?php
