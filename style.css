@@ -115,21 +115,28 @@ body {
 	padding: 0 3.8%;
 	background-color: #fafafa;
 }
-#header {
+
+header {
 	float: left;
 	width: 100%;
+    background: #fff;
+	border-left: 1px solid #eeeeee;
+	border-right: 1px solid #eeeeee;
 }
+
 #container {
 	clear: both;
 	margin: 0 auto;
 	background: #fff;
-	border-left: 1px solid #eeeeee;
-	border-right: 1px solid #eeeeee;
 	width: 980px;
 }
 
 section#content-box {
 	width: 100%;
+	background: #fff;
+	border-left: 1px solid #eeeeee;
+	border-right: 1px solid #eeeeee;
+	float: left;
 }
 
 footer {
@@ -719,25 +726,25 @@ nav.menu_social li a {
 	float: left;
 }
 
-nav.menu_social ul li.facebook a, .facebook {
+nav.menu_social ul li.facebook a, .icon_facebook {
     background-image: url("images/CSS_sprite.png");
     background-position: -100px -200px;
     background-repeat: no-repeat;
 }
 
-nav.menu_social ul li.twitter a,  .twitter {
+nav.menu_social ul li.twitter a,  .icon_twitter {
     background-image: url("images/CSS_sprite.png");
     background-position: -150px -200px;
     background-repeat: no-repeat;
 }
 
-nav.menu_social ul li.youtube a, .youtube {
+nav.menu_social ul li.youtube a, .icon_youtube {
     background-image: url("images/CSS_sprite.png");
     background-position: -200px -200px;
     background-repeat: no-repeat;
 }
 
-nav.menu_social ul li.rss a, .rss {
+nav.menu_social ul li.rss a, .icon_rss {
     background-image: url("images/CSS_sprite.png");
     background-position: -250px -200px;
     background-repeat: no-repeat;
@@ -1456,6 +1463,7 @@ img.aligncenter {
     border: none;
     margin-left: 5px;
     margin-bottom: 10px;
+      cursor: pointer;
 }
 .widget_newsletterwidget .newsletter input[type="submit"]:hover  {
 	background-color: #871f28;
@@ -1525,11 +1533,51 @@ box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
    	float: right;
     margin-left: 38px;
     width: 310px;
+    margin-top: 20px;
 }
 
 .widget_polls-widget {
-  	background-color: #EBEBEB;	
-  	border-top: 1px solid #fffaf3;
+  	background-color: #fffaf3;	
+  	border-top: 6px #C7BA6B solid;
+  	border-left: 1px #C7BA6B solid;
+    border-right: 1px #C7BA6B solid;
+  	border-bottom: 1px #C7BA6B  solid;
+}
+
+.widget_polls-widget p {
+margin-bottom: 0.5em;
+}
+
+.widget_polls-widget .encuesta {
+	color: #9d292a;
+	font-weight: bold;
+    font-size: 1.05em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #f4f1e1;
+    padding: 4px 10px;
+    width:288px;
+    float: left;
+    margin-bottom: 5px;
+}
+
+.widget_polls-widget .wp-polls .Buttons  {
+    background-color: #AF242F;
+    border: medium none;
+    color: #FFFFFF;
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding: 2px 4px 0px;
+    text-transform: none;
+    cursor: pointer;
+}
+
+.widget_polls-widget .wp-polls .Buttons:hover  {
+	background-color: #871f28;
+}
+
+.widget_polls-widget .wp-polls-ul {
+	margin: 0px 0px 10px 20px;
 }
 
 /* Otros revisar*/
@@ -1823,11 +1871,6 @@ box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
 	text-decoration: none;
 	font-weight: bold;
 }
-
-
-
-
-
 
 
 /* =Comments
