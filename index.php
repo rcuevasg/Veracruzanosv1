@@ -85,7 +85,7 @@ get_header(); ?>
 			<!-- Fin de la sección policiaca -->
 			
 	</div><!-- #content -->
-<aside>
+
 <?php get_sidebar(); ?>
-</aside>
+
 <?php get_footer(); ?>

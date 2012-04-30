@@ -135,10 +135,18 @@ section#content-box {
 footer {
 	clear: both;
 	width: 100%;
+	background-color: #EBEBEB;
+    background-image: url("images/repeat/repeat_dot.png");
+    float: left;
+    font-family: Arial,sans-serif;
+    height: 100%;
+    margin: 0;
+    padding-top: 20px;
+    position: relative;
 }
 
 #content {
-   width: 678px;
+  width: 664px;
   float: left;
   margin-right: 22px;
   margin-left: 14px;
@@ -146,21 +154,29 @@ footer {
 
 .home #content {
   margin-left: 0px;
+  width: 678px;
 }
 
 #content-post {	
 	margin: 0px 14px;
 }
 
-aside {
- 	float: right;
-	width: 268px;
-	margin-right: 10px;
-}
 
 /* 2-column layouts */
 .two-column #container {
 	max-width: 980px;
+}
+
+#main-sidebars {
+	float: right;
+    margin-right: 10px;
+    width: 268px;
+}
+
+#primary,
+#secondary {
+	width: 268px;
+	float: right;
 }
 
 /* 3-column layouts */
@@ -189,24 +205,14 @@ body.no-sidebars #container,
 	max-width: 990px;
 }
 
-#main-sidebars {
-	max-width: 450px;
-	width: 45.5%;
-}
 
 #feature {
 	width: 100%;
 }
 
-#primary,
-#secondary {
-	width: 268px;
-	float: right;
-}
 body.no-sidebars #primary {
 	display: none;
 }
-
 
 /* Content-Sidebar layouts */
 .content-sidebar #content-container {
@@ -713,25 +719,25 @@ nav.menu_social li a {
 	float: left;
 }
 
-nav.menu_social ul li.facebook a{
+nav.menu_social ul li.facebook a, .facebook {
     background-image: url("images/CSS_sprite.png");
     background-position: -100px -200px;
     background-repeat: no-repeat;
 }
 
-nav.menu_social ul li.twitter a{
+nav.menu_social ul li.twitter a,  .twitter {
     background-image: url("images/CSS_sprite.png");
     background-position: -150px -200px;
     background-repeat: no-repeat;
 }
 
-nav.menu_social ul li.youtube a{
+nav.menu_social ul li.youtube a, .youtube {
     background-image: url("images/CSS_sprite.png");
     background-position: -200px -200px;
     background-repeat: no-repeat;
 }
 
-nav.menu_social ul li.rss a{
+nav.menu_social ul li.rss a, .rss {
     background-image: url("images/CSS_sprite.png");
     background-position: -250px -200px;
     background-repeat: no-repeat;
@@ -1125,7 +1131,7 @@ img.aligncenter {
 /* =Sidebar
 -------------------------------------------------------------- */
 
-.home #content .aside {
+.home #content .#main-sidebars {
 	border-left: 1px solid #ccc;
 	font-size: 13px;
 	margin: 0;
@@ -1187,35 +1193,35 @@ img.aligncenter {
 
 /*Tabs - últimas, populares y tags*/
 
-#primary .tabberlive ul.tabbernav {
+#main-sidebars .tabberlive ul.tabbernav {
 	font-family: Arial;
 }
 
-#primary .tabberlive ul.tabbernav li a {
+#main-sidebars .tabberlive ul.tabbernav li a {
     background-color: #EBEBEB;
     padding: 5px 7px;
 	border: none;
 }
 
-#primary .tabberlive ul.tabbernav li.tabberactive a, #primary .tabberlive ul.tabbernav li a:hover  {
+#main-sidebars .tabberlive ul.tabbernav li.tabberactive a, #main-sidebars .tabberlive ul.tabbernav li a:hover  {
 	background-color: #ffffff;
 	color: #AF242F;
 	border: none;
 }
 
-#primary .tabberlive div.tabbertab {
+#main-sidebars .tabberlive div.tabbertab {
 	margin-top: 4px;
 	border: none;
 }
 
-#primary .tabberlive {
+#prmain-sidebarsimary .tabberlive {
 	 background-color: #EBEBEB;
 	 padding: 10px 0 3px;
 	 float: left;
 	  width: 268px;
 }
 
-#primary .tabbertab a {
+#main-sidebars .tabbertab a {
 	color: #333;
 	font-size: 1.05em;
 	font-weight: normal;
@@ -1223,29 +1229,29 @@ img.aligncenter {
 	overflow: hidden;
 }
 
-#primary .tabbertab .yd_rp_widget img {
+#main-sidebars .tabbertab .yd_rp_widget img {
 	width: 62px;
 	height: auto;
 	padding-right: 15px;
 }
 
-#primary .tabberlive .tabbertab .yd_rp_widget ul li {
+#main-sidebars .tabberlive .tabbertab .yd_rp_widget ul li {
     padding: 10px 0;
     list-style: none;
     border-bottom: 1px dotted #ebebeb;
 }
 
-#primary .tabberlive .tabbertab .yd_rp_widget ul li span.img { 
+#main-sidebars .tabberlive .tabbertab .yd_rp_widget ul li span.img { 
    float: left;
    margin-right: 4px;
    margin-bottom: 10px;
 }
 
-#primary .tabberlive .tabbertab .yd_rp_widget ul li span.title { 
+#main-sidebars .tabberlive .tabbertab .yd_rp_widget ul li span.title { 
 	font-weight: bold;
 }
 
-#primary .tabberlive .tabbertab ul li {
+#main-sidebars .tabberlive .tabbertab ul li {
 	line-height: 1.4em;
     list-style-image: url("images/elements/bullet_news.png");
  	list-style-position: inside;
@@ -1257,17 +1263,17 @@ img.aligncenter {
 	border: none;
 }
 
-#primary .tabberlive .tabbertab ul {
+#main-sidebars .tabberlive .tabbertab ul {
 	margin: 0px 0px 0.5em 1em;
 }
 
 
-#primary .tabberlive .tabbertab ul.tw-tag-cloud li {
+#main-sidebars .tabberlive .tabbertab ul.tw-tag-cloud li {
 	list-style-image: url("images/elements/arrow6px.png");
 	fon
 }
 
-#primary .tabberlive .tabbertab ul.tw-tag-cloud li a {
+#main-sidebars .tabberlive .tabbertab ul.tw-tag-cloud li a {
 	font-size: 1.1em;
 }
 
@@ -1332,7 +1338,7 @@ img.aligncenter {
 	position: relative;
 }
 
-aside #primary .widget_list  .WebDevStudio_SinglePostWidget {
+#main-sidebars #primary .widget_list  .WebDevStudio_SinglePostWidget {
 	background-color: ffffff;
 	border: 8px solid #EBEBEB;
 	width: 232px;
@@ -1416,12 +1422,13 @@ aside #primary .widget_list  .WebDevStudio_SinglePostWidget {
 
 /*widget_newsletterwidget - newsletter */
 
-aside #primary .widget_list  .widget_newsletterwidget, .widget_newsletterwidget  {
+#main-sidebars #primary .widget_list  .widget_newsletterwidget, .widget_newsletterwidget, #main-sidebars #secondary .widget_list  .widget_newsletterwidget {
 	background-color: #ebebeb;
 	border-top: #dd4e14 solid 6px;
 	padding: 10px 20px;
 	width: 248px;
 	font-size: 1.1em;
+	min-height: 130px;
 }
 
 .widget_newsletterwidget h3 {
@@ -1524,6 +1531,8 @@ box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
   	background-color: #EBEBEB;	
   	border-top: 1px solid #fffaf3;
 }
+
+/* Otros revisar*/
 
 .widget-area {
 	overflow: hidden;
@@ -1915,22 +1924,93 @@ box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
 /* =Footer
 ----------------------------------------------- */
 
-#footer {
+footer {
 	padding: 0 0 1.7em;
 }
-#footer .widget-area {
-	float: left;
-	margin: 0 4.04% 0 0;
-	width: 21.9699%;
+
+footer #footer-widget-area {
+	padding: 15px 20px;
 }
-.two-column #footer .widget-area {
-	margin: 0 5.19% 0 0;
-	width: 47.4%;
-}
-.two-column #footer #second,
-#footer #fourth {
+
+footer #footer-widget-area #first {
+	width: 910px;
+	background: #fff;
 	margin: 0;
+	padding: 15px 15px 10px;
+	margin-bottom: 20px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px; 
 }
+
+footer #footer-widget-area #first h1 { 
+	font-family: 'Enriqueta';
+	font-weight: normal;
+	font-size: 1.2em;
+	color: #9d292a;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+
+footer #footer-widget-area #first .widget_text {
+	width: 30%;
+	margin: 10px;
+	color: #707070;
+	 float: left;
+}
+
+footer #footer-widget-area #first  .widget_sp_image {
+	float: left;
+	margin: 10px 15px;
+}
+
+footer .widget-area {
+	float: left;
+	margin: 0 4.04% 0 3%;
+    width: 26.2%;
+}
+
+footer .bullet_red li {
+	list-style-image: url('images/elements/bullet_red.jpg');
+}
+
+footer .widget-area li a{
+	color: #4d4d4f;
+}
+
+footer .widget-area .list_fourth, footer ul.social { 
+	margin: 0px;
+}
+
+footer .widget-area .list_fourth li{
+	display: inline;
+	list-style-image: none;
+	margin-right: 10px;
+}
+
+footer .widget-area .list_fourth li a{
+	color: #af242f;
+	text-decoration: underline;
+}
+
+footer ul.social li a{
+	display: block;
+	width: 30px;
+	height: 30px;
+	 margin-right: 80px;
+}
+
+footer ul.social li {
+	list-style: none;
+	float: left;
+}
+
+footer ul.social li span {
+	float: left;
+    padding: 5px 30px;
+}
+
 #colophon {
 	border-top: 1px solid #ccc;
 	clear: both;
@@ -1941,20 +2021,24 @@ box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
 	padding: 1.6em 0 0;
 	text-align: center;
 }
+
 #colophon a {
 	color: #888;
 	text-decoration: none;
 }
+
 #colophon a:hover {
 	color: #df0000;
 }
+
 #colophon .generator-link {
 	background: url("images/wordpress.png") no-repeat left center;
 	display: inline-block;
 	margin: 0 0 0 3px;
 	padding-left: 20px;
 }
-#footer img#wpstats {
+
+footer img#wpstats {
 	display: block;
 	margin: 0 auto 10px;
 }

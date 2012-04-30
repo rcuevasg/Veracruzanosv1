@@ -405,9 +405,9 @@ endif;
 function coraline_widgets_init() {
 	// Area 1, located at the top of the sidebar.
 	register_sidebar( array(
-		'name' => __( 'Pag. inicio primera área widget', 'coraline' ),
+		'name' => __( 'Portada Primera área widget', 'coraline' ),
 		'id' => 'sidebar-1',
-		'description' => __( 'En la página de inicio la primera área arriba de la columna lateral para widget', 'coraline' ),
+		'description' => __( 'Página de inicio: primera área arriba de la columna lateral para widget', 'coraline' ),
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
@@ -416,20 +416,108 @@ function coraline_widgets_init() {
 
 	// Area 2, located below the Primary Widget Area in the sidebar. Empty by default.
 	register_sidebar( array(
-		'name' => __( 'Secondary Widget Area', 'coraline' ),
+		'name' => __( 'Portada Segunda área widget', 'coraline' ),
 		'id' => 'secondary-widget-area',
-		'description' => __( 'The secondary widget area appears in 3-column layouts', 'coraline' ),
+		'description' => __( 'Página de inicio: segunda área de la columna lateral para widget', 'coraline' ),
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	
+		// Area 3, located above the primary and secondary sidebars. Empty by default.
+	register_sidebar( array(
+		'name' => __( 'Portada Banner área widget banners', 'coraline' ),
+		'id' => 'banner-widget-area',
+		'description' => __( 'Página de inicio: tercera área de la columna lateral para widget de banners al final', 'coraline' ),
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
 
-	// Area 3, located above the primary and secondary sidebars in Content-Sidebar-Sidebar and Sidebar-Sidebar-Content layouts. Empty by default.
+		
+	//Area 1, located at the Index for the Twitter area
 	register_sidebar( array(
-		'name' => __( 'Feature Widget Area', 'coraline' ),
-		'id' => 'feature-widget-area',
-		'description' => __( 'The feature widget above the sidebars in Content-Sidebar-Sidebar and Sidebar-Sidebar-Content layouts', 'coraline' ),
+		'name' => __( 'Portada Twitter área widget', 'coraline' ),
+		'id' => 'twitter-index-widget-area',
+		'description' => __( 'Página de inicio: Twitter área contenido central para widget', 'coraline' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<span class="twitter-widget-title">',
+		'after_title' => '</span>',
+	) );
+	
+	//Area 2, En el index entre temas destacados y picadas jarochas, para colocar banner
+	register_sidebar( array(
+		'name' => __( 'Portada Banner área widget', 'coraline' ),
+		'id' => 'banner1-index-widget-area',
+		'description' => __( 'Página de inicio: Banner área en contenido central entre temas destacados y picadas jarochas', 'coraline' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<span class="banner1">',
+		'after_title' => '</span>',
+	) );
+	
+	//Area 3, En el index encuesta
+	register_sidebar( array(
+		'name' => __( 'Portada Encuesta área widget', 'coraline' ),
+		'id' => 'encuesta-index-widget-area',
+		'description' => __( 'Página de inicio: Encuesta o Banner área en contenido central después de Economía y finanzas', 'coraline' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<span class="encuesta">',
+		'after_title' => '</span>',
+	) );
+	
+	//Area 1, En la platilla single y page
+	register_sidebar( array(
+		'name' => __( 'Interior Área lateral para páginas internas', 'coraline' ),
+		'id' => 'single-sidebar-widget-area',
+		'description' => __( 'Area de sidebar para todas las paginas internas', 'coraline' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<span class="internal_sidebar">',
+		'after_title' => '</span>',
+	) );
+	//Area 2, En las plantillas de listado
+	register_sidebar( array(
+		'name' => __( 'Listado Área lateral para páginas de listados', 'coraline' ),
+		'id' => 'single-sidebar-listado-widget-area',
+		'description' => __( 'Area de sidebar para todas las paginas de listados', 'coraline' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<span class="internal_sidebar_listados">',
+		'after_title' => '</span>',
+	) );
+	
+	// Area 1, located in the footer para el logotipo de veracruzanos. Empty by default.
+	register_sidebar( array(
+		'name' => __( 'Footer Primer área widget', 'coraline' ),
+		'id' => 'first-footer-widget-area',
+		'description' => __( 'Footer: primera área de widget para logotipos', 'coraline' ),
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	// Area 2, located in the footer. Empty by default.
+	register_sidebar( array(
+		'name' => __( 'Footer Segunda área widget', 'coraline' ),
+		'id' => 'second-footer-widget-area',
+		'description' => __( 'Footer: segunda área de widget para menú', 'coraline' ),
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	// Area 3, located in the footer. Empty by default.
+	register_sidebar( array(
+		'name' => __( 'Footer Tercera área widget', 'coraline' ),
+		'id' => 'third-footer-widget-area',
+		'description' => __( 'Footer: tercera área de widget para redes sociales', 'coraline' ),
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
@@ -438,100 +526,16 @@ function coraline_widgets_init() {
 
 	// Area 4, located in the footer. Empty by default.
 	register_sidebar( array(
-		'name' => __( 'First Footer Widget Area', 'coraline' ),
-		'id' => 'first-footer-widget-area',
-		'description' => __( 'The first footer widget area', 'coraline' ),
-		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</li>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	// Area 5, located in the footer. Empty by default.
-	register_sidebar( array(
-		'name' => __( 'Second Footer Widget Area', 'coraline' ),
-		'id' => 'second-footer-widget-area',
-		'description' => __( 'The second footer widget area', 'coraline' ),
-		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</li>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	// Area 6, located in the footer. Empty by default.
-	register_sidebar( array(
-		'name' => __( 'Third Footer Widget Area', 'coraline' ),
-		'id' => 'third-footer-widget-area',
-		'description' => __( 'The third footer widget area', 'coraline' ),
-		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</li>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	// Area 7, located in the footer. Empty by default.
-	register_sidebar( array(
-		'name' => __( 'Fourth Footer Widget Area', 'coraline' ),
+		'name' => __( 'Footer Cuarta área widget', 'coraline' ),
 		'id' => 'fourth-footer-widget-area',
-		'description' => __( 'The fourth footer widget area', 'coraline' ),
+		'description' => __( 'Footer: cuarta área de widget para datos', 'coraline' ),
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
-	
-	//Area 8, located at the Index for the Twitter area
-	register_sidebar( array(
-		'name' => __( 'Index area Twitter widget', 'coraline' ),
-		'id' => 'twitter-index-widget-area',
-		'description' => __( 'Area del Twitter en in Index', 'coraline' ),
-		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<span class="twitter-widget-title">',
-		'after_title' => '</span>',
-	) );
-	
-	//Area 9, En el index entre temas destacados y picadas jarochas, para colocar banner
-	register_sidebar( array(
-		'name' => __( 'Index area Banner 1', 'coraline' ),
-		'id' => 'banner1-index-widget-area',
-		'description' => __( 'Area de banner en Index entre temas destacados y picadas jarochas', 'coraline' ),
-		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<span class="banner1">',
-		'after_title' => '</span>',
-	) );
-	
-	//Area 10, En el index encuesta
-	register_sidebar( array(
-		'name' => __( 'Index area Encuesta', 'coraline' ),
-		'id' => 'encuesta-index-widget-area',
-		'description' => __( 'Area de encuesta en Index debajo de economia y finanzas', 'coraline' ),
-		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<span class="encuesta">',
-		'after_title' => '</span>',
-	) );
-	//Area 11, En los single
-	register_sidebar( array(
-		'name' => __( 'Sidebar para páginas internas', 'coraline' ),
-		'id' => 'single-sidebar-widget-area',
-		'description' => __( 'Area de sidebar para todas las paginas internas', 'coraline' ),
-		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<span class="internal_sidebar">',
-		'after_title' => '</span>',
-	) );
-	//Area 12, En los single
-	register_sidebar( array(
-		'name' => __( 'Sidebar para páginas de listados', 'coraline' ),
-		'id' => 'single-sidebar-listado-widget-area',
-		'description' => __( 'Area de sidebar para todas las paginas de listados', 'coraline' ),
-		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<span class="internal_sidebar_listados">',
-		'after_title' => '</span>',
-	) );
+
+
 }
 /** Register sidebars by running coraline_widgets_init() on the widgets_init hook. */
 add_action( 'widgets_init', 'coraline_widgets_init' );
