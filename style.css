@@ -1136,7 +1136,7 @@ img.aligncenter {
 /* =Widgets
 ----------------------------------------------- */
 
-/*Simple Featured Widget */
+/*Simple Featured Widget - Lo destacado*/
 
 
 #primary .widget_list li.widget-container {
@@ -1178,6 +1178,15 @@ img.aligncenter {
 	 color: #707070;
 }
 
+.WebDevStudio_SimpleFeaturedPostWidget span.img  {
+	display: block;
+    max-height: 300px;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+/*Tabs - últimas, populares y tags*/
+
 #primary .tabberlive ul.tabbernav {
 	font-family: Arial;
 }
@@ -1202,6 +1211,8 @@ img.aligncenter {
 #primary .tabberlive {
 	 background-color: #EBEBEB;
 	 padding: 10px 0 3px;
+	 float: left;
+	  width: 268px;
 }
 
 #primary .tabbertab a {
@@ -1218,12 +1229,23 @@ img.aligncenter {
 	padding-right: 15px;
 }
 
-#primary .tabbertab .yd_rp_widget li {
+#primary .tabberlive .tabbertab .yd_rp_widget ul li {
     padding: 10px 0;
     list-style: none;
+    border-bottom: 1px dotted #ebebeb;
 }
 
-#primary .tabberlive #wmp_widget-2 ul li {
+#primary .tabberlive .tabbertab .yd_rp_widget ul li span.img { 
+   float: left;
+   margin-right: 4px;
+   margin-bottom: 10px;
+}
+
+#primary .tabberlive .tabbertab .yd_rp_widget ul li span.title { 
+	font-weight: bold;
+}
+
+#primary .tabberlive .tabbertab ul li {
 	line-height: 1.4em;
     list-style-image: url("images/elements/bullet_news.png");
  	list-style-position: inside;
@@ -1231,12 +1253,181 @@ img.aligncenter {
      border-bottom: 1px dotted #666666;
 }
 
-#primary .tabberlive #wmp_widget-2 ul li:last-child {
+#primary .tabberlive .tabbertab ul li:last-child {
 	border: none;
 }
 
-#primary .tabberlive #wmp_widget-2 ul {
+#primary .tabberlive .tabbertab ul {
 	margin: 0px 0px 0.5em 1em;
+}
+
+
+#primary .tabberlive .tabbertab ul.tw-tag-cloud li {
+	list-style-image: url("images/elements/arrow6px.png");
+	fon
+}
+
+#primary .tabberlive .tabbertab ul.tw-tag-cloud li a {
+	font-size: 1.1em;
+}
+
+/*WebDevStudio_VeracruzanosTVWidget - VeracruzanosTV*/
+
+.WebDevStudio_VeracruzanosTVWidget {
+  	 background-color: #EBEBEB;
+	 padding: 10px 0 3px;
+	 float: left;
+	 width: 268px;
+}
+
+.WebDevStudio_VeracruzanosTVWidget h3 a{
+	font-family: 'Enriqueta';
+	padding: 0px 10px;
+	font-size: 1.4em;
+	text-transform: uppercase;
+}
+
+.WebDevStudio_VeracruzanosTVWidget #featuredVideo h3 a {
+	background-color: #fff;
+	padding: 6px 6px 8px;
+}
+
+.WebDevStudio_VeracruzanosTVWidget #featuredVideo li {
+	list-style: none;
+}
+
+.WebDevStudio_VeracruzanosTVWidget #featuredVideo li span {
+	float: left;
+	position: relative;
+	margin-right: 5px;
+}
+
+/*---WebDevStudio_SinglePostWidget- La entrevista--*/
+
+.WebDevStudio_SinglePostWidget {
+	position: relative;
+}
+
+aside #primary .widget_list  .WebDevStudio_SinglePostWidget {
+	background-color: ffffff;
+	border: 8px solid #EBEBEB;
+	width: 232px;
+	padding: 10px;
+}
+
+.WebDevStudio_SinglePostWidget h3.widget-title {
+	color: #AF242F;
+	text-transform: uppercase;
+	font-size: 1.3em;
+	font-weight: bold;
+	background-color: #ffffff;
+	padding: 2px 8px;
+	position: absolute;
+	top:-8px;
+	left: 4px;
+	margin-bottom: 5px;
+}
+
+.WebDevStudio_SinglePostWidget #SinglePost .img {
+	width: 110px;
+	height: 104px;
+	overflow: hidden;
+	display: block;
+	padding: 4px;
+	float: left;
+	margin-top: 10px;
+	margin-right: 12px;
+}
+
+.WebDevStudio_SinglePostWidget #SinglePost h3 {
+	float: left;
+    margin-top: 10px;
+    width: 100px;
+}
+.WebDevStudio_SinglePostWidget #SinglePost h3 a {
+	color: #404040;
+}
+
+.WebDevStudio_SinglePostWidget #SinglePost small {
+	font-size: 1em;
+	float: left;
+	 color: #707070;
+}
+
+.WebDevStudio_SinglePostWidget #SinglePost span.text {
+	float: left;
+	clear: left;
+	font-size: 1.05em;
+}
+
+/*WebDevStudio_QuotesWidget - Frase del día*/
+
+.WebDevStudio_QuotesWidget {
+	background-color: #c7bd5b;
+}
+
+.WebDevStudio_QuotesWidget h3 {
+	background: #ffffff;
+	padding: 4px 10px 3px;
+	width: 248px;
+	margin-top: 7px;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	font-weight: normal;
+}
+
+.WebDevStudio_QuotesWidget #quotes{
+	float: left;
+	width: 236px;
+	padding: 5px 15px 15px;
+} 
+
+.WebDevStudio_QuotesWidget #quotes h4 {
+	color: #5b5920;
+	font-family: 'Enriqueta';
+	text-align: center;
+	font-size: 1.3em;
+}
+
+
+/*widget_newsletterwidget - newsletter */
+
+aside #primary .widget_list  .widget_newsletterwidget, .widget_newsletterwidget  {
+	background-color: #ebebeb;
+	border-top: #dd4e14 solid 6px;
+	padding: 10px 20px;
+	width: 248px;
+	font-size: 1.1em;
+}
+
+.widget_newsletterwidget h3 {
+	text-transform: uppercase;
+	color: #dd4e14;
+	font-size: 1.05em;
+    font-weight: normal;
+}
+
+.widget_newsletterwidget  .newsletter {
+	margin-top: 4px;
+}
+
+.widget_newsletterwidget .newsletter input[type="text"]  {
+	float: left;
+}
+
+.widget_newsletterwidget .newsletter input[type="submit"]  {
+	float: left;
+	background-color: #AF242F;
+    color: #FFFFFF;
+    font-size: 1em;
+    padding: 2px 4px 3px;
+    text-transform: none;
+    border: none;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+.widget_newsletterwidget .newsletter input[type="submit"]:hover  {
+	background-color: #871f28;
 }
 
 /*Widget twitter content*/
@@ -1413,7 +1604,7 @@ box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
 	padding-right: 13px;
 }
 
-#home_section .bottom, .WebDevStudio_SimpleFeaturedPostWidget span {
+#home_section .bottom, .WebDevStudio_SimpleFeaturedPostWidget span.bottom {
 	border-bottom: 1px dotted #707070;
 	border-top: 1px dotted #707070;
 	width: 100%;
