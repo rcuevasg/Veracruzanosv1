@@ -25,7 +25,7 @@ get_header(); ?>
 				endif;
 			?>
 			
-				<div id="banner1">  
+				<div id="home_banner_full">  
                 <?php // The primary sidebar used in all layouts index
                 	if (  ! dynamic_sidebar( 'banner1-index-widget-area' ) ) : ?>
                     	<?php endif; // end primary widget area ?>
@@ -73,7 +73,7 @@ get_header(); ?>
 				endif;
            	?>
            	
-           	<div id="banner1">  
+           	<div id="home_banner_right">  
                 <?php // The primary sidebar used in all layouts index
                 	if (  ! dynamic_sidebar( 'encuesta-index-widget-area' ) ) : ?>
                     	<?php endif; // end primary widget area ?>

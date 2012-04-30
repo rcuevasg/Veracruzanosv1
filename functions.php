@@ -405,9 +405,9 @@ endif;
 function coraline_widgets_init() {
 	// Area 1, located at the top of the sidebar.
 	register_sidebar( array(
-		'name' => __( 'Primary Widget Area', 'coraline' ),
+		'name' => __( 'Pag. inicio primera área widget', 'coraline' ),
 		'id' => 'sidebar-1',
-		'description' => __( 'The primary widget area', 'coraline' ),
+		'description' => __( 'En la página de inicio la primera área arriba de la columna lateral para widget', 'coraline' ),
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
