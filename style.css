@@ -118,7 +118,7 @@ body {
 
 header {
 	float: left;
-	width: 100%;
+	 width: 978px;
     background: #fff;
 	border-left: 1px solid #eeeeee;
 	border-right: 1px solid #eeeeee;
@@ -132,7 +132,7 @@ header {
 }
 
 section#content-box {
-	width: 100%;
+	 width: 978px;
 	background: #fff;
 	border-left: 1px solid #eeeeee;
 	border-right: 1px solid #eeeeee;
@@ -1152,7 +1152,7 @@ img.aligncenter {
 /*Simple Featured Widget - Lo destacado*/
 
 
-#primary .widget_list li.widget-container {
+#primary .widget_list li.widget-container, #secondary .widget_list li.widget-container {
 	margin-bottom: 20px;
 	float: left;
 	width: 268px;
@@ -1214,6 +1214,7 @@ img.aligncenter {
 	background-color: #ffffff;
 	color: #AF242F;
 	border: none;
+	font-size: 1em;
 }
 
 #main-sidebars .tabberlive div.tabbertab {
@@ -1276,8 +1277,7 @@ img.aligncenter {
 
 
 #main-sidebars .tabberlive .tabbertab ul.tw-tag-cloud li {
-	list-style-image: url("images/elements/arrow6px.png");
-	fon
+	 list-style-image: url("images/elements/bullet_red.jpg");
 }
 
 #main-sidebars .tabberlive .tabbertab ul.tw-tag-cloud li a {
@@ -1286,15 +1286,29 @@ img.aligncenter {
 
 /*WebDevStudio_VeracruzanosTVWidget - VeracruzanosTV*/
 
+.icon_tag_tv {
+    background-image: url("images/CSS_sprite.png");
+    background-position: -475px -200px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:0px;
+    right: 10px;
+    width: 28px;
+    height: 34px;
+    display: block;
+}
+
 .WebDevStudio_VeracruzanosTVWidget {
   	 background-color: #EBEBEB;
 	 padding: 10px 0 3px;
 	 float: left;
 	 width: 268px;
+	 position: relative;
 }
 
 .WebDevStudio_VeracruzanosTVWidget h3.widget-title {
-	margin-top: 8px;
+	margin-top: 6px;
+	position: relative;
 }
 
 .WebDevStudio_VeracruzanosTVWidget h3 a{
@@ -1307,21 +1321,23 @@ img.aligncenter {
 
 .WebDevStudio_VeracruzanosTVWidget #featuredVideo h3 {
   background-color: #FFFFFF;
-  padding: 6px 6px 8px;
+  padding: 8px 6px 8px;
   margin: 4px 8px;
 }
 
 
 .WebDevStudio_VeracruzanosTVWidget #featuredVideo h3 a {
     font-family: Arial;
-    font-size: 1.15em;
+    font-size: 1.05em;
     text-transform: none;
+    padding: 0px;
 }
 
 .WebDevStudio_VeracruzanosTVWidget #featuredVideo li {
 	list-style: none;
 	 padding: 6px 6px 8px;
 	 float: left;
+	 position: relative;
 }
 
 .WebDevStudio_VeracruzanosTVWidget #featuredVideo li:last-child {
@@ -1338,6 +1354,15 @@ img.aligncenter {
 	margin-right: 10px;
 }
 
+.WebDevStudio_VeracruzanosTVWidget #featuredVideo .list_video a {
+	color: #333;
+}
+
+.WebDevStudio_VeracruzanosTVWidget #featuredVideo .list_video span.img {
+	background-image: url('images/elements/bullet_video.png');
+	background-repeat: no-repeat;
+	padding: 3px;
+}
 
 /*---WebDevStudio_SinglePostWidget- La entrevista--*/
 
@@ -1355,14 +1380,17 @@ img.aligncenter {
 .WebDevStudio_SinglePostWidget h3.widget-title {
 	color: #AF242F;
 	text-transform: uppercase;
-	font-size: 1.3em;
+	font-size: 1.2em;
 	font-weight: bold;
 	background-color: #ffffff;
-	padding: 2px 8px;
+	padding: 2px 15px 0 8px;
 	position: absolute;
 	top:-8px;
 	left: 4px;
 	margin-bottom: 5px;
+	background-image: url('images/elements/arrow12pxred.png');
+	background-repeat: no-repeat;
+	background-position: right center;
 }
 
 .WebDevStudio_SinglePostWidget #SinglePost .img {
@@ -1433,7 +1461,7 @@ img.aligncenter {
 	background-color: #ebebeb;
 	border-top: #dd4e14 solid 6px;
 	padding: 10px 20px;
-	width: 248px;
+	width: 228px;
 	font-size: 1.1em;
 	min-height: 130px;
 }
@@ -1580,6 +1608,147 @@ margin-bottom: 0.5em;
 	margin: 0px 0px 10px 20px;
 }
 
+/* últimas - Comunicados*/
+
+#WDSListadoNotas {
+	border: 1px solid #b7b7b7;
+	padding: 10px 10px;
+    width: 246px;
+}
+
+#WDSListadoNotas ul li  {
+	background-image: url("images/elements/bullet_com.jpg");
+    background-position: left 6px;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #E1E1E1;
+    list-style: none outside none;
+    padding-left: 28px;
+    margin: 4px 0;
+}
+
+#WDSListadoNotas ul li:last-child {
+ border-bottom:none;
+}
+
+#WDSListadoNotas ul li a {
+	color: #333333; 
+}
+
+#WDSListadoNotas ul li a:hover {
+	color: #555555; 
+}
+
+#WDSListadoNotas h3 {
+    margin-bottom: 10px;
+	color: #9d292a;
+	text-transform: uppercase;
+	font-size: 1.1em;
+	font-weight: bold;
+	background-color: #ffffff;
+	padding: 4px 7px;
+	top:-8px;
+	left: 4px;
+	margin-bottom: 5px;
+}
+
+#WDSListadoNotas h3 a {
+	background-image: url('images/elements/arrow12pxred.png');
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding-right: 14px;
+}
+
+#WDSListadoNotas h3 a:hover {
+	color: #9d292a;	
+}
+
+/* últimas - Deporte y Cultura*/
+
+#WDSdeportes {
+	background-color: #ebebeb;
+	border-top: 4px solid #005b7f;
+	padding: 10px 0px 0px;
+    width: 268px;
+    float: left;
+}
+
+
+#WDSespectaculos  {
+	background-color: #ffffff;
+	border-top: 4px solid #de4a33;
+	padding: 10px 0px 0px;
+    width: 266px;
+    float: left;
+    border-left: 1px solid #efefef;
+    border-right: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+}
+
+#WDSdeportes  h3, #WDSespectaculos h3 {
+	width: 268px;
+}
+
+#WDSdeportes  h3 a, #WDSespectaculos h3 a{
+ 	color: #444444;
+    float: left;
+    font-family: 'Magra';
+    font-size: 1.15em;
+    font-weight: normal;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    text-transform: none;
+    background-image: url('images/elements/arrow9px.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+#WDSdeportes .featured a, #WDSespectaculos .featured a{
+	color: #333333;
+    float: left;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 268px;
+    max-height: 320px;
+    overflow: hidden;
+}
+
+#WDSdeportes  .featured a span,  #WDSespectaculos .featured a span {
+	margin: 0px 15px 10px;
+	float: left;
+}
+
+#WDSdeportes  .featured a:hover span, #WDSespectaculos .featured a:hover span {
+	color: #555555;
+}
+
+.WebDevStudio_ListadoUltimasNotasWidget .news_list {
+	font-size: 1.1em;
+    margin-left: 32px;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+.WebDevStudio_ListadoUltimasNotasWidget .bottom {
+ border-bottom: 1px dotted #707070;
+ border-top: 1px dotted #707070;
+ float: left;
+ width: 100%;
+}
+
+.WebDevStudio_ListadoUltimasNotasWidget .bottom a {
+    background-image: url("images/elements/arrow6px.png");
+    background-position: right 4px;
+    background-repeat: no-repeat;
+    color: #707070;
+    float: right;
+    font-size: 0.9em;
+    font-weight: bold;
+    line-height: 1.4em;
+    padding-right: 10px;
+}
+
+
 /* Otros revisar*/
 
 .widget-area {
@@ -1602,7 +1771,7 @@ margin-bottom: 0.5em;
 }
 .widget-area ul ul {
 	list-style: square;
-	margin: 0 0 1.5em 1.5em;
+	margin: 0 0 0.5em 0.5em;
 }
 .widget-area ul ul ul {
 	margin-bottom: 0;
