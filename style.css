@@ -962,6 +962,7 @@ nav.menu_social ul li.rss a, .icon_rss {
 #content-list .featured a.title {
 	font-size: 1.5em;
     font-weight: bold;
+    margin-top: 0px;
 }
 
 #content-list .bottom {
@@ -1031,6 +1032,7 @@ nav.menu_social ul li.rss a, .icon_rss {
 #content-list .list-iz a.title {
 	font-size: 1.25em;
 	color: #333333;
+	 margin-top: 0px;
 }
 
 #content-list .list-iz a.title:hover, #content-list .list-de a.title:hover {
@@ -1044,6 +1046,7 @@ nav.menu_social ul li.rss a, .icon_rss {
 
 #content-list .list-de a.title { 
 	font-size: 1.15em;
+	 margin-top: 0px;
 }
 
 #content-list .list-de li { 
