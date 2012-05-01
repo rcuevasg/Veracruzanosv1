@@ -5,12 +5,13 @@
 
 get_header(); ?>
 
-		<div id="content-container">
-			<div id="content" role="main">
+			<div id="content" class="different" role="main">
 
 				<h1 class="title-list"><?php
 					printf( __( '%s', 'coraline' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 				?></h1>
+				
+				<div id="content-list">
 				
 				<?php
 				$idCategoria = get_cat_ID(single_cat_title( '', false ));
@@ -21,12 +22,24 @@ get_header(); ?>
 				while ($entrevistas->have_posts()): $entrevistas->the_post();
 					//$wp_query->in_the_loop = true;
 					?>
-					<div>
+					<div class="box-list">
+	
+						<?php //Obtenemos la url de la imagen 
+    					$domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'big'));
+    					$thumbnailsrc = "";
+    					if (!empty($domsxe))
+							$thumbnailsrc = $domsxe->attributes()->src;
+						if (!empty($thumbnailsrc)):
+						?>
+			 			<span class='img'><img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=84&h=74' border=0 /></span>
+			 			<?php
+			 			endif;
+			 			?>
+				
 						<?php
-						the_post_thumbnail('thumbnail');
-        				print "<h3><a href='" . get_permalink() . "' title='" . get_the_title() ."' >" . get_the_title() . "</a></h3>";
-        				print substr(get_the_excerpt(), 0, strrpos(get_the_excerpt(), "<a")-1);
-        				print "<span><small>" . get_the_time('d M, Y') . "</small>";
+        				print "<a class='title' href='" . get_permalink() . "' title='" . get_the_title() ."' >" . get_the_title() . "</a>";
+        				print "<p>" . substr(get_the_excerpt(), 0, strrpos(get_the_excerpt(), "<a")-1). "</p>" ;
+        				print "<span class='bottom'><small class='date'>" . get_the_time('d M, Y') . "</small>";
         				print "<a href='" . get_permalink() . "' class='btn_more' title='Ver video ". get_the_title() ."'>Continuar leyendo</a></span>";
 						?>
 					</div>
@@ -42,8 +55,10 @@ get_header(); ?>
 				endif;
 				?>
 				
+				</div><!-- #content-list -->
+				
 			</div><!-- #content -->
-		</div><!-- #content-container -->
+	
 
 <?php get_sidebar('list'); ?>
 

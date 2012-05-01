@@ -986,7 +986,7 @@ nav.menu_social ul li.rss a, .icon_rss {
     margin-top: 3px;
 }
 
-#content-list .featured small.date {
+#content-list .featured small.date, #content-list .box-list small.date  {
 	color: #707070;
     float: left;
     font-size: 0.9em;
@@ -1152,6 +1152,46 @@ nav.menu_social ul li.rss a, .icon_rss {
     width: 226px;
     margin-right: 20px;
 }
+
+.category-la-entrevista #content-list {
+	 margin: 10px 14px 0px 28px;
+}
+
+.category-la-entrevista #content-list a.title {
+	font-size: 1.15em;
+	line-height: 1em;
+	float: none;
+}
+
+.category-la-entrevista #content-list p {
+	margin-top: 5px;
+}	
+
+.category-la-entrevista #content-list span.img {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 50px;
+}
+
+.box-list {
+	width: 294px;
+	float: left;
+	line-height: 1.4em;
+	margin-right: 45px;
+	margin-top: 22px;
+}
+
+.box-list:nth-child(2n+2) {
+	margin-right:0px;
+}
+
+.box-list small.date  {
+    padding: 0px 0px 0px 3px;
+}
+
+#content-list .box-list a.btn_more {
+	 margin-top: 1px;
+	}
 
 
 /*Page*/

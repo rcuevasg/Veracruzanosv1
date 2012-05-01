@@ -78,7 +78,7 @@ get_header(); ?>
 											$thumbnailsrc = $domsxe->attributes()->src;
 										if (!empty($thumbnailsrc)):
 										?>
-							 			<span class='img'><img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=100' border=0 /></span>
+							 			<span class='img'><img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=82&h=70' border=0 /></span>
 							 			<?php
 										endif;
 										?>
