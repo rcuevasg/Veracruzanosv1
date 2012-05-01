@@ -36,7 +36,7 @@ get_header(); ?>
         				</span>
         				<?php the_post_thumbnail('medium'); ?>
 						
-						</div>
+					</div><!-- Fin del div featured clearfix -->
 					<?php
 						$step++;
 					elseif ($step == 2):
@@ -197,10 +197,17 @@ get_header(); ?>
 				endwhile;
 				endif;
 				?>
-				</ul>
+				
 				<?php
 				if ($cierraUltimoDiv):
 					print "</div>";
+				endif;
+				if ($step > 1 && $step < 7):
+					print "</ul></div>";
+				elseif ($step >= 8 && $step < 16):
+					print "</ul></div>";
+				elseif ($step >= 16 && $step <= 20):
+					print "</ul></div>";
 				endif;
 				?>
 				
