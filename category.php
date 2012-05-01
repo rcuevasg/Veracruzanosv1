@@ -23,11 +23,22 @@ get_header(); ?>
 				$cierraUltimoDiv = false;
 				while ($notas->have_posts()): $notas->the_post();
 					//$wp_query->in_the_loop = true;
+					//Obtenemos la categoria de cada nota
+					$categorias = get_the_category();
+   					foreach ($categorias as $c):
+					if ($c->cat_ID == $idCategoria ) :
+						continue;
+					else :
+						$nameCat = $c->cat_name;
+						$urlCat = esc_url(get_category_link($c->cat_ID));
+					endif;
+					endforeach;
 					
 					if ($step == 1):
 					?>
 					<!-- Estamos en el primer elemento por lo que procedemos a generar la nota principal -->
 					<div class="featured clearfix">
+						<a class='btn_cat' href='<?php print $urlCat ?>' title='Ir a la seccion <?php print $nameCat ?>'><?php print $nameCat ?></a>
 						<a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
 						<?php print substr(get_the_content(), 0, 300); ?>
 						<span>
@@ -45,6 +56,7 @@ get_header(); ?>
 						<ul class="listado-izquierda clearfix">
 							<li>
 								<div>
+								<a class='btn_cat' href='<?php print $urlCat ?>' title='Ir a la seccion <?php print $nameCat ?>'><?php print $nameCat ?></a>
 								<a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
 								<span><?php print substr(get_the_content(), 0, 100); ?>…</span>
 								<?php //Obtenemos la url de la imagen destacada
@@ -66,6 +78,7 @@ get_header(); ?>
 						?>
 							<li>
 								<div>
+								<a class='btn_cat' href='<?php print $urlCat ?>' title='Ir a la seccion <?php print $nameCat ?>'><?php print $nameCat ?></a>
 								<a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
 								<span><?php print substr(get_the_content(), 0, 100); ?>…</span>
 								<?php //Obtenemos la url de la imagen destacada
@@ -87,6 +100,7 @@ get_header(); ?>
 						?>
 							<li>
 								<div>
+								<a class='btn_cat' href='<?php print $urlCat ?>' title='Ir a la seccion <?php print $nameCat ?>'><?php print $nameCat ?></a>
 								<a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
 								<span><?php print substr(get_the_content(), 0, 100); ?>…</span>
 								<?php //Obtenemos la url de la imagen destacada
@@ -115,6 +129,7 @@ get_header(); ?>
 						<ul class="listado-derecha">
 							<li>
 								<div>
+								<a class='btn_cat' href='<?php print $urlCat ?>' title='Ir a la seccion <?php print $nameCat ?>'><?php print $nameCat ?></a>
 								<a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
 								<span><?php print substr(get_the_content(), 0, 100); ?>…</span>
 								<?php //Obtenemos la url de la imagen destacada
@@ -136,6 +151,7 @@ get_header(); ?>
 						?>
 							<li>
 								<div>
+								<a class='btn_cat' href='<?php print $urlCat ?>' title='Ir a la seccion <?php print $nameCat ?>'><?php print $nameCat ?></a>
 								<a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
 								<span><?php print substr(get_the_content(), 0, 100); ?>…</span>
 								<?php //Obtenemos la url de la imagen destacada
@@ -157,6 +173,7 @@ get_header(); ?>
 						?>
 							<li>
 								<div>
+								<a class='btn_cat' href='<?php print $urlCat ?>' title='Ir a la seccion <?php print $nameCat ?>'><?php print $nameCat ?></a>
 								<a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
 								<span><?php print substr(get_the_content(), 0, 100); ?>…</span>
 								<?php //Obtenemos la url de la imagen destacada
