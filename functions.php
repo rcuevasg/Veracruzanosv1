@@ -427,7 +427,7 @@ function coraline_widgets_init() {
 	
 		// Area 3, located above the primary and secondary sidebars. Empty by default.
 	register_sidebar( array(
-		'name' => __( 'Portada Banner área widget banners', 'coraline' ),
+		'name' => __( 'Portada Banner área widget lateral', 'coraline' ),
 		'id' => 'banner-widget-area',
 		'description' => __( 'Página de inicio: tercera área de la columna lateral para widget de banners al final', 'coraline' ),
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
@@ -450,7 +450,7 @@ function coraline_widgets_init() {
 	
 	//Area 2, En el index entre temas destacados y picadas jarochas, para colocar banner
 	register_sidebar( array(
-		'name' => __( 'Portada Banner área widget', 'coraline' ),
+		'name' => __( 'Portada Banner área widget central', 'coraline' ),
 		'id' => 'banner1-index-widget-area',
 		'description' => __( 'Página de inicio: Banner área en contenido central entre temas destacados y picadas jarochas', 'coraline' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',

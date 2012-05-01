@@ -5,13 +5,15 @@
 
 get_header(); ?>
 
-		<div id="content-container">
 			<div id="content" role="main">
 
-				<h1 class="page-title"><?php
+				<h1 class="title-list"><?php
 					printf( __( '%s', 'coraline' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 				?></h1>
 				
+				<div id="content-list">
+				
+				<div class="col-iz">
 				<?php
 				$idCategoria = get_cat_ID(single_cat_title( '', false ));
 				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -24,8 +26,8 @@ get_header(); ?>
 					
 					if ($step == 1):
 					?>
-						<!-- Estamos en el primer elemento por lo que procedemos a generar la nota principal -->
-						<div>
+					<!-- Estamos en el primer elemento por lo que procedemos a generar la nota principal -->
+					<div class="featured clearfix">
 						<a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
 						<?php print substr(get_the_content(), 0, 300); ?>
 						<span>
@@ -40,7 +42,7 @@ get_header(); ?>
 					elseif ($step == 2):
 						?>
 						<!-- Iniciamos el primer listado -->
-						<ul class='listadoIzquierda'>
+						<ul class="listado-izquierda clearfix">
 							<li>
 								<div>
 								<a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
@@ -105,8 +107,12 @@ get_header(); ?>
 						$step++;
 					elseif ($step == 8):
 						?>
+					</div><!--col-iz-->
+					
+					<div class="col-de">
+						
 						<!-- Iniciamos el segundo listado -->
-						<ul class='listadoDerecha'>
+						<ul class="listado-derecha">
 							<li>
 								<div>
 								<a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
@@ -172,8 +178,10 @@ get_header(); ?>
 					elseif ($step == 17):
 						$cierraUltimoDiv = true;
 						?>
+						</div><!--col-de-->
+						
 						<!-- Iniciamos el div del ultimo listado -->
-						<div >
+						<div class="listado-final clearfix">
 							<h3>M&aacute;s notas de <?php print single_cat_title( '', false ) ?></h3>
 							<ul>
 							<li><a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a></li>
@@ -196,9 +204,9 @@ get_header(); ?>
 				endif;
 				?>
 				
+				</div><!-- #content-list -->
 				
 			</div><!-- #content -->
-		</div><!-- #content-container -->
 
 <?php get_sidebar('list'); ?>
 

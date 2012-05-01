@@ -164,7 +164,7 @@ footer {
   width: 678px;
 }
 
-#content-post {	
+#content-post, #content-list {	
 	margin: 0px 14px;
 }
 
@@ -380,6 +380,7 @@ p {
 	font-size: 1em;
 	color: #333333;
 }
+
 ul, ol {
 	margin: 0 0 0.2em 0.5em;
 }
@@ -464,6 +465,15 @@ input[type=text] {
 	padding: 3px;
 }
 
+/*Custom*/
+
+.title-list {
+	color: #666666;
+	border-bottom: 1px #cccccc dotted;
+	margin-bottom: 10px;
+	padding: 0px 15px 10px;
+}
+
 
 /* =Links
 ----------------------------------------------- */
@@ -537,6 +547,20 @@ a.btn_more {
     font-weight: normal;
     line-height: 1.4em;
     padding-right: 10px;
+}
+
+/* icons - tags */
+
+.icon_tag_tv {
+    background-image: url("images/CSS_sprite.png");
+    background-position: -425px -200px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:0px;
+    right: 10px;
+    width: 28px;
+    height: 34px;
+    display: block;
 }
 
 /* =Header
@@ -615,6 +639,7 @@ select:hover, select:focus {
 	float: left;
 	width: 970px;
 	position: relative;
+    /*border-bottom: 1px solid #a53a3b;*/
 }
 
 hgroup {
@@ -642,18 +667,20 @@ hgroup {
     text-decoration: none;
     text-transform: uppercase;
     width: 0px;
+    padding-bottom: 3px;
 }
 
 #site-description {
 	bottom: 28px;
 	color: #464646;
-	font-family: 'Magra', sans-serif;
-	font-size: 1.5em;
-	margin: 0 0 9px 0;
+	font-family: 'Magra', Arial;
+	font-size: 1.4em;
+	margin: 0px 0 9px 0;
 	left: 92px;
 	text-align: left;
 	font-weight: normal;
 	position: absolute;
+	text-transform: none;
 }
 
 #branding img {
@@ -753,7 +780,6 @@ nav.menu_social ul li.rss a, .icon_rss {
 
 #access {
 	background-color: #9d292a;
-	border-top: 1px solid #a53a3b;
 	border-bottom: 1px solid #833232;
 	display: block;
 	float: left;
@@ -781,16 +807,18 @@ nav.menu_social ul li.rss a, .icon_rss {
 	display: block;
 	line-height: 2em;
 	margin: 0 1px 0 0;
-    padding: 0.25em 0em 0;
+    padding:  0.2em 0;
 	text-decoration: none;
 	font-family: 'Magra', sans-serif;
+	height: 26px;
+	
 }
 #access ul ul {
 	display: none;
 	float: left;
 	font-weight: normal;
 	position: absolute;
-	top: 33px;
+	top: 32px;
 	left: 0;
 	text-transform: none;
 	z-index: 99999;
@@ -813,10 +841,15 @@ nav.menu_social ul li.rss a, .icon_rss {
 }
 #access li:hover > a,
 #access ul ul :hover > a {
-	color: #fff;
+	color: #ebebeb;
+	border-top: 4px #c7ba6b solid;
+	padding: 1px 0px 0px;
+	height: 22px;
 }
 #access ul ul a:hover {
-background-color: #ccc;
+    background-color: #ccc;
+    border: none;
+    padding: .66em .5em .5em 1em;
 }
 #access ul li:hover > ul {
 	display: block;
@@ -828,6 +861,15 @@ background-color: #ccc;
 	color: #ebebeb;
 	border-top: 4px #c7ba6b solid;
 	padding: 0.08em 0em 0;
+}
+
+#access .current-menu-item .sub-menu a, #access .current-menu-ancestor .sub-menu a {
+	border: none;
+	padding: 0.66em 0.5em 0.5em 1em;
+}
+
+#access .current-menu-item .sub-menu a:hover, #access .current-menu-ancestor .sub-menu a:hover, #access .sub-menu a:hover {
+	height: auto;
 }
 
 /* Navigation */
@@ -866,6 +908,19 @@ background-color: #ccc;
 
 /* =Content
 ----------------------------------------------- */
+
+/*listados categoria*/
+
+#content-list .col-iz{
+	width: 360px;
+	float: left;
+	margin-right: 24px;
+}
+
+#content-list .col-de {
+	width: 238px;
+	float: right;
+}
 
 .page-title {
 	border-bottom: 1px solid #ccc;
@@ -1206,7 +1261,7 @@ img.aligncenter {
 
 #main-sidebars .tabberlive ul.tabbernav li a {
     background-color: #EBEBEB;
-    padding: 5px 7px;
+    padding: 4px 7px;
 	border: none;
 }
 
@@ -1222,7 +1277,7 @@ img.aligncenter {
 	border: none;
 }
 
-#prmain-sidebarsimary .tabberlive {
+#main-sidebars .tabberlive {
 	 background-color: #EBEBEB;
 	 padding: 10px 0 3px;
 	 float: left;
@@ -1286,18 +1341,6 @@ img.aligncenter {
 
 /*WebDevStudio_VeracruzanosTVWidget - VeracruzanosTV*/
 
-.icon_tag_tv {
-    background-image: url("images/CSS_sprite.png");
-    background-position: -475px -200px;
-    background-repeat: no-repeat;
-    position: absolute;
-    top:0px;
-    right: 10px;
-    width: 28px;
-    height: 34px;
-    display: block;
-}
-
 .WebDevStudio_VeracruzanosTVWidget {
   	 background-color: #EBEBEB;
 	 padding: 10px 0 3px;
@@ -1354,6 +1397,10 @@ img.aligncenter {
 	margin-right: 10px;
 }
 
+.WebDevStudio_VeracruzanosTVWidget #featuredVideo li img {
+	z-index: 2;
+}
+
 .WebDevStudio_VeracruzanosTVWidget #featuredVideo .list_video a {
 	color: #333;
 }
@@ -1361,7 +1408,7 @@ img.aligncenter {
 .WebDevStudio_VeracruzanosTVWidget #featuredVideo .list_video span.img {
 	background-image: url('images/elements/bullet_video.png');
 	background-repeat: no-repeat;
-	padding: 3px;
+	z-index: 10;
 }
 
 /*---WebDevStudio_SinglePostWidget- La entrevista--*/
@@ -1423,6 +1470,7 @@ img.aligncenter {
 	float: left;
 	clear: left;
 	font-size: 1.05em;
+	padding: 8px 4px;
 }
 
 /*WebDevStudio_QuotesWidget - Frase del día*/
@@ -1748,7 +1796,6 @@ margin-bottom: 0.5em;
     padding-right: 10px;
 }
 
-
 /* Otros revisar*/
 
 .widget-area {
@@ -1761,6 +1808,7 @@ margin-bottom: 0.5em;
 }
 .widget-area ul ul a {
 	text-decoration: none;
+	color: #333;
 }
 .widget-area ul ul a:hover {
 	text-decoration: underline;
@@ -2185,6 +2233,7 @@ footer .widget-area {
 
 footer .bullet_red li {
 	list-style-image: url('images/elements/bullet_red.jpg');
+	margin: 0 10px;
 }
 
 footer .widget-area li a{
