@@ -28,25 +28,37 @@ get_header(); ?>
 					?>
 					<!-- Estamos en el primer elemento por lo que procedemos a generar la nota principal -->
 					<div class="featured clearfix">
-						<a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
-						<?php print substr(get_the_content(), 0, 300); ?>
-						<span>
-							<small><?php print get_the_time('d M, Y'); ?></small>
+						<a class="title" href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
+						<p><?php print substr(get_the_content(), 0, 200); ?></p>
+						
+						<span class="bottom">
+							<small class="date"><?php print get_the_time('d M, Y'); ?></small>
         					<a href='<?php print get_permalink() ?>' class='btn_more' title='Continuar leyendo <?php get_the_title() ?>'>Continuar leyendo</a>
         				</span>
-        				<?php the_post_thumbnail('medium'); ?>
-						
+
+						<?php //Obtenemos la url de la imagen destacada
+			    					$domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'big'));
+			    					$thumbnailsrc = "";
+			    					if (!empty($domsxe))
+										$thumbnailsrc = $domsxe->attributes()->src;
+									if (!empty($thumbnailsrc)):
+									?>
+						 			<span class='img'><img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=360&h=210' border=0 /></span>
+						 			<?php
+						 			endif;
+						 			?>
+
 						</div>
 					<?php
 						$step++;
 					elseif ($step == 2):
 						?>
 						<!-- Iniciamos el primer listado -->
-						<ul class="listado-izquierda clearfix">
+						<ul class="list-iz clearfix">
 							<li>
-								<div>
-								<a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
-								<span><?php print substr(get_the_content(), 0, 100); ?>…</span>
+								
+								<a class="title" href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
+								
 								<?php //Obtenemos la url de la imagen destacada
 			    					$domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'medium'));
 			    					$thumbnailsrc = "";
@@ -54,20 +66,23 @@ get_header(); ?>
 										$thumbnailsrc = $domsxe->attributes()->src;
 									if (!empty($thumbnailsrc)):
 									?>
-						 			<span class='img'><img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=150' border=0 /></span>
+						 			<span class='img'><img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=140&h=96' border=0 /></span>
 						 			<?php
 						 			endif;
 						 			?>
-								</div>
+								
+								<p><?php print substr(get_the_content(), 0, 140); ?>…</p>
+								
+								
 							</li>
 						<?php
 						$step++;
 					elseif ($step > 2 && $step < 7):
 						?>
 							<li>
-								<div>
-								<a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
-								<span><?php print substr(get_the_content(), 0, 100); ?>…</span>
+				
+								<a class="title"  href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
+								
 								<?php //Obtenemos la url de la imagen destacada
 			    					$domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'medium'));
 			    					$thumbnailsrc = "";
@@ -75,20 +90,20 @@ get_header(); ?>
 										$thumbnailsrc = $domsxe->attributes()->src;
 									if (!empty($thumbnailsrc)):
 									?>
-						 			<span class='img'><img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=150' border=0 /></span>
+						 			<span class='img'><img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=140&h=96' border=0 /></span>
 						 			<?php
 						 			endif;
 						 			?>
-								</div>
+						 			<p><?php print substr(get_the_content(), 0, 140); ?>…</p>
+								
 							</li>
 						<?php
 						$step++;
 					elseif ($step == 7):
 						?>
 							<li>
-								<div>
-								<a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
-								<span><?php print substr(get_the_content(), 0, 100); ?>…</span>
+								<a class="title" href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
+								
 								<?php //Obtenemos la url de la imagen destacada
 			    					$domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'medium'));
 			    					$thumbnailsrc = "";
@@ -96,11 +111,12 @@ get_header(); ?>
 										$thumbnailsrc = $domsxe->attributes()->src;
 									if (!empty($thumbnailsrc)):
 									?>
-						 			<span class='img'><img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=150' border=0 /></span>
+						 			<span class='img'><img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=140&h=96' border=0 /></span>
 						 			<?php
 						 			endif;
 						 			?>
-								</div>
+						 			<p><?php print substr(get_the_content(), 0, 140); ?>…</p>
+							
 							</li>
 						</ul>
 						<?php
@@ -112,11 +128,11 @@ get_header(); ?>
 					<div class="col-de">
 						
 						<!-- Iniciamos el segundo listado -->
-						<ul class="listado-derecha">
+						<ul class="list-de">
 							<li>
-								<div>
-								<a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
-								<span><?php print substr(get_the_content(), 0, 100); ?>…</span>
+					
+								<a class="title" href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
+								
 								<?php //Obtenemos la url de la imagen destacada
 			    					$domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'medium'));
 			    					$thumbnailsrc = "";
@@ -124,20 +140,21 @@ get_header(); ?>
 										$thumbnailsrc = $domsxe->attributes()->src;
 									if (!empty($thumbnailsrc)):
 									?>
-						 			<span class='img'><img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=100' border=0 /></span>
+						 			<span class='img'><img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=82&h=56' border=0 /></span>
 						 			<?php
 						 			endif;
 						 			?>
-								</div>
+								
+								<p><?php print substr(get_the_content(), 0, 90); ?>…</p>
+
 							</li>
 						<?php
 						$step++;
 					elseif ($step > 8 && $step < 16):
 						?>
 							<li>
-								<div>
-								<a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
-								<span><?php print substr(get_the_content(), 0, 100); ?>…</span>
+							
+								<a class="title" href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
 								<?php //Obtenemos la url de la imagen destacada
 			    					$domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'medium'));
 			    					$thumbnailsrc = "";
@@ -145,20 +162,21 @@ get_header(); ?>
 										$thumbnailsrc = $domsxe->attributes()->src;
 									if (!empty($thumbnailsrc)):
 									?>
-						 			<span class='img'><img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=100' border=0 /></span>
+						 			<span class='img'><img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=82&h=56' border=0 /></span>
 						 			<?php
 						 			endif;
 						 			?>
-								</div>
+								
+								<p><?php print substr(get_the_content(), 0, 90); ?>…</p>
+
 							</li>
 						<?php
 						$step++;
 					elseif ($step == 16):
 						?>
 							<li>
-								<div>
-								<a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
-								<span><?php print substr(get_the_content(), 0, 100); ?>…</span>
+								
+								<a class="title" href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
 								<?php //Obtenemos la url de la imagen destacada
 			    					$domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'medium'));
 			    					$thumbnailsrc = "";
@@ -166,30 +184,36 @@ get_header(); ?>
 										$thumbnailsrc = $domsxe->attributes()->src;
 									if (!empty($thumbnailsrc)):
 									?>
-						 			<span class='img'><img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=100' border=0 /></span>
+						 			<span class='img'><img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=82&h=56' border=0 /></span>
 						 			<?php
 						 			endif;
 						 			?>
-								</div>
+								
+								<p><?php print substr(get_the_content(), 0, 90); ?>…</p>
+
 							</li>
 						</ul>
+						</div><!--col-de-->
+						
 						<?php
 						$step++;
 					elseif ($step == 17):
 						$cierraUltimoDiv = true;
 						?>
-						</div><!--col-de-->
-						
+
 						<!-- Iniciamos el div del ultimo listado -->
-						<div class="listado-final clearfix">
-							<h3>M&aacute;s notas de <?php print single_cat_title( '', false ) ?></h3>
+						<div class="list-end clearfix">
+							<h2>m&aacute;s de <span> <?php print single_cat_title( '', false ) ?><span></h2>
 							<ul>
-							<li><a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a></li>
+							<li>
+							
+							<a class="title" href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><span class="date"><?php print get_the_time('d M, Y'); ?></span><?php the_title() ?></a></li>
 						<?php
 						$step++;
 					elseif ($step > 17):
 						?>
-							<li><a href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a></li>
+							<li>
+							<a class="title" href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><span class="date"><?php print get_the_time('d M, Y'); ?></span><?php the_title() ?></a></li>
 						<?php
 						$step++;
 					endif;

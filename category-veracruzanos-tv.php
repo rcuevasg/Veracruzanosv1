@@ -8,7 +8,7 @@ get_header(); ?>
 		<div id="content-container">
 			<div id="content" role="main">
 
-				<h1 class="page-title"><?php
+				<h1 class="title-list"><?php
 					printf( __( '%s', 'coraline' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 				?></h1>
 				
