@@ -34,32 +34,47 @@ get_header(); ?>
 						<div class="entry-content">
 							
 							<h4><?php print substr(get_the_excerpt(), 0, strrpos(get_the_excerpt(), "<a")-1); ?></h4>
-							<div class="img">
-							<?php
-								if (function_exists('display_related_posts_via_categories')):
-									display_related_posts_via_categories();
-								endif;
 							
-							the_post_thumbnail('full');
-							?>
+							<div class="mar-top-20">
+							
+							<div class="img">
+							
+								<?php //Obtenemos la url de la imagen destacada
+			    					$domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'big'));
+			    					$thumbnailsrc = "";
+			    					if (!empty($domsxe))
+										$thumbnailsrc = $domsxe->attributes()->src;
+									if (!empty($thumbnailsrc)):
+								?>
+						 			<img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=378&h=240' border=0 />
+					 			<?php
+					 			endif;
+					 			?>
+								
 							</div> <!-- Fin del div -->
 						
 							
-							<div class="others">
-							 <!--aqui deberia ir compartir y relacionados -->
-							 	
+							<div class="box-add">
+							  <!--aqui deberia ir compartir y relacionados -->
+							 
 							</div>
 							
-		
+							
 							<?php the_content(); ?>
+							
 							<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'coraline' ), 'after' => '</div>' ) ); ?>
+							
+							</div>
+							
 						</div><!-- .entry-content -->
 	
 						</div><!-- #post-## -->
 						
 						
-	
-						<div>COMENTARIOS</div>
+						
+						<div id="title-comments">
+							<h3>COMENTARIOS</h3>
+						</div>
 			
 						<?php comments_template( '', true ); ?>
 					</div><!-- #content-post -->

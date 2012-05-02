@@ -357,10 +357,10 @@ function coraline_comment( $comment, $args, $depth ) {
 		<div class="comment-author vcard">
 			<?php echo get_avatar( $comment, 48 ); ?>
 
-			<cite class="fn"><?php comment_author_link(); ?></cite>
+			<cite class="fn"><?php comment_author_link(); ?> dice:</cite>
 
 			<span class="comment-meta commentmetadata">
-				|
+	
 				<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 				<?php
 					/* translators: 1: date, 2: time */
@@ -375,7 +375,7 @@ function coraline_comment( $comment, $args, $depth ) {
 			</span><!-- .comment-meta .commentmetadata -->
 		</div><!-- .comment-author .vcard -->
 		<?php if ( $comment->comment_approved == '0' ) : ?>
-			<em><?php _e( 'Your comment is awaiting moderation.', 'coraline' ); ?></em>
+			<em><?php _e( 'Su comentario está en espera de revisión.', 'coraline' ); ?></em>
 			<br />
 		<?php endif; ?>
 

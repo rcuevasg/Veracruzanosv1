@@ -26,7 +26,9 @@
 	
 	</div><!-- #post-## -->
 	
-	<div>COMENTARIOS</div>
+		<div id="title-comments">
+					<h3>COMENTARIOS</h3>
+	    </div>
 		
 	<?php comments_template( '', true ); ?>
 </div><!-- #content-post -->

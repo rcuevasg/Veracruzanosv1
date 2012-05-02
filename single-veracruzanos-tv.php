@@ -8,6 +8,7 @@
 		</div><!-- .entry-meta -->
 	
 		<div class="entry-content">
+		
 			<div class="video">
 				<?php
 				$urlVideo = substr(get_the_excerpt(), 0, strrpos(get_the_excerpt(), "<a")-1);
@@ -16,13 +17,23 @@
 				print $smart_youtube_pro->check( $urlVideo, 0);
 				?>
 			</div> <!-- Fin del div video -->
+			
+			<div class="box-add">
+			  <!--aqui deberia ir compartir y relacionados -->
+			 
+			</div>
+							
+							
 			<?php the_content(); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'coraline' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 	
 	</div><!-- #post-## -->
 	
-	<div>COMENTARIOS</div>
+		
+	<div id="title-comments">
+		<h3>COMENTARIOS</h3>
+	</div>
 		
 	<?php comments_template( '', true ); ?>
 </div><!-- #content-post -->
