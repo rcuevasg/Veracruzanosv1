@@ -38,7 +38,8 @@ get_header(); ?>
 				
 						<?php
         				print "<a class='title' href='" . get_permalink() . "' title='" . get_the_title() ."' >" . get_the_title() . "</a>";
-        				print "<p>" . substr(get_the_excerpt(), 0, strrpos(get_the_excerpt(), "<a")-1). "</p>" ;
+        				$resumen = substr(get_the_excerpt(), 0, strrpos(get_the_excerpt(), "<a")-1);
+        				print "<p>" . substr($resumen, 0, 84). "...</p>" ;
         				print "<span class='bottom'><small class='date'>" . get_the_time('d M, Y') . "</small>";
         				print "<a href='" . get_permalink() . "' class='btn_more' title='Ver video ". get_the_title() ."'>Continuar leyendo</a></span>";
 						?>
