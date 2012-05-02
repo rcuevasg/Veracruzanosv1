@@ -1153,7 +1153,7 @@ nav.menu_social ul li.rss a, .icon_rss {
     margin-right: 20px;
 }
 
-.category-la-entrevista #content-list {
+.category-la-entrevista #content-list, .category-veracruzanos-tv #content-list{
 	 margin: 10px 14px 0px 28px;
 }
 
@@ -1191,7 +1191,14 @@ nav.menu_social ul li.rss a, .icon_rss {
 
 #content-list .box-list a.btn_more {
 	 margin-top: 1px;
-	}
+}
+
+.category-veracruzanos-tv #content-list a.title{
+	float: left;
+	width: 100%;
+    font-size: 1.15em;
+	line-height: 1.2em;
+}
 
 
 /*Page*/

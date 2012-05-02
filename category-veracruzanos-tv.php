@@ -5,12 +5,15 @@
 
 get_header(); ?>
 
-		<div id="content-container">
-			<div id="content" role="main">
+			<div id="content" class="different" role="main">
 
-				<h1 class="title-list"><?php
+				<h1 class="title-list">
+				<span class="icon_tag_tv"></span>
+				<?php
 					printf( __( '%s', 'coraline' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 				?></h1>
+				
+				<div id="content-list">
 				
 				<?php
 				$idCategoria = get_cat_ID(single_cat_title( '', false ));
@@ -22,12 +25,12 @@ get_header(); ?>
 					//$wp_query->in_the_loop = true;
 					$urlVideo = substr(get_the_excerpt(), 0, strrpos(get_the_excerpt(), "<a")-1);
 					?>
-					<div>
+					<div class="box-list">
 						<?php
 						global $smart_youtube_pro;
 						print $smart_youtube_pro->check( $urlVideo, 1);
-        				print "<h3><a href='" . get_permalink() . "' title='" . get_the_title() ."' >" . get_the_title() . "</a></h3>";
-        				print "<span><small>" . get_the_time('d M, Y') . "</small>";
+        				print "<a class='title' href='" . get_permalink() . "' title='" . get_the_title() ."' >" . get_the_title() . "</a>";
+        				print "<span class='bottom'><small class='date'>" . get_the_time('d M, Y') . "</small>";
         				print "<a href='" . get_permalink() . "' class='btn_more' title='Ver video ". get_the_title() ."'>Ver video</a></span>";
 						?>
 					</div>
@@ -43,7 +46,9 @@ get_header(); ?>
 				endif;
 				?>
 				
+				</div><!-- #content-list -->
+				
 			</div><!-- #content -->
-		</div><!-- #content-container -->
+
 <?php get_sidebar('list'); ?>
 <?php get_footer(); ?>
