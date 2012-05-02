@@ -1200,6 +1200,27 @@ nav.menu_social ul li.rss a, .icon_rss {
 	line-height: 1.2em;
 }
 
+#content-box .wp-pagenavi a, 
+#content-box .wp-pagenavi span {
+	border: none;
+	color: #707070;
+	font-size: 0.95em;
+}
+
+#content-box  .wp-pagenavi span.current {
+    font-weight: bold;
+    background-image: url('images/elements/nav_circle_red.png');
+    background-position: -1px 50%;
+    color: #fff;
+    font-weight: normal;
+}
+
+#content-box .wp-pagenavi a.page {
+	background-image: url('images/elements/nav_circle_gray.png');
+    background-position: -1px 50%;
+    color: #888;
+}
+
 
 /*Page*/
 
@@ -1273,9 +1294,9 @@ nav.menu_social ul li.rss a, .icon_rss {
 	text-transform: uppercase;
 }
 .entry-content h4 {
-	color: #888;
-	font-size: 17px;
-	font-style: italic;
+	color: #666666;
+	font-size: 1.2em;
+	font-family: 'Enriqueta';
 }
 .entry-content h5,
 .entry-content h6 {
@@ -1573,6 +1594,11 @@ img.aligncenter {
 	overflow: hidden;
 }
 
+#main-sidebars .tabbertab .nomCat {
+	color: #AF242F;
+    font-size: 1em;
+}
+
 #main-sidebars .tabbertab .yd_rp_widget img {
 	width: 62px;
 	height: auto;
@@ -1588,11 +1614,14 @@ img.aligncenter {
 #main-sidebars .tabberlive .tabbertab .yd_rp_widget ul li span.img { 
    float: left;
    margin-right: 4px;
-   margin-bottom: 10px;
+   margin-bottom: 20px;
 }
 
 #main-sidebars .tabberlive .tabbertab .yd_rp_widget ul li span.title { 
 	font-weight: bold;
+	width: 100%;
+	height: auto;
+	font-size: 1em;
 }
 
 #main-sidebars .tabberlive .tabbertab ul li {

@@ -33,7 +33,7 @@ get_header(); ?>
 	
 						<div class="entry-content">
 							
-							<?php print substr(get_the_excerpt(), 0, strrpos(get_the_excerpt(), "<a")-1); ?>
+							<h4><?php print substr(get_the_excerpt(), 0, strrpos(get_the_excerpt(), "<a")-1); ?></h4>
 							
 							<div>
 							<?php
