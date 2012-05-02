@@ -17,7 +17,7 @@ get_header(); ?>
 				
 				<?php
 				if (in_category('videos')):
-					include(TEMPLATEPATH.'/single-video.php');
+					include(TEMPLATEPATH.'/single-veracruzanos-tv.php');
 				elseif (in_category('la-entrevista')):
 					include(TEMPLATEPATH.'/single-la-entrevista.php');
 				else:

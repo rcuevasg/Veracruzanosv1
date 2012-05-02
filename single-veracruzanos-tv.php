@@ -9,7 +9,6 @@
 	
 		<div class="entry-content">
 			<div class="video">
-				Si aparece esto esta llamando a la plantilla correcta y el error es otro
 				<?php
 				$urlVideo = substr(get_the_excerpt(), 0, strrpos(get_the_excerpt(), "<a")-1);
 				global $smart_youtube_pro;
