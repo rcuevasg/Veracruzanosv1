@@ -1674,7 +1674,7 @@ img.aligncenter {
 
 .WebDevStudio_VeracruzanosTVWidget #featuredVideo h3 {
   background-color: #FFFFFF;
-  padding: 8px 6px 8px;
+  padding: 8px 14px 8px;
   margin: 4px 8px;
 }
 
@@ -1684,6 +1684,7 @@ img.aligncenter {
     font-size: 1.05em;
     text-transform: none;
     padding: 0px;
+    color: #AF242F;
 }
 
 .WebDevStudio_VeracruzanosTVWidget #featuredVideo li {
@@ -1734,7 +1735,7 @@ img.aligncenter {
 	padding: 10px;
 }
 
-.WebDevStudio_SinglePostWidget h3.widget-title {
+.WebDevStudio_SinglePostWidget h3.widget-title a {
 	color: #AF242F;
 	text-transform: uppercase;
 	font-size: 1.2em;
@@ -1748,6 +1749,11 @@ img.aligncenter {
 	background-image: url('images/elements/arrow12pxred.png');
 	background-repeat: no-repeat;
 	background-position: right center;
+}
+
+.WebDevStudio_SinglePostWidget h3.widget-title a:hover {
+	text-decoration: none;
+	color: #851f28;
 }
 
 .WebDevStudio_SinglePostWidget #SinglePost .img {

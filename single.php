@@ -34,8 +34,7 @@ get_header(); ?>
 						<div class="entry-content">
 							
 							<h4><?php print substr(get_the_excerpt(), 0, strrpos(get_the_excerpt(), "<a")-1); ?></h4>
-							
-							<div>
+							<div class="img">
 							<?php
 								if (function_exists('display_related_posts_via_categories')):
 									display_related_posts_via_categories();
@@ -44,12 +43,21 @@ get_header(); ?>
 							the_post_thumbnail('full');
 							?>
 							</div> <!-- Fin del div -->
+						
+							
+							<div class="others">
+							 <!--aqui deberia ir compartir y relacionados -->
+							 	
+							</div>
+							
 		
 							<?php the_content(); ?>
 							<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'coraline' ), 'after' => '</div>' ) ); ?>
 						</div><!-- .entry-content -->
 	
 						</div><!-- #post-## -->
+						
+						
 	
 						<div>COMENTARIOS</div>
 			
