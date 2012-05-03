@@ -403,6 +403,16 @@ endif;
  * @uses register_sidebar
  */
 function coraline_widgets_init() {
+
+	// Area 0, located at the top of the header.
+	register_sidebar( array(
+		'name' => __( 'Encabezado Banner área widget', 'coraline' ),
+		'id' => 'top-header-widget-area',
+		'description' => __( 'Encabezado (header): primera área arriba del header para colocar un banner', 'coraline' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+	) );
+	
 	// Area 1, located at the top of the sidebar.
 	register_sidebar( array(
 		'name' => __( 'Portada Primera área widget', 'coraline' ),
@@ -472,7 +482,7 @@ function coraline_widgets_init() {
 	
 	//Area 1, En la platilla single y page
 	register_sidebar( array(
-		'name' => __( 'Interior Área lateral para páginas internas', 'coraline' ),
+		'name' => __( 'Interior área lateral páginas internas', 'coraline' ),
 		'id' => 'single-sidebar-widget-area',
 		'description' => __( 'Area de sidebar para todas las paginas internas', 'coraline' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
@@ -482,7 +492,7 @@ function coraline_widgets_init() {
 	) );
 	//Area 2, En las plantillas de listado
 	register_sidebar( array(
-		'name' => __( 'Listado Área lateral para páginas de listados', 'coraline' ),
+		'name' => __( 'Listado área lateral página listados', 'coraline' ),
 		'id' => 'single-sidebar-listado-widget-area',
 		'description' => __( 'Area de sidebar para todas las paginas de listados', 'coraline' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',

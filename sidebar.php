@@ -8,10 +8,10 @@
 
 	<div id="main-sidebars">
 		<div id="primary" class="widget-area" role="complementary">
-		<?php do_action( 'before_sidebar' ); ?>
+	
 			<ul class="widget_list">
 
-			<?php // The primary sidebar used in all layouts
+			<?php // The primary sidebar used in home
 			if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
 				<li id="search" class="widget-container widget_search">
@@ -45,6 +45,9 @@
 			<?php endif; // end primary widget area ?>
 			</ul>
 		</div><!-- #primary .widget-area -->
+		
+		
+		<?php if ( is_active_sidebar( 'secondary-widget-area' ) ) : ?>
 
 	    <div id="secondary" class="widget-area" role="complementary">
 			<ul class="widget_list">
@@ -55,10 +58,12 @@
 			</ul>
 		</div><!-- #secondary .widget-area -->
 		
+		<?php endif; ?>
+		
 
-		<?php if ( is_active_sidebar( 'banner-sidebar-area' ) ) : ?>
+		<?php if ( is_active_sidebar( 'banner-widget-area' ) ) : ?>
 
-		<div id="Banner-sidebar" class="widget-area" role="complementary">
+		<div id="banner-sidebar" class="widget-area" role="complementary">
 			<ul class="widget_list">
 				<?php dynamic_sidebar( 'banner-widget-area' ); ?>
 			</ul>

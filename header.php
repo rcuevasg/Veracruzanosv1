@@ -5,15 +5,12 @@
  * @since Coraline 1.0
  */
 ?><!DOCTYPE html>
-<!--[if IE 6]>
-<html id="ie6" <?php language_attributes(); ?>>
-<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" <?php language_attributes(); ?>><![endif]-->
 <!--[if IE 8]>
-<html id="ie8" <?php language_attributes(); ?>>
-<![endif]-->
+<html id="ie8" <?php language_attributes(); ?>><![endif]-->
 <!--[if (!IE)]><!-->
-<html <?php language_attributes(); ?>>
-<!--<![endif]-->
+<html <?php language_attributes(); ?>><!--<![endif]-->
 
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -43,16 +40,6 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link href='http://fonts.googleapis.com/css?family=Enriqueta:400,700|Magra:400,700' rel='stylesheet' type='text/css'>
 
-<!-- <script>
-	jQuery(function ($j) {
-		$('.WDSCPslideshow').cycle({
-			fx: 'scrollLeft',
-			pager:  '.WDSCPnav',
-			timeout: 0, 
-		});
-	});	 
-</script> -->
-
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
@@ -75,6 +62,14 @@
 <div id="container">
 <?php do_action( 'before' ); ?>
 	<header>
+	
+	   <?php if ( is_active_sidebar( 'top-header-widget-area' ) ) : ?>
+		<div id="widget-top">  
+     		<?php // The top widget for banner
+        	if (  ! dynamic_sidebar( 'top-header-widget-area' ) ) : ?>
+        	<?php endif; // end primary widget area ?>
+        </div> <!--widget-top-->	
+        <?php endif; ?>
 	
 		<!-- topheader: date and weather -->
 		<section id="tophead">
@@ -114,7 +109,7 @@
 		
 		<!-- masterhead: logo, social menu and description -->
 		<section id="masthead" role="banner">
-			
+			<span class="img_out"></span>
 			<!-- Inicio del menu de Redes sociales -->
 			<?php
 			wp_nav_menu( array( 'theme_location' => 'socialNetwork', 'sort_column' => 'menu_order', 'container_class' => 'social_nav', 'container_class' => 'menu_social', 'container' =>'nav'  ) );

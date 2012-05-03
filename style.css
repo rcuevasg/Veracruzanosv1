@@ -229,10 +229,10 @@ body.no-sidebars #primary {
 }
 
 .content-sidebar #primary,
-.content-sidebar #secondary {
+.content-sidebar #secondary,.content-sidebar #banner-sidebar {
 	float: right;
 }
-.content-sidebar #secondary {
+.content-sidebar #secondary, #banner-sidebar {
 	clear: right;
 }
 
@@ -613,6 +613,17 @@ a.btn_more {
 	padding: 2px 20px;
 	width: 940px;
 	float: left;
+}
+
+.img_out {
+	background-image: url("images/elements/img_out.png");
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 60px;
+    display: block;
+    position: absolute;
+ 	right: -9px;
+    top: 38px;
 }
 
 #box_data {
@@ -1225,15 +1236,23 @@ nav.menu_social ul li.rss a, .icon_rss {
 /*Page*/
 
 .page-title {
-	border-bottom: 1px solid #ccc;
-	border-top: 3px solid #000;
-	font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
-	font-size: 13px;
+	border-bottom: 1px dotted #dadada;
+	font-family: Arial, Helvetica, "Nimbus Sans L", sans-serif;
+	font-size: 12px;
 	font-weight: bold;
 	letter-spacing: 0.025em;
 	margin: 0 0 24px 0;
 	padding: 2px;
+	font-weight: normal;
+	color: #555;
 	text-transform: uppercase;
+}
+
+.page-title span {
+	color: #333; 
+	font-weight: bold;
+	font-size: 1.4em;
+	text-transform: none;
 }
 
 .mar-top-20 {
@@ -1241,7 +1260,7 @@ nav.menu_social ul li.rss a, .icon_rss {
 }
 
 .hentry {
-	margin: 0 0 3.4em;
+	margin: 0 0 2em;
 }
 .single .hentry {
 	margin: 0 0 1.7em;
@@ -1255,6 +1274,25 @@ nav.menu_social ul li.rss a, .icon_rss {
 .sticky .entry-meta {
 	display: none;
 }
+
+.search .entry-title a, .archive .entry-title a { 
+	font-size: 0.8em;
+	letter-spacing: 0.01em;
+	color: #252525;
+}
+
+.search .entry-title a:hover, .archive .entry-title a:hover { 
+	text-decoration: none;
+	color: #444444;
+}
+
+.search .hentry {
+    border-bottom: 1px dotted #707070;
+    float: left;
+    padding: 8px 0;
+    width: 100%;
+}
+
 .entry-title {
 	font-size: 1.8em;
 	letter-spacing: 0.02em;
@@ -1547,7 +1585,16 @@ img.aligncenter {
 /*Simple Featured Widget - Lo destacado*/
 
 
-#primary .widget_list li.widget-container, #secondary .widget_list li.widget-container {
+#widget-top h2 {
+	display: none;
+}
+
+#widget-top .widget-container, #widget-top .widget-container a{
+ margin: 0px;
+}
+
+
+#primary .widget_list li.widget-container, #secondary .widget_list li.widget-container, #banner-sidebar  .widget_list li.widget-container{
 	margin-bottom: 20px;
 	float: left;
 	width: 268px;
@@ -2129,6 +2176,7 @@ margin-bottom: 0.5em;
     margin-left: 32px;
     margin-top: 10px;
     margin-right: 15px;
+    float: left;
 }
 
 .WebDevStudio_ListadoUltimasNotasWidget .bottom {
