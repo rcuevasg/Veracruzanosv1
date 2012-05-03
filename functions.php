@@ -31,8 +31,8 @@ if( !is_admin()){
 	*/
 	
 	/**
-	* My code for jquery PENDIENTE
-	*/
+	* My code for jquery PENDIENTE*/
+	
 	wp_enqueue_script('mycode', get_bloginfo('template_directory').'/js/mycode.js'); 
 	
 }

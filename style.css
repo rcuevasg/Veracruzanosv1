@@ -480,7 +480,7 @@ input[type=text] {
 ----------------------------------------------- */
 
 a {
-	color: #9d292a;
+	color: #960011;
 	text-decoration: none;
 }
 a:visited {
@@ -692,6 +692,7 @@ select:hover, select:focus {
 
 hgroup {
 	float: left;
+	margin-left: 10px;
 }
 
 #site-title {
@@ -706,11 +707,11 @@ hgroup {
   	background-image: url("images/CSS_sprite.png");
     background-position: -100px -50px;
     background-repeat: no-repeat;
-    color: #9D292A;
+    color: #960011;
     display: block;
     font-weight: 400;
     height: 80px;
-    padding-left: 80px;
+    padding-left: 70px;
     padding-top: 10px;
     text-decoration: none;
     text-transform: uppercase;
@@ -827,7 +828,7 @@ nav.menu_social ul li.rss a, .icon_rss {
 
 
 #access {
-	background-color: #9d292a;
+	background-color: #960011;
 	border-bottom: 1px solid #833232;
 	display: block;
 	float: left;

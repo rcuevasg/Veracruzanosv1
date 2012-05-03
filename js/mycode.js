@@ -1,3 +1,4 @@
+/*carrusel policial home*/
 jQuery(function ($j) {
 		$('.WDSCPslideshow').cycle({
 			fx: 'scrollLeft',
@@ -5,6 +6,10 @@ jQuery(function ($j) {
 			timeout: 0
 		});
 		
+});
+
+/*carrusel opinión home*/
+jQuery(function ($j) {		
 		
 		$('.WDSCOslideshow').cycle({
 			fx: 'scrollLeft',
@@ -12,5 +17,4 @@ jQuery(function ($j) {
 			timeout: 0
 		});
 		
-		
-	});
+});
