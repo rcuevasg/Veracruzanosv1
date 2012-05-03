@@ -1273,6 +1273,28 @@ nav.menu_social ul li.rss a, .icon_rss {
 	margin-right: 20px;
 }
 
+.entrevista .entry-content .img, .entrevista .entry-content .video {
+	float: right;
+	margin-left: 20px;
+	margin-right: 0px;
+}
+
+.entrevista .subtitle {
+  color: #9D292A;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.entrevista .bio .subtitle {
+ 	border-top: 1px solid #9D292A;
+ 	padding-top: 8px;
+}
+
+.entrevista .bio {
+	margin-bottom: 10px;
+	margin-right: 5px;
+}
+
 .entry-title a {
 	color: #000;
 }
