@@ -9,6 +9,46 @@ get_header(); ?>
 
 		<div id="content-container">
 			<div id="content" role="main">
+			
+			<!-- Navegacion -->
+			<div id="breadcrumbs">
+				<?php 
+				$category = get_the_category();
+				$idCategoria = $category[0]->cat_ID;
+				//$idCategoria = get_cat_ID(single_cat_title( '', false ));
+				$navegacion = get_category_parents($idCategoria,true,',',true); 
+				$elementosNavegacion = explode(",",$navegacion);
+				if (in_category('veracruzanos-tv') || in_category('la-entrevista') || in_category('voto-veracruz') || in_category('susecion_presidencial')):
+					//Navegación especial
+					print "<div class='navegacionEspecial'>";
+					print "<a href='".get_bloginfo('wpurl')."'>Inicio</a>";
+					$numElementos = count($elementosNavegacion) - 1;
+					$elemMenu = 1;
+					foreach ($elementosNavegacion as $item){
+						if (!empty($item)):
+							if ($elemMenu == $numElementos):
+								print " / <span class='masGrande'>" . $item . "</span>";
+							else:
+								print " / " . $item;
+							endif;
+							$elemMenu++;
+						endif;
+					}
+				else:
+					//Navegacion normal
+					print "<div class='navegacionNormal'>";
+					print "<a href='".get_bloginfo('wpurl')."'>Inicio</a>";
+					foreach ($elementosNavegacion as $item){
+						if (!empty($item)):
+							print " / " . $item;
+						endif;
+					}
+				endif;
+				print "</div>";
+				//print $navegacion;
+				?>
+			</div> 
+			<!-- Fin Navegacion -->
 
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
