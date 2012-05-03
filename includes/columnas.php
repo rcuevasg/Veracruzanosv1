@@ -1,7 +1,7 @@
 <!-- Contenido de la sección policiaca -->
 			<div id='home_section' class='WDSCarouselOpinion'>
 				<div id='WDSCOTitle'>
-					 <h2><a href="">Opini&oacute;n > Columnas</a></h2>
+					 <h2><a href="">Opini&oacute;n  Columnas</a></h2>
 				</div>
 			<div class='WDSCOslideshow'>
 			<?php
@@ -51,7 +51,7 @@
     				$countSlide++;
 		    	elseif ($step == 6):
 		    		?>
-		    			<<div class="featured">
+		    			<div class="featured">
     							<h3>
     							<a class='btn_title' href='<?php print get_permalink() ?>'><?php print get_the_title() ?>…</a>
     							</h3>
