@@ -7,7 +7,6 @@
 
 get_header(); ?>
 
-		<div id="content-container">
 			<div id="content" role="main">
 
 			<?php if ( have_posts() ) the_post(); ?>
@@ -30,7 +29,6 @@ get_header(); ?>
 			?>
 
 			</div><!-- #content -->
-		</div><!-- #content-container -->
 
 <?php get_sidebar('list'); ?>
 

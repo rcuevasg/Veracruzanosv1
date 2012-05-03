@@ -7,7 +7,6 @@
 
 get_header(); ?>
 
-		<div id="content-container">
 			<div id="content" role="main">
 
 			<?php if ( have_posts() ) the_post(); ?>
@@ -19,7 +18,6 @@ get_header(); ?>
 				get_template_part( 'loop', 'author' );
 			?>
 			</div><!-- #content -->
-		</div><!-- #content-container -->
 
 <?php get_sidebar('list'); ?>
 <?php get_footer(); ?>

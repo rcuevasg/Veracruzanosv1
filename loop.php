@@ -17,9 +17,9 @@
 <?php /* If there are no posts to display, such as an empty archive page */ ?>
 <?php if ( ! have_posts() ) : ?>
 	<div id="post-0" class="post error404 not-found">
-		<h3 class="entry-title"><?php _e( 'Not Found', 'coraline' ); ?></h3>
+		<h4 class="entry-title"><?php _e( 'Página no encontrada.', 'coraline' ); ?></h4>
 		<div class="entry-content">
-			<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'coraline' ); ?></p>
+			<p><?php _e( 'Puede ser que la página que buscas tenga una nueva ubicación o ya no este disponible. ', 'coraline' ); ?></p>
 			<?php get_search_form(); ?>
 		</div><!-- .entry-content -->
 	</div><!-- #post-0 -->
@@ -89,7 +89,7 @@
 			</div><!-- .entry-summary -->
 		<?php else : ?>
 			<div class="entry-content aside">
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'coraline' ) ); ?>
+				<?php the_content( __( 'Continuar leyendo <span class="meta-nav">&rarr;</span>', 'coraline' ) ); ?>
 			</div><!-- .entry-content -->
 		<?php endif; ?>
 
@@ -107,7 +107,7 @@
 			<h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'coraline' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 
 			<div class="entry-meta">
-				<?php coraline_posted_on(); coraline_posted_by(); ?><span class="comments-link"><span class="meta-sep">|</span> <?php comments_popup_link( __( 'Leave a comment', 'coraline' ), __( '1 Comment', 'coraline' ), __( '% Comments', 'coraline' ) ); ?></span>
+				<?php coraline_posted_on(); coraline_posted_by(); ?><span class="comments-link"><span class="meta-sep">|</span> <?php comments_popup_link( __( 'Escribir un comentario', 'coraline' ), __( '1 Comment', 'coraline' ), __( '% Comments', 'coraline' ) ); ?></span>
 			</div><!-- .entry-meta -->
 
 	<?php if ( is_search() ) : // Display excerpts for search. ?>
@@ -116,16 +116,16 @@
 			</div><!-- .entry-summary -->
 	<?php else : ?>
 			<div class="entry-content">
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'coraline' ) ); ?>
+				<?php the_content( __( 'Continuar leyendo <span class="meta-nav">&rarr;</span>', 'coraline' ) ); ?>
 				<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'coraline' ), 'after' => '</div>' ) ); ?>
 			</div><!-- .entry-content -->
 	<?php endif; ?>
 
 			<div class="entry-info">
-					<p class="comments-link"><?php comments_popup_link( __( '&rarr; Leave a comment', 'coraline' ), __( '&rarr; 1 Comment', 'coraline' ), __( '&rarr; % Comments', 'coraline' ) ); ?></p>
+					
 				<?php if ( count( get_the_category() ) ) : ?>
 					<p class="cat-links">
-						<?php printf( __( '<span class="%1$s">Posted in</span> %2$s', 'coraline' ), 'entry-info-prep entry-info-prep-cat-links', get_the_category_list( ', ' ) ); ?>
+						<?php printf( __( '<span class="%1$s"><strong>La noticia pertenece a:</strong></span> %2$s', 'coraline' ), 'entry-info-prep entry-info-prep-cat-links', get_the_category_list( ', ' ) ); ?>
 					</p>
 				<?php endif; ?>
 				<?php
@@ -133,7 +133,7 @@
 					if ( $tags_list ):
 				?>
 					<p class="tag-links">
-						<?php printf( __( '<span class="%1$s">Tagged</span> %2$s', 'coraline' ), 'entry-info-prep entry-info-prep-tag-links', $tags_list ); ?>
+						<?php printf( __( '<span class="%1$s"><strong>Tema:</strong></span> %2$s', 'coraline' ), 'entry-info-prep entry-info-prep-tag-links', $tags_list ); ?>
 					</p>
 				<?php endif; ?>
 				<?php edit_post_link( __( 'Edit', 'coraline' ), '<p class="edit-link">', '</p>' ); ?>

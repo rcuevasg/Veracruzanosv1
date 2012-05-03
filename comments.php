@@ -22,7 +22,7 @@
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
-		<h3 id="comments-title"><?php printf( _n( 'Un comentario en %2$s', '%1$s comentarios en %2$s', get_comments_number(), 'coraline' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?></h3>
+		<h3 id="comments-title"><?php printf( _n( 'Un comentario en la noticia %2$s', '%1$s comentarios en la noticia %2$s', get_comments_number(), 'coraline' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?></h3>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<div class="navigation">

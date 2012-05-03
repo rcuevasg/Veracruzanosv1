@@ -297,7 +297,7 @@ add_filter( 'excerpt_length', 'coraline_excerpt_length' );
  * @return string "Continue Reading" link
  */
 function coraline_continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'coraline' ) . '</a>';
+	return ' <a href="'. get_permalink() . '">' . __( 'Continuar leyendo <span class="meta-nav">&rarr;</span>', 'coraline' ) . '</a>';
 }
 
 /**
