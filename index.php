@@ -58,7 +58,15 @@ get_header(); ?>
 														
 					print WebDevStudio_GeneralNews(array('categoria' => "politica-politica",
 														'layout' => "3News"));
+				endif
+			?>
 					
+			<!-- Contenido de la sección policiaca -->
+			<?php include(TEMPLATEPATH . "/includes/columnas.php");  ?> 	
+			<!-- Fin de la sección policiaca -->
+					
+			<?php
+				if (function_exists("WebDevStudio_GeneralNews")):
 					print WebDevStudio_GeneralNews(array('categoria' => "pais",
 														'layout' => "1NewSmallPic"));
 														
