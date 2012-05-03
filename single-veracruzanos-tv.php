@@ -21,7 +21,9 @@
 			
 			<div class="box-add">
 			  <!--aqui deberia ir compartir y relacionados -->
-			 
+			<?php
+				do_action( 'erp-show-related-posts', array( $this, 'relatedPosts' ) );
+			?>
 			</div>
 							
 							
