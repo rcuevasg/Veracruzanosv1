@@ -1,4 +1,4 @@
-<div id="content-post">
+<div id="content-post" class="opinion">
 	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	
@@ -7,14 +7,14 @@
 			<?php $ciudadNota = get_post_meta($post->ID, 'ciudad', true); ?>
 			<?php if (!empty($ciudadNota)): print $ciudadNota . " "; endif; coraline_posted_on(); ?>
 		</div><!-- .entry-meta -->
-		<div>
+		<div class="opinion_info clearfix">
 		<?php
 			//Imagen del autor
 			ciii_category_images(); 
 		?>
-		<?php if (!empty($autorNota)) : print "Por " . $autorNota; endif; ?>
+		<span class="autor"><?php if (!empty($autorNota)) : print "Por " . $autorNota; endif; ?></span>
 		</div>
-		<div class="entry-content">
+		<div class="entry-content clearfix">
 			
 			 <!-- botones redes sociales -->
 				<?php include(TEMPLATEPATH . "/includes/share.php");  ?> 	

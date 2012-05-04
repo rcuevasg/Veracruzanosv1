@@ -25,13 +25,17 @@ if( !is_admin()){
 	
 	/**
 	* Modernizr.js
-	* Load up modernizr.min.js using the WordPress wp_enqueue_script function PENDIENTE
+	* Load up modernizr.min.js using the WordPress wp_enqueue_script function 	*/
 	
-	wp_enqueue_script( 'modernizr', get_bloginfo('template_directory').'/js/modernizr-1.6.min.js');
-	*/
+	wp_enqueue_script( 'modernizr', get_bloginfo('template_directory').'/js/modernizr.custom.49865.js');
 	
 	/**
-	* My code for jquery PENDIENTE*/
+	* My code for lettering*/
+	
+	wp_enqueue_script('lettering', get_bloginfo('template_directory').'/js/jquery.lettering-0.6.1.min.js'); 
+	
+	/**
+	* My code for jquery*/
 	
 	wp_enqueue_script('mycode', get_bloginfo('template_directory').'/js/mycode.js'); 
 	

@@ -26,7 +26,14 @@ jQuery(function ($j) {
 	if ($('.related_post li a').length == 0) {
     	$('#related').hide();
   } else {
- 
+    /*nothing*/
   }
+
+});
+
+
+jQuery(function ($j) {
+
+	$(".site_title_button").lettering();
 
 });

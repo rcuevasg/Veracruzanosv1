@@ -742,6 +742,10 @@ hgroup {
     padding-bottom: 3px;
 }
 
+.site_title_button .char14, .site_title_button .char15, .site_title_button .char16, .site_title_button .char17 {
+	color: #333;
+}
+
 #site-description {
 	bottom: 28px;
 	color: #464646;
@@ -1002,6 +1006,11 @@ nav.menu_social ul li.rss a, .icon_rss {
     z-index: 100;
 }
 
+.single #breadcrumbs {
+	 border-bottom: 1px dotted #CCCCCC;
+	 width: 630px;
+}
+
 /* =Content
 ----------------------------------------------- */
 
@@ -1214,6 +1223,7 @@ nav.menu_social ul li.rss a, .icon_rss {
 
 .category-la-entrevista #content-list, .category-veracruzanos-tv #content-list{
 	 margin: 10px 14px 0px 28px;
+	 float: left;
 }
 
 .category-la-entrevista #content-list a.title {
@@ -1253,6 +1263,13 @@ nav.menu_social ul li.rss a, .icon_rss {
 	font-size: 1.2em;
 	float: none;
 	width: inherit;
+	clear: left;
+}
+
+.category-opinion .box-list .autor {
+	color: #328900;
+    float: left;
+    width: 190px;
 }
 
 .box-list {
@@ -1273,6 +1290,9 @@ nav.menu_social ul li.rss a, .icon_rss {
 
 #content-list .box-list a.btn_more {
 	 margin-top: 1px;
+}
+.category-veracruzanos-tv span.youtube {
+	float: left;
 }
 
 .category-veracruzanos-tv #content-list a.title{
@@ -1465,6 +1485,32 @@ nav.menu_social ul li.rss a, .icon_rss {
 .entrevista .bio {
 	margin-bottom: 10px;
 	margin-right: 5px;
+}
+
+.opinion .opinion_info li.category_image {
+	list-style: none;
+}
+
+.opinion .opinion_info li.category_image a {
+    display: block;
+    float: left;
+    height: 50px;
+    overflow: hidden;
+    width: 58px;
+}   
+
+.opinion .opinion_info .autor {
+    color: #666666;
+    float: left;
+    width: 190px;
+    margin-left: 10px;
+}
+
+.opinion .opinion_info{
+	float: left;
+	clear: left;
+	width: 100%;
+	margin-bottom: 25px;
 }
 
 .mar-top-20 {
