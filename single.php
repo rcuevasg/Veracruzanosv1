@@ -36,7 +36,7 @@ get_header(); ?>
 						<div class="entry-meta">
 							<?php $autorNota = get_post_meta($post->ID, 'autor', true); ?>
 							<?php $ciudadNota = get_post_meta($post->ID, 'ciudad', true); ?>
-							<?php if (!empty($ciudadNota)): print $ciudadNota . " "; endif; coraline_posted_on(); ?>  
+							<?php if (!empty($ciudadNota)): print $ciudadNota . " | "; endif; coraline_posted_on(); ?>  
 							<?php if (!empty($autorNota)) : print " | Por " . $autorNota; endif; ?>
 						</div><!-- .entry-meta -->
 	
