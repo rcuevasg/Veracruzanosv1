@@ -1,8 +1,16 @@
 <div id="breadcrumbs">
 				<?php 
 				//print "El id actual es " . $cat_ID;
-				$category = get_the_category();
-				$idCategoria = get_cat_id( single_cat_title("",false) );//$category[0]->cat_ID;
+				
+				$idCategoria = 0;
+				$muestraCompleto = false;
+				if (is_page() || is_single()):
+					$category = get_the_category();
+					$idCategoria = $category[0]->cat_ID;
+					$muestraCompleto = true;
+				else:
+					$idCategoria = get_cat_id( single_cat_title("",false) );//$category[0]->cat_ID;
+				endif;
 				//$idCategoria = get_cat_ID(single_cat_title( '', false ));
 				$navegacion = get_category_parents($idCategoria,true,',',true); 
 				$elementosNavegacion = explode(",",$navegacion);
@@ -15,7 +23,11 @@
 					foreach ($elementosNavegacion as $item){
 						if (!empty($item)):
 							if ($elemMenu == $numElementos):
-								print " / ";
+								if ($muestraCompleto):
+									print " / " . $item;
+								else:
+									print " / ";
+								endif;
 								//continue;
 							else:
 								print " / " . $item;
@@ -32,7 +44,11 @@
 					foreach ($elementosNavegacion as $item){
 						if (!empty($item)):
 							if ($elemMenu == $numElementos):
-								print " / ";
+								if ($muestraCompleto):
+									print " / " . $item;
+								else:
+									print " / ";
+								endif;
 								//continue;
 							else:
 								print " / " . $item;
