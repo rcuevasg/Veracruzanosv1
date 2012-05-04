@@ -1,3 +1,5 @@
+<div id="content" class="different single-different" role="main">
+
 <!-- Navegacion -->
 <?php include(TEMPLATEPATH.'/includes/breadcumb.php'); ?> 
 <!-- Fin navegacion -->
@@ -45,13 +47,7 @@
 				print $smart_youtube_pro->check( $urlVideo, 0);
 				?>
 			</div> <!-- Fin del div video -->
-			
-			<div class="box-add">
-				<!--aqui deberia ir compartir y relacionados -->
-			<?php
-				//do_action( 'erp-show-related-posts', array( $this, 'relatedPosts' ) );
-			?> 
-			</div>
+		
 			
 			<div class="bio">
 				<span class="subtitle">Semblanza del personaje</span>

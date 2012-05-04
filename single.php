@@ -7,8 +7,6 @@
 
 get_header(); ?>
 
-			<div id="content" role="main">
-			
 			
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				
@@ -22,10 +20,14 @@ get_header(); ?>
 				else:
 					//Estamos viendo una noticia que no entra dentro de las categorias anteriores así que se muestra como una nota normal
 					?>
+					
+					<div id="content" role="main">
 
 					<!-- Navegacion -->
 					<?php include(TEMPLATEPATH.'/includes/breadcumb.php'); ?> 
 					<!-- Fin navegacion -->
+					
+					
 
 					<div id="content-post">
 						<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

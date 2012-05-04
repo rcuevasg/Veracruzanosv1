@@ -25,13 +25,13 @@
 						if (!empty($item)):
 							if ($elemMenu == $numElementos):
 								if ($muestraCompleto):
-									print " / <h1 class='title-list'><span>" . $item . "</span></h1>";
+									print "<span> / </span><h1 class='title-list'><span>" . $item . "</span></h1>";
 								else:
-									print " / ";
+									print "<span> / </span> ";
 								endif;
 								//continue;
 							else:
-								print " / " . $item;
+								print " <span> / </span> " . $item;
 							endif;
 							$elemMenu++;
 						endif;
