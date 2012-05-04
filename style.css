@@ -1331,6 +1331,7 @@ nav.menu_social ul li.rss a, .icon_rss {
   padding-bottom: 10px;
   background-color: #ebebeb;
   margin-bottom: 15px;
+  clear: left;
 }
 
 #related h3 {
@@ -1362,6 +1363,10 @@ nav.menu_social ul li.rss a, .icon_rss {
     list-style-image: url("images/elements/bullet_news.png");
     list-style-position: outside;
     padding: 4px 0;
+}
+
+#related li a {
+	color: #444;
 }
 
 .search .entry-title a, .archive .entry-title a { 
