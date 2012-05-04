@@ -10,8 +10,9 @@ get_header(); ?>
 				<!-- Navegacion -->
 				<div id="breadcrumbs">
 				<?php 
+				//print "El id actual es " . $cat_ID;
 				$category = get_the_category();
-				$idCategoria = $category[0]->cat_ID;
+				$idCategoria = get_cat_id( single_cat_title("",false) );//$category[0]->cat_ID;
 				//$idCategoria = get_cat_ID(single_cat_title( '', false ));
 				$navegacion = get_category_parents($idCategoria,true,',',true); 
 				$elementosNavegacion = explode(",",$navegacion);
@@ -24,7 +25,8 @@ get_header(); ?>
 					foreach ($elementosNavegacion as $item){
 						if (!empty($item)):
 							if ($elemMenu == $numElementos):
-								print " / <span class='masGrande'>" . $item . "</span>";
+								//print " / <h1 class='title-list'>" . single_cat_title( '', false ) . "</h1>";
+								continue;
 							else:
 								print " / " . $item;
 							endif;
