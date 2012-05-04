@@ -1193,6 +1193,19 @@ nav.menu_social ul li.rss a, .icon_rss {
 	width: 664px;
 }
 
+.navegacionEspecial {
+	background-color: #ebebeb;
+	border-bottom: none;
+	padding-top: 9px;
+	position: relative;
+}
+
+.navegacionEspecial .title-list{
+  font-family: "Enriqueta";
+  text-transform: uppercase;
+	color: #333333;
+}
+
 .different .title-list {
 	font-family: "Enriqueta";
 	text-transform: uppercase;
