@@ -1,3 +1,7 @@
+<!-- Navegacion -->
+<?php include(TEMPLATEPATH.'/includes/breadcumb.php'); ?> 
+<!-- Fin navegacion -->
+
 <div id="content-post" class="entrevista">
 	
 	

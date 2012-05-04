@@ -1,3 +1,7 @@
+<!-- Navegacion -->
+<?php include(TEMPLATEPATH.'/includes/breadcumb.php'); ?> 
+<!-- Fin navegacion -->
+
 <div id="content-post" class="opinion">
 	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<h1 class="entry-title"><?php the_title(); ?></h1>
