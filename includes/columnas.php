@@ -1,7 +1,7 @@
 <!-- Contenido de la sección policiaca -->
 			<div id='home_section' class='WDSCarouselOpinion'>
 				<div id='WDSCOTitle'>
-					 <h2><a href="">Opini&oacute;n  Columnas</a></h2>
+					 <h2><a href="">Opini&oacute;n </a><a href="#" class="cat"> Columnas</a></h2>
 				</div>
 			<div class='WDSCOslideshow'>
 			<?php
@@ -40,7 +40,7 @@
     							<h3>
     							<a class='btn_title' href='<?php print get_permalink() ?>'><?php print get_the_title() ?>…</a>
     							</h3>
-    							<span class="cat"><?php ciii_category_images( 'category_ids='.$idCat ); ?></span>
+    							<span><?php ciii_category_images( 'category_ids='.$idCat ); ?></span>
     							<div class="entry-meta">
 									<?php $autorNota = get_post_meta($post->ID, 'autor', true); ?>
 									<?php if (!empty($autorNota)) : print "Por " . $autorNota; endif; ?>

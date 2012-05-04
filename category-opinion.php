@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-			<div id="content" class="different" role="main">
+			<div id="content" role="main">
 			
 				<!-- navegacion -->
 				<div id="breadcrumbs">
@@ -68,10 +68,11 @@ get_header(); ?>
 						<?php
 						//Imagen del autor
 						ciii_category_images();
-						$autorNota = get_post_meta($post->ID, 'autor', true);
-						if (!empty($autorNota)) : print "Por " . $autorNota; endif;
+						
         				print "<a class='title' href='" . get_permalink() . "' title='" . get_the_title() ."' >" . get_the_title() . "</a>";
-        				print "<span>".substr(get_the_content(), 0, 250)."...</span>";
+        				$autorNota = get_post_meta($post->ID, 'autor', true);
+						if (!empty($autorNota)) : print "Por " . $autorNota; endif;
+        				print "<span class='text'>".substr(get_the_content(), 0, 140)."...</span>";
         				print "<span class='bottom'><small class='date'>" . get_the_time('d M, Y') . "</small>";
         				print "<a href='" . get_permalink() . "' class='btn_more' title='Continuar leyendo ". get_the_title() ."'>Continuar leyendo</a></span>";
 						?>

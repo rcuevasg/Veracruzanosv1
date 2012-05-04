@@ -1209,6 +1209,29 @@ nav.menu_social ul li.rss a, .icon_rss {
 	margin-bottom: 50px;
 }
 
+.category-opinion .box-list ul {
+	float: left;
+}
+
+.category-opinion .box-list ul a {
+	 display: block;
+    height: 60px;
+    overflow: hidden;
+    width: 68px;
+    margin-right: 10px;
+}
+
+.category-opinion .box-list span.text {
+	margin: 5px 0px;
+	float: left;
+}
+
+.category-opinion .box-list a.title {
+	font-size: 1.2em;
+	float: none;
+	width: inherit;
+}
+
 .box-list {
 	width: 294px;
 	float: left;
@@ -1259,11 +1282,6 @@ nav.menu_social ul li.rss a, .icon_rss {
 
 
 /* Custom Page */
-
-.box-add {
-
-}
-
 #social {
   border-top: solid #9d292a 1px;
   border-bottom: solid #acacac 1px;
@@ -2774,13 +2792,111 @@ margin-bottom: 0.5em;
 }
 
 .WDSCarouselOpinion #WDSCOTitle {
-	border-bottom: 1px solid #328803;
+	border-bottom: 2px solid #328803;
 }
 
 .WDSCarouselOpinion #WDSCOTitle h2 {
 	margin-bottom: 2px;
-    padding-bottom: 6px;
+    padding-bottom: 2px;
     font-size: 1.15em;
+}
+
+.WDSCarouselOpinion #WDSCOTitle h2 a {
+	 background-image: url("images/elements/arrow10pxgreen.png");
+	 background-position: right center;
+	 color: #777777;
+}
+
+.WDSCarouselOpinion #WDSCOTitle h2 a.cat {
+	font-family: 'Enriqueta';
+	background-image: none;
+	margin-left: 5px;
+	text-transform: uppercase;
+}
+
+.WDSCarouselOpinion .WDSCOslideshow {
+	border-top: 6px solid #226300;
+}
+
+.WDSCarouselOpinion .featured {
+	float: left;
+	width: 200px;
+	display: block;
+	margin-right: 28px;
+	padding-bottom: 10px;
+	border-right: 1px solid #328900;
+	min-height: 114px;
+}
+
+.WDSCarouselOpinion .featured:nth-child(3n + 3) {
+ border-right:none;
+ margin-right: 0px;
+}
+
+.WDSCarouselOpinion .featured ul {
+	float: left;
+	margin: 0;
+}
+
+.WDSCarouselOpinion .featured .entry-meta {
+	color: #328900;
+	margin-left: 5px;
+	margin-top: 16px;
+	float: left;
+	width: 90px;
+}
+
+.WDSCarouselOpinion .featured ul li p {
+	display: none;
+}
+
+.WDSCarouselOpinion .featured li {
+	list-style: none;
+}
+
+.WDSCarouselOpinion .featured li a{
+	display: block;
+	width: 68px;
+	height: 60px;
+	overflow: hidden;
+	float: left;
+}
+
+.WDSCarouselOpinion .featured h3 a {
+ font-family: 'Enriqueta';
+ font-weight: normal;
+ font-size: 0.9em;
+ color: #494949;
+}
+
+.WDSCarouselOpinion .featured h3  a:hover{
+	text-decoration: underline;
+}
+
+#content .WDSCarouselOpinion .bottom .WDSCOnav {
+	float: left;
+	margin-left: 5px;
+}
+
+#content .WDSCarouselOpinion .bottom .WDSCOnav a {
+	float: left;
+	background-image: url("images/elements/nav_circle_oroclaro.png");
+	background-position: 0 center;
+    background-repeat: no-repeat;
+	height: 19px;
+    line-height: 1.6em;
+    margin-right: 5px;
+    padding-right: 0;
+    text-align: center;
+    width: 19px;
+    color: #fff;
+}
+
+#content .WDSCarouselOpinion .bottom .WDSCOnav .activeSlide {
+   background-image: url("images/elements/nav_circle_green.png");
+   color: #FFFFFF;
+   font-weight: bold;
+   text-decoration: none;
 }
 
 
