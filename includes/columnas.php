@@ -1,7 +1,11 @@
 <!-- Contenido de la sección policiaca -->
+			<?php
+				$opinion = get_category_by_slug('opinion');
+				$columnas = get_category_by_slug('columnas');
+			?>
 			<div id='home_section' class='WDSCarouselOpinion'>
 				<div id='WDSCOTitle'>
-					 <h2><a href="">Opini&oacute;n </a><a href="#" class="cat"> Columnas</a></h2>
+					 <h2><a href="<?php print esc_url(get_category_link($opinion->cat_ID)) ?>">Opini&oacute;n </a><a href="<?php print esc_url(get_category_link($columnas->cat_ID)) ?>" class="cat"> Columnas</a></h2>
 				</div>
 			<div class='WDSCOslideshow'>
 			<?php
