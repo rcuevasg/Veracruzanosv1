@@ -12,7 +12,7 @@ get_header(); ?>
 				<!-- Fin navegacion -->
 
 				<h1 class="title-list">
-				<span class="icon_tag_logo"></span>
+				<span class="icon_tag_voto"></span>
 				<?php
 					printf( __( '%s', 'coraline' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 				?></h1>

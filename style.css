@@ -575,6 +575,18 @@ a.btn_more {
     display: block;
 }
 
+.icon_tag_voto {
+    background-image: url("images/CSS_sprite.png");
+    background-position: -575px -200px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:0px;
+    right: 10px;
+    width: 28px;
+    height: 34px;
+    display: block;
+}
+
 .icon_tag_logo {
     background-image: url("images/CSS_sprite.png");
     background-position: -375px -200px;
@@ -978,10 +990,16 @@ nav.menu_social ul li.rss a, .icon_rss {
 	display: block;
 }
 
+.different #breadcrumbs  {
+	margin-top: 10px;
+}
+
 #breadcrumbs {
 	float: left;
 	margin-bottom: 10px;
-    padding: 0 15px 10px;
+    padding: 0 7px 10px 15px;
+    position: relative;
+    z-index: 100;
 }
 
 /* =Content
@@ -1287,6 +1305,11 @@ nav.menu_social ul li.rss a, .icon_rss {
 
 
 /* Custom Page */
+
+.vertv #social { 
+	float: right;
+}
+
 #social {
   border-top: solid #9d292a 1px;
   border-bottom: solid #acacac 1px;

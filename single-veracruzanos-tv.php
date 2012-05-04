@@ -1,4 +1,4 @@
-<div id="content-post">
+<div id="content-post" class="vertv">
 	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	
@@ -9,6 +9,11 @@
 		</div><!-- .entry-meta -->
 	
 		<div class="entry-content">
+		
+			 <!-- botones redes sociales -->
+				<?php include(TEMPLATEPATH . "/includes/share.php");  ?> 	
+			  <!-- Fin botones redes sociales -->
+
 		
 			<div class="video">
 				<?php
