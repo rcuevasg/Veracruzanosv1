@@ -4,13 +4,13 @@
  */
 
 get_header(); ?>
-
+			
 			<div id="content" class="different" role="main">
 			
 				<!-- Navegacion -->
 				<?php include(TEMPLATEPATH.'/includes/breadcumb.php'); ?> 
 				<!-- Fin navegacion -->
-
+				
 				<h1 class="title-list">
 				<span class="icon_tag_voto"></span>
 				<?php

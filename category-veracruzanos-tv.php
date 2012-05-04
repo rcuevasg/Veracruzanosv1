@@ -5,8 +5,9 @@
 
 get_header(); ?>
 
-			<div id="content" class="different" role="main">
 			
+			<div id="content" class="different" role="main">
+				
 				<!-- Navegacion -->
 				<?php include(TEMPLATEPATH.'/includes/breadcumb.php'); ?> 
 				<!-- Fin navegacion -->
