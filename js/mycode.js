@@ -18,3 +18,15 @@ jQuery(function ($j) {
 		});
 		
 });
+
+
+/*related */
+jQuery(function ($j) {
+
+	if ($('.related_post li a').length == 0) {
+    	$('#related').hide();
+  } else {
+ 
+  }
+
+});
