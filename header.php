@@ -43,6 +43,7 @@
 
 <link href='http://fonts.googleapis.com/css?family=Enriqueta:400,700|Magra:400,700' rel='stylesheet' type='text/css'>
 
+
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).

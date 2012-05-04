@@ -152,7 +152,7 @@ footer {
     position: relative;
 }
 
-#content {
+#content, .category #content {
   width: 664px;
   float: left;
   margin-right: 22px;
@@ -160,7 +160,7 @@ footer {
   margin-bottom: 30px;
 }
 
-.search #content, .archive #content, .author #content, .error404  #content,  .page  #content { 
+.search #content, .date #content, .author #content, .error404  #content,  .page  #content { 
 	margin-left: 22px;
 	width: 656px;
 }
@@ -973,6 +973,12 @@ nav.menu_social ul li.rss a, .icon_rss {
 	display: block;
 }
 
+#breadcrumbs {
+	float: left;
+	margin-bottom: 10px;
+    padding: 0 15px 10px;
+}
+
 /* =Content
 ----------------------------------------------- */
 
@@ -1254,6 +1260,110 @@ nav.menu_social ul li.rss a, .icon_rss {
 
 /* Custom Page */
 
+.box-add {
+
+}
+
+#social {
+  border-top: solid #9d292a 1px;
+  border-bottom: solid #acacac 1px;
+  border-left: solid #acacac 1px;
+  border-right: solid #acacac 1px;
+  display: block;
+  float: left;
+  margin: 0 10px 5px 0;
+  overflow: hidden;
+  width: 222px;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+#social h5 {
+	background-color: #ebebeb;
+	color: #555;
+	font-size: 1em;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding: 3px 3px 3px 10px;
+	margin-bottom: 10px;
+	background: #fcfcfc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fcfcfc 0%, #ededed 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fcfcfc 0%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fcfcfc 0%,#ededed 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fcfcfc 0%,#ededed 100%); /* IE10+ */
+	background: linear-gradient(top,  #fcfcfc 0%,#ededed 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+
+}
+
+#social .st_fblike_hcount {
+	margin-left: 10px;
+	padding: 5px 0px 5px;
+	float: left;
+}
+
+#social .st_twitter_hcount {
+	padding: 5px 0px 5px;
+	margin-right: 8px;
+	float: right;
+}
+
+#social .st_plusone_hcount {
+	  float: left;
+	  margin-left: 12px;
+	  margin-top: 10px;
+}
+
+#social .st_sharethis_hcount {
+	float: right;
+	margin-right: 8px;
+	margin-top: 10px;
+}
+
+#related {
+  border: solid #acacac 1px;
+  display: block;
+  float: left;
+  margin: 0 10px 5px 0;
+  overflow: hidden;
+  width: 222px;
+  padding-bottom: 10px;
+  background-color: #ebebeb;
+  margin-bottom: 15px;
+}
+
+#related h3 {
+	background-color: #ebebeb;
+	color: #333;
+	font-size: 0.9em;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding: 4px 3px 4px 10px;
+	margin-bottom: 10px;
+	background: #fcfcfc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fcfcfc 0%, #ededed 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fcfcfc 0%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fcfcfc 0%,#ededed 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fcfcfc 0%,#ededed 100%); /* IE10+ */
+	background: linear-gradient(top,  #fcfcfc 0%,#ededed 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+	border-bottom: solid #9d292a 1px;
+}
+
+#related ul {
+	margin-left: 20px;
+}
+
+#related li {
+	 float: left;
+    line-height: 1.4em;
+    list-style-image: url("images/elements/bullet_news.png");
+    list-style-position: outside;
+    padding: 4px 0;
+}
+
 .search .entry-title a, .archive .entry-title a { 
 	font-size: 0.8em;
 	letter-spacing: 0.01em;
@@ -1355,6 +1465,7 @@ nav.menu_social ul li.rss a, .icon_rss {
 	line-height: 1.15em;
 	padding: 0 0 8px;
 	color: #333333;
+	clear: left;
 }
 
 h4.entry-title {

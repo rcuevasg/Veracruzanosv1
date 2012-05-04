@@ -89,15 +89,18 @@ get_header(); ?>
 								
 							</div> <!-- Fin del div -->
 						
-							
-							<div class="box-add">
-							  <!--aqui deberia ir compartir y relacionados -->
 							  
-							  <?php
-							  do_action( 'erp-show-related-posts', array( $this, 'relatedPosts' ) );
-							  ?>
+							  <!-- botones redes sociales -->
+								<?php include(TEMPLATEPATH . "/includes/share.php");  ?> 	
+							  <!-- Fin botones redes sociales -->
 							 
-							</div>
+							 <div id="related">
+							  
+								  <?php
+								  do_action( 'erp-show-related-posts', array( $this, 'relatedPosts' ) );
+								  ?>
+							  
+							  </div>
 							
 							
 							<?php the_content(); ?>
