@@ -59,7 +59,7 @@
 	
 	</div><!-- #post-## -->
 	
-		<div id="title-comments">
+		<div id="title-comments" class="clearfix">
 			<h3>COMENTARIOS</h3>
 	    </div>
 		

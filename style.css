@@ -2394,7 +2394,6 @@ margin-bottom: 0.5em;
     float: left;
 }
 
-
 #WDSespectaculos  {
 	background-color: #ffffff;
 	border-top: 4px solid #de4a33;
@@ -2844,6 +2843,7 @@ margin-bottom: 0.5em;
 
 .WDSCarouselOpinion .WDSCOslideshow {
 	border-top: 6px solid #226300;
+	height: 320px;
 }
 
 .WDSCarouselOpinion .featured {
@@ -2853,7 +2853,7 @@ margin-bottom: 0.5em;
 	margin-right: 28px;
 	padding-bottom: 10px;
 	border-right: 1px solid #328900;
-	min-height: 114px;
+	min-height: 144px;
 }
 
 .WDSCarouselOpinion .featured:nth-child(3n + 3) {
@@ -2895,6 +2895,11 @@ margin-bottom: 0.5em;
  font-weight: normal;
  font-size: 0.9em;
  color: #494949;
+}
+
+
+#content .WDSCarouselOpinion .featured h3 a:first-letter { 
+
 }
 
 .WDSCarouselOpinion .featured h3  a:hover{
