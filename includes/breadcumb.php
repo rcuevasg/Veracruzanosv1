@@ -14,7 +14,7 @@
 				//$idCategoria = get_cat_ID(single_cat_title( '', false ));
 				$navegacion = get_category_parents($idCategoria,true,',',false); 
 				$elementosNavegacion = explode(",",$navegacion);
-				if (in_category('veracruzanos-tv') || in_category('la-entrevista') || in_category('voto-veracruz') || in_category('susecion_presidencial')):
+				if (in_category('veracruzanos-tv') || in_category('la-entrevista') || in_category('voto-veracruz') || in_category('sucesion-presidencial')):
 					//Navegación especial
 					print "<div class='navegacionEspecial'>";
 					print "<a href='".get_bloginfo('wpurl')."'>Inicio</a>";
