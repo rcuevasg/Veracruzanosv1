@@ -40,7 +40,7 @@
     							<h3>
     							<a class='btn_title' href='<?php print get_permalink() ?>'><?php print get_the_title() ?>…</a>
     							</h3>
-    							<?php ciii_category_images( 'category_ids='.$idCat ); ?>
+    							<span class="cat"><?php ciii_category_images( 'category_ids='.$idCat ); ?></span>
     							<div class="entry-meta">
 									<?php $autorNota = get_post_meta($post->ID, 'autor', true); ?>
 									<?php if (!empty($autorNota)) : print "Por " . $autorNota; endif; ?>

@@ -1895,7 +1895,8 @@ img.aligncenter {
 	font-weight: bold;
 	width: 100%;
 	height: auto;
-	font-size: 1em;
+	font-size: 0.95em;
+	color: #444444;
 }
 
 #main-sidebars .tabberlive .tabbertab ul li {
@@ -2300,7 +2301,44 @@ margin-bottom: 0.5em;
 	color: #9d292a;	
 }
 
-/* últimas - Deporte y Cultura*/
+/* articulo del día */
+
+.WebDevStudio_OpinionPostWidget {
+	float: left;
+}
+
+.WebDevStudio_OpinionPostWidget h3.widget-title a {
+	 border-top: 4px solid #9b2c21;
+	 background-color: #f4f1de;
+	 padding: 5px 10px;
+	 margin-bottom: 2px;
+	 text-transform: uppercase;
+	 color: #9b2c21;
+	 display: block;
+}
+
+.WebDevStudio_OpinionPostWidget #opinionPost h3 a {
+	color: #333;
+	clear: left;
+}
+
+.WebDevStudio_OpinionPostWidget #opinionPost span.text {
+	margin-bottom: 6px;
+	margin-top: 6px;
+	float: left;
+	clear: left;
+}
+
+.WebDevStudio_OpinionPostWidget #opinionPost h3 a:hover {
+	text-decoration: none;
+	color: #555555;
+}
+
+.WebDevStudio_OpinionPostWidget  #opinionPost {
+	margin: 0px 10px;
+}
+
+/* últimas noticias - Deporte y Cultura*/
 
 #WDSdeportes {
 	background-color: #ebebeb;
@@ -2368,23 +2406,24 @@ margin-bottom: 0.5em;
     float: left;
 }
 
-.WebDevStudio_ListadoUltimasNotasWidget .bottom {
+.WebDevStudio_ListadoUltimasNotasWidget .bottom, .WebDevStudio_OpinionPostWidget .bottom{
  border-bottom: 1px dotted #707070;
  border-top: 1px dotted #707070;
  float: left;
  width: 100%;
 }
 
-.WebDevStudio_ListadoUltimasNotasWidget .bottom a {
+.WebDevStudio_ListadoUltimasNotasWidget .bottom a, .WebDevStudio_OpinionPostWidget .bottom a {
     background-image: url("images/elements/arrow6px.png");
     background-position: right 4px;
     background-repeat: no-repeat;
     color: #707070;
     float: right;
-    font-size: 0.9em;
+    font-size: 0.95em;
     font-weight: bold;
     line-height: 1.4em;
     padding-right: 10px;
+    margin-right: 3px;
 }
 
 
@@ -2627,7 +2666,7 @@ margin-bottom: 0.5em;
 	display: block;
 }
 
-.two_news, .three_news, .WDSCarouselPoliciaca {
+.two_news, .three_news, .WDSCarouselPoliciaca, .WDSCarouselOpinion {
   float: left;
   margin-left: 18px;
   margin-top: 30px;
@@ -2732,6 +2771,16 @@ margin-bottom: 0.5em;
 	color: #ffffff;
 	text-decoration: none;
 	font-weight: bold;
+}
+
+.WDSCarouselOpinion #WDSCOTitle {
+	border-bottom: 1px solid #328803;
+}
+
+.WDSCarouselOpinion #WDSCOTitle h2 {
+	margin-bottom: 2px;
+    padding-bottom: 6px;
+    font-size: 1.15em;
 }
 
 
