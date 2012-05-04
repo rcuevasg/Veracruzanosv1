@@ -10,6 +10,10 @@
 	
 		<div class="entry-content">
 		
+				 <!-- botones redes sociales -->
+				<?php include(TEMPLATEPATH . "/includes/share.php");  ?> 	
+			  <!-- Fin botones redes sociales -->
+		
 		
 			<div class="img">
 	 			

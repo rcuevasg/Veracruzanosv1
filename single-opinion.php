@@ -16,9 +16,9 @@
 		</div>
 		<div class="entry-content">
 			
-			<div class="box-add">
-			  <!--aqui deberia ir compartir y relacionados -->
-			</div>
+			 <!-- botones redes sociales -->
+				<?php include(TEMPLATEPATH . "/includes/share.php");  ?> 	
+			  <!-- Fin botones redes sociales -->
 							
 							
 			<?php the_content(); ?>

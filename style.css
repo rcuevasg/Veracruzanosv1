@@ -160,7 +160,12 @@ footer {
   margin-bottom: 30px;
 }
 
-.search #content, .date #content, .author #content, .error404  #content,  .page  #content { 
+.search #content, 
+.date #content, 
+.author #content, 
+.error404  #content,  
+.page #content,
+.tag #content { 
 	margin-left: 22px;
 	width: 656px;
 }
