@@ -42,7 +42,7 @@
 
 			<div class="entry-content">
 			<?php if ( post_password_required() ) : ?>
-				<?php the_content(); ?>
+				<?php print substr(get_the_content(),0, 300); ?>
 			<?php else : ?>
 				<?php
 					$images = get_children( array( 'post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC', 'numberposts' => 999 ) );
@@ -85,11 +85,11 @@
 
 		<?php if ( is_archive() || is_search() ) : // Display excerpts for archives and search. ?>
 			<div class="entry-summary aside">
-				<?php the_excerpt(); ?>
+				<?php print substr(get_the_content(),0 ,300);//the_excerpt(); ?>
 			</div><!-- .entry-summary -->
 		<?php else : ?>
 			<div class="entry-content aside">
-				<?php the_content( __( 'Continuar leyendo <span class="meta-nav">&rarr;</span>', 'coraline' ) ); ?>
+				<?php print substr(get_the_content(),0 ,300);//the_content( __( 'Continuar leyendo <span class="meta-nav">&rarr;</span>', 'coraline' ) ); ?>
 			</div><!-- .entry-content -->
 		<?php endif; ?>
 
