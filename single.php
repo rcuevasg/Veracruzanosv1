@@ -54,6 +54,8 @@ get_header(); ?>
 					include(TEMPLATEPATH.'/single-veracruzanos-tv.php');
 				elseif (in_category('la-entrevista')):
 					include(TEMPLATEPATH.'/single-la-entrevista.php');
+				elseif (strrpos($navegacion,'opinion')):
+					include(TEMPLATEPATH.'/single-opinion.php');
 				else:
 					//Estamos viendo una noticia que no entra dentro de las categorias anteriores así que se muestra como una nota normal
 					?>
