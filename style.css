@@ -924,7 +924,7 @@ nav.menu_social ul li.rss a, .icon_rss {
 	display: none;
 }
 #access ul ul a {
-	background: #acacac;
+	background: #9a9a9a;
 	color: #ffffff;
 	line-height: 1em;
 	margin: 0;
@@ -942,7 +942,7 @@ nav.menu_social ul li.rss a, .icon_rss {
 	height: 28px;
 }
 #access ul ul a:hover {
-    background-color: #999;
+    background-color: #888888;
     border: none;
     padding: .66em .5em .5em 1em;
 }
@@ -1298,7 +1298,10 @@ nav.menu_social ul li.rss a, .icon_rss {
   min-height: 350px;
 }
 
-#ie8 .category-la-entrevista .box-list, #ie8 .category-opinion .box-list{  
+#ie8 .category-la-entrevista .box-list, 
+#ie8 .category-opinion .box-list, 
+#ie8 .category-columnas .box-list,
+#ie8 .category-articulo .box-list{  
 	 min-height: 180px;
 	 margin-right: 22px;
 }
@@ -1420,7 +1423,7 @@ nav.menu_social ul li.rss a, .icon_rss {
   border-right: solid #acacac 1px;
   display: block;
   float: left;
-  margin: 0 10px 5px 0;
+  margin: 0 15px 5px 0;
   overflow: hidden;
   width: 222px;
   padding-bottom: 10px;
@@ -1452,6 +1455,12 @@ nav.menu_social ul li.rss a, .icon_rss {
 	float: left;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#social .st_fblike_hcount {
+	padding: 0px 0px 0px;
+	}
+}
+
 #social .st_twitter_hcount {
 	padding: 5px 0px 5px;
 	margin-right: 8px;
@@ -1474,7 +1483,7 @@ nav.menu_social ul li.rss a, .icon_rss {
   border: solid #acacac 1px;
   display: block;
   float: left;
-  margin: 0 10px 5px 0;
+  margin: 0 15px 5px 0;
   overflow: hidden;
   width: 222px;
   padding-bottom: 10px;
@@ -1548,10 +1557,21 @@ nav.menu_social ul li.rss a, .icon_rss {
 	min-height: 300px;
 }
 
-.entrevista .entry-content .img, .entrevista .entry-content .video {
+.entrevista .entry-content .img {
 	float: right;
-	margin-left: 10px;
+	margin-left: 0px;
 	margin-right: 0px;
+}
+
+.entrevista .entry-content .video {
+	float: right;
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 378px;
+    background-color: #ccc;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px 0px;
 }
 
 .entrevista .subtitle {
@@ -1656,7 +1676,7 @@ h4.entry-title {
 
 .entry-content .img {
 	float: right;
-	margin-left: 20px;
+	margin-left: 15px;
 }
 
 .entry-content .video { 
