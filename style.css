@@ -1156,14 +1156,15 @@ nav.menu_social ul li.rss a, .icon_rss {
 }
 
 #content-list .list-end ul {
-	margin: 10px 20px;
+	margin: 10px;
 }
 
 #content-list .list-end li {
 	line-height: 1.4em;
-    list-style-image: url("images/elements/bullet_news.png");
-    list-style-position: outside;
-    padding: 4px 0;
+ 	background-image: url("images/elements/bullet_news.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+     padding: 4px 16px;
     float: left;
 }
 
@@ -1290,6 +1291,10 @@ nav.menu_social ul li.rss a, .icon_rss {
 	color: #328900;
     float: left;
     width: 190px;
+}
+
+#ie8 .box-list  {
+  margin-right: 22px;
 }
 
 .box-list {
@@ -2891,6 +2896,10 @@ margin-bottom: 0.5em;
 	margin-top: 20px;
 	width: 310px;
 	margin-left: 18px;
+}
+
+#ie8 .one_newsmallpic, #ie8 .one_newbigpic, #ie8 .three_textnews {
+	float: left;
 }
 
 .one_newsmallpic .news_list, .one_newbigpic .news_list, .three_textnews .news_list {
