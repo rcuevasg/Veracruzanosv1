@@ -32,9 +32,10 @@ get_header(); ?>
 					?>
 					<div class="box-list">
 						<?php
+						print "<a class='title' href='" . get_permalink() . "' title='" . get_the_title() ."' >" . get_the_title() . "</a>";
 						global $smart_youtube_pro;
 						print $smart_youtube_pro->check( $urlVideo, 0);
-        				print "<a class='title' href='" . get_permalink() . "' title='" . get_the_title() ."' >" . get_the_title() . "</a>";
+        				
         				print "<span class='bottom'><small class='date'>" . get_the_time('d M, Y') . "</small>";
         				print "<a href='" . get_permalink() . "' class='btn_more' title='Ver video ". get_the_title() ."'>Ver video</a></span>";
 						?>

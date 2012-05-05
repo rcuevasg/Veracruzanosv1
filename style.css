@@ -1292,9 +1292,15 @@ nav.menu_social ul li.rss a, .icon_rss {
     float: left;
     width: 190px;
 }
-
-#ie8 .box-list  {
+ 
+#ie8.category-veracruzanos-tv .box-list  {
   margin-right: 22px;
+  min-height: 350px;
+}
+
+#ie8.category-la-entrevista .box-list, #ie8.category-opinion .box-list{  
+	 min-height: 180px;
+	 margin-right: 22px;
 }
 
 .box-list {
@@ -2617,13 +2623,14 @@ margin-bottom: 0.5em;
 
 /* Calendar Widget */
 
-.widget_calendar {
+#main-sidebars .widget_calendar {
 	background-color: #ebebeb;
 	border: 1px solid #cccccc;
 	float: left;
 	width: 248px;
 	 padding: 10px 10px;
 	 text-align: center;
+	 margin-top: 20px;
 }
 
 .widget_calendar .internal_sidebar_listados {
