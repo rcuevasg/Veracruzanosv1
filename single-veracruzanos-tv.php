@@ -20,11 +20,7 @@
 			
 				<div class="entry-content clearfix">
 				
-					 <!-- botones redes sociales -->
-						<?php include(TEMPLATEPATH . "/includes/share.php");  ?> 	
-					  <!-- Fin botones redes sociales -->
-			
-				
+							
 					<div class="video">
 						<?php
 						$urlVideo = substr(get_the_excerpt(), 0, strrpos(get_the_excerpt(), "<a")-1);
@@ -42,6 +38,8 @@
 			
 			</div><!-- #post-## -->
 		
+			
+		<div class="clearfix"></div>
 			
 		<div id="title-comments" class="clearfix">
 			<h3>COMENTARIOS</h3>

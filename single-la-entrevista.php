@@ -62,6 +62,8 @@
 	
 	</div><!-- #post-## -->
 	
+		<div class="clearfix"></div>
+	
 		<div id="title-comments" class="clearfix">
 			<h3>COMENTARIOS</h3>
 	    </div>
