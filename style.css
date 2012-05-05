@@ -892,8 +892,10 @@ nav.menu_social ul li.rss a, .icon_rss {
 #access li {
 	float: left;
 	position: relative;
-	padding: 0em 1.3em 0;
+	margin: 0 9px;
+    padding: 0 0.8em;
 }
+
 #access a {
 	color: #ffffff;
 	display: block;
@@ -902,16 +904,16 @@ nav.menu_social ul li.rss a, .icon_rss {
     padding:  0.2em 0;
 	text-decoration: none;
 	font-family: 'Magra', sans-serif;
-	height: 26px;
-	
+	height: 28px;
 }
+
 #access ul ul {
 	display: none;
 	float: left;
 	font-weight: normal;
 	position: absolute;
-	top: 32px;
-	left: 0;
+	top: 33px;
+	left: -10px;
 	text-transform: none;
 	z-index: 99999;
 	width: 180px;
@@ -919,6 +921,7 @@ nav.menu_social ul li.rss a, .icon_rss {
 #access ul ul ul {
 	left: 100%;
 	top: 0;
+	display: none;
 }
 #access ul ul a {
 	background: #acacac;
@@ -934,17 +937,21 @@ nav.menu_social ul li.rss a, .icon_rss {
 #access li:hover > a,
 #access ul ul :hover > a {
 	color: #ebebeb;
-	border-top: 4px #c7ba6b solid;
-	padding: 1px 0px 0px;
-	height: 22px;
+	border-top: 3px #c7ba6b solid;
+	padding: 0px 0px 2px;
+	height: 28px;
 }
 #access ul ul a:hover {
-    background-color: #ccc;
+    background-color: #999;
     border: none;
     padding: .66em .5em .5em 1em;
 }
 #access ul li:hover > ul {
 	display: block;
+}
+
+#access ul ul li:hover > ul {
+	display: none;
 }
 #access .current-menu-item a,
 #access .current-menu-ancestor a,
@@ -962,6 +969,15 @@ nav.menu_social ul li.rss a, .icon_rss {
 
 #access .current-menu-item .sub-menu a:hover, #access .current-menu-ancestor .sub-menu a:hover, #access .sub-menu a:hover {
 	height: auto;
+}
+
+#access #menu-menu-principal li.arrow {
+	background-image: url(images/elements/arrow_menu.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+#access  li.arrow:hover  {
+	background-position: right bottom;
 }
 
 /* Navigation */
@@ -2394,12 +2410,33 @@ margin-bottom: 0.5em;
 	margin: 0px 0px 10px 20px;
 }
 
+#nav_avisos a.activeSlide {
+    background-image: url("images/elements/nav_circle_oro.png");
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#nav_avisos a {
+    background-image: url("images/elements/nav_circle_clara.png");
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    color: #8c895e;
+    display: block;
+    float: left;
+    font-size: 0.9em;
+    height: 19px;
+    margin-right: 5px;
+    text-align: center;
+    width: 19px;
+}
+
 /* últimas - Comunicados*/
 
 #WDSListadoNotas {
 	border: 1px solid #b7b7b7;
 	padding: 10px 10px;
     width: 246px;
+    position: relative;
 }
 
 #WDSListadoNotas ul li  {

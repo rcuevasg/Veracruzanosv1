@@ -33,7 +33,27 @@ jQuery(function ($j) {
 
 
 jQuery(function ($j) {
-
 	$(".site_title_button").lettering();
-
 });
+
+
+/* Mini banner rotations Cycle plugin*/
+jQuery(function ($j) {
+	$('#slide_avisos').cycle({
+	fx: 'scrollLeft',
+	speed: 'slow',
+	timeout: 10000,
+	pager: '#nav_avisos',
+	slideExpr: 'a'
+	});
+}); 
+
+/* flecha abajo menu*/
+jQuery(function ($j) { 
+	$(".menu-item").has("ul.sub-menu").addClass("arrow");
+}); 
+
+
+
+
+
