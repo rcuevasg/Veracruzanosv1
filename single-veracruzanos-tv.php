@@ -30,6 +30,7 @@
 						?>
 					</div> <!-- Fin del div video -->
 						
+					<div class="clearfix"></div>
 									
 					<?php the_content(); ?>
 					<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'coraline' ), 'after' => '</div>' ) ); ?>
