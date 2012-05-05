@@ -10,7 +10,7 @@
 			<div class='WDSCOslideshow'>
 			<?php
 			//Obtenemos el id de la categoria
-			$idObj = get_category_by_slug('opinion'); 
+			$idObj = get_category_by_slug('columnas'); 
   			$categoria = get_category($idObj->term_id);
   			$idCategoria = $categoria->cat_ID;
   			$nameCategoria = $categoria->cat_name;
