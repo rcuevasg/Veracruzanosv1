@@ -3003,6 +3003,10 @@ margin-bottom: 0.5em;
 	min-height: 144px;
 }
 
+#ie8 .WDSCarouselOpinion .featured {
+	margin-right: 19px;
+}
+
 .WDSCarouselOpinion .featured:nth-child(3n + 3) {
  border-right:none;
  margin-right: 0px;
