@@ -1583,6 +1583,7 @@ nav.menu_social ul li.rss a, .icon_rss {
 .entrevista .bio .subtitle {
  	border-top: 1px solid #9D292A;
  	padding-top: 8px;
+ 	margin-right: 30px;
 }
 
 .entrevista .bio {
