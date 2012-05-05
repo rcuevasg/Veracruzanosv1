@@ -1262,11 +1262,11 @@ nav.menu_social ul li.rss a, .icon_rss {
 	margin-bottom: 50px;
 }
 
-.category-opinion .box-list ul {
+.category-opinion .box-list ul, .category-columnas .box-list ul, .category-articulo .box-list ul  {
 	float: left;
 }
 
-.category-opinion .box-list ul a {
+.category-opinion .box-list ul a, .category-columnas .box-list ul a, .category-articulo .box-list ul a  {
 	 display: block;
     height: 60px;
     overflow: hidden;
@@ -1274,19 +1274,19 @@ nav.menu_social ul li.rss a, .icon_rss {
     margin-right: 10px;
 }
 
-.category-opinion .box-list span.text {
+.category-opinion .box-list span.text, .category-columnas .box-list span.text, .category-articulo .box-list span.text  {
 	margin: 5px 0px;
 	float: left;
 }
 
-.category-opinion .box-list a.title {
+.category-opinion .box-list a.title, .category-columnas .box-list a.title, .category-articulo .box-list a.title {
 	font-size: 1.2em;
 	float: none;
 	width: inherit;
 	clear: left;
 }
 
-.category-opinion .box-list .autor {
+.category-opinion .box-list .autor, .category-columnas .box-list .autor, .category-articulo .box-list .autor {
 	color: #328900;
     float: left;
     width: 190px;

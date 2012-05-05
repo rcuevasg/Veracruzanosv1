@@ -55,5 +55,3 @@ jQuery(function ($j) {
 
 
 
-
-
