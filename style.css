@@ -1293,12 +1293,12 @@ nav.menu_social ul li.rss a, .icon_rss {
     width: 190px;
 }
  
-#ie8.category-veracruzanos-tv .box-list  {
+#ie8 .category-veracruzanos-tv .box-list  {
   margin-right: 22px;
   min-height: 350px;
 }
 
-#ie8.category-la-entrevista .box-list, #ie8.category-opinion .box-list{  
+#ie8 .category-la-entrevista .box-list, #ie8 .category-opinion .box-list{  
 	 min-height: 180px;
 	 margin-right: 22px;
 }
@@ -1331,6 +1331,7 @@ nav.menu_social ul li.rss a, .icon_rss {
 	width: 100%;
     font-size: 1.15em;
 	line-height: 1.2em;
+	 min-height: 36px;
 }
 
 #content-box .wp-pagenavi a, 
