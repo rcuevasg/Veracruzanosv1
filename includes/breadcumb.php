@@ -4,7 +4,7 @@
 				
 				$idCategoria = 0;
 				$muestraCompleto = false;
-				if (is_page() || is_single()):
+				if (is_single()):
 					$category = get_the_category();
 					$idCategoria = $category[0]->cat_ID;
 					$muestraCompleto = true;

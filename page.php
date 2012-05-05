@@ -11,7 +11,6 @@ get_header(); ?>
 			<div id="content" role="main">
 			
 			<!-- Navegacion -->
-				<?php include(TEMPLATEPATH.'/includes/breadcumb.php'); ?> 
 				<!-- Fin navegacion -->
 
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
