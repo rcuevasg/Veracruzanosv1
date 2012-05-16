@@ -2388,6 +2388,62 @@ img.aligncenter {
 	right: 0px;
 }
 
+/* nuevo twitter widget timeline*/
+
+#widget_twitter {
+	background-color: #005b7f;
+	float: left;
+	padding: 10px 16px;
+	color: #ffffff;
+	margin: 20px 0px 10px 18px;
+	position: relative;
+	width: 630px;
+	background-image: url('images/repeat/repeat_dot_white.png');
+	background-repeat: repeat;
+	-webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+#widget_twitter .twitter-widget-title {
+    float: left;
+	line-height: 1.4em;
+	font-weight: bold;
+	background-image: url("images/elements/bird2.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding-right: 45px;
+    display: block;
+    height: 24px;
+    clear: left;
+    width:590px;
+    
+}
+
+#widget_twitter .twitter-stream {
+	background-color: #eef8ff;
+	float: left;
+	padding: 10px 0px;
+}
+
+#widget_twitter .twitter-stream p {
+	border-bottom: 1px dotted #d7dfe6;
+	padding: 2px 10px 6px;
+	margin-bottom: 8px;
+}
+
+#widget_twitter .twitter-stream p a  {
+ 	color: #008fc8;
+}
+
+#widget_twitter .twitter-stream .profile-link a{
+  color: #008fc8;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+
+
 
 /* Encuesta Poll widget*/
 
