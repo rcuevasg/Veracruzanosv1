@@ -1423,7 +1423,6 @@ nav.menu_social ul li.rss a, .icon_rss {
   display: block;
   float: left;
   margin: 0 15px 5px 0;
-  overflow: hidden;
   width: 222px;
   padding-bottom: 10px;
   margin-bottom: 15px;
@@ -2978,6 +2977,10 @@ margin-bottom: 0.5em;
 	margin-left: 5px;
 }
 
+.WDSCarouselPoliciaca .WDSCPslideshow {
+	 height: 202px !important;
+}
+
 #content .WDSCarouselPoliciaca .WDSCPnav a {
     background-image: url('images/elements/nav_circle_gray.png');
 	background-repeat: no-repeat;
@@ -3531,6 +3534,8 @@ footer img#wpstats {
 	}
 }
 
+
+ 
 
 /* =IE
 -------------------------------------------------------------- */
