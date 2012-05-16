@@ -29,9 +29,7 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 				</div><!-- #post-## -->
 				
-				<div id="title-comments">
-					<h3>COMENTARIOS</h3>
-				</div>
+
 
 				<?php comments_template( '', true ); ?>
 

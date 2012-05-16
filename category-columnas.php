@@ -36,7 +36,7 @@ get_header(); ?>
         				print "<a class='title' href='" . get_permalink() . "' title='" . get_the_title() ."' >" . get_the_title() . "</a>";
         				$autorNota = get_post_meta($post->ID, 'autor', true);
 						if (!empty($autorNota)) : print "<span class='autor'>Por " . $autorNota . "</span>"; endif;
-        				print "<span class='text'>".substr(get_the_content(), 0, 140)."...</span>";
+        				print "<span class='text'>".substr(strip_tags(get_the_content()), 0, 140)."...</span>";
         				print "<span class='bottom'><small class='date'>" . get_the_time('d M, Y') . "</small>";
         				print "<a href='" . get_permalink() . "' class='btn_more' title='Continuar leyendo ". get_the_title() ."'>Continuar leyendo</a></span>";
 						?>

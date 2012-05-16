@@ -2078,6 +2078,7 @@ img.aligncenter {
     padding: 10px 0;
     list-style: none;
     border-bottom: 1px dotted #ebebeb;
+    min-height: 80px;
 }
 
 #main-sidebars .tabberlive .tabbertab .yd_rp_widget ul li span.img { 
@@ -2924,6 +2925,14 @@ margin-bottom: 0.5em;
 	margin-top: 20px;
 	width: 310px;
 	margin-left: 18px;
+}
+
+.one_newsmallpic, .one_newbigpic  {
+	min-height: 400px;
+}
+
+#ie8 .one_newsmallpic, #ie8 .one_newbigpic  {
+	min-height: 400px;
 }
 
 #ie8 .one_newsmallpic, #ie8 .one_newbigpic, #ie8 .three_textnews {

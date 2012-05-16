@@ -1,15 +1,18 @@
 <!-- Contenido de la sección policiaca -->
-			<div id='home_section' class='WDSCarouselPoliciaca'>
-				<div id='WDSCPTitle'>
-					 <h2><a href="">Policiaca</a></h2>
-				</div>
-			<div class='WDSCPslideshow'>
 			<?php
 			//Obtenemos el id de la categoria
 			$idObj = get_category_by_slug('policiaca'); 
   			$categoria = get_category($idObj->term_id);
   			$idCategoria = $categoria->cat_ID;
   			$nameCategoria = $categoria->cat_name;
+			?>
+			<div id='home_section' class='WDSCarouselPoliciaca'>
+				<div id='WDSCPTitle'>
+					 <h2><a href="<?php print esc_url(get_category_link($idCategoria)) ?>">Policiaca</a></h2>
+				</div>
+			<div class='WDSCPslideshow'>
+			<?php
+			
   			//Preparamos el query
 			$news = new WP_Query('cat=' . $idCategoria . '&showposts=9');
 			$step = 1;
@@ -89,7 +92,7 @@
 			</div>
 				<div class='bottom'>
 					<div class='WDSCPnav'></div>
-					<a href='<?php esc_url(get_category_link($idCategoria)) ?>'>Ver todo</a>
+					<a href='<?php print esc_url(get_category_link($idCategoria)) ?>'>Ver todo</a>
 				</div>
 			</div>
 	

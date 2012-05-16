@@ -6,14 +6,6 @@
  */
 ?>
 
-<?php /* Display navigation to next/previous pages when applicable */ ?>
-<?php if ( $wp_query->max_num_pages > 1 ) : ?>
-	<div id="nav-above" class="navigation">
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'coraline' ) ); ?></div>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'coraline' ) ); ?></div>
-	</div><!-- #nav-above -->
-<?php endif; ?>
-
 <?php /* If there are no posts to display, such as an empty archive page */ ?>
 <?php if ( ! have_posts() ) : ?>
 	<div id="post-0" class="post error404 not-found">
@@ -104,22 +96,35 @@
 
 	<?php else : ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'coraline' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+			<h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Continuar leyendo %s', 'coraline' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 
 			<div class="entry-meta">
-				<?php coraline_posted_on(); coraline_posted_by(); ?><span class="comments-link"><span class="meta-sep">|</span> <?php comments_popup_link( __( 'Escribir un comentario', 'coraline' ), __( '1 Comment', 'coraline' ), __( '% Comments', 'coraline' ) ); ?></span>
+				<?php $autorNota = get_post_meta($post->ID, 'autor', true); ?>
+				<?php $ciudadNota = get_post_meta($post->ID, 'ciudad', true); ?>
+				<?php if (!empty($ciudadNota)): print $ciudadNota . " | "; endif; coraline_posted_on(); ?>  
+				<?php if (!empty($autorNota)) : print " | Por " . $autorNota; endif; ?>
 			</div><!-- .entry-meta -->
 
-	<?php if ( is_search() ) : // Display excerpts for search. ?>
 			<div class="entry-summary">
-				<?php the_excerpt(); ?>
+				<?php 
+					$resumen = substr(get_the_excerpt(),0,strrpos(get_the_excerpt(),"<a"));
+					if (empty($resumen)):
+						$resumen = substr(strip_tags(get_the_content(),0,400));
+					endif;
+				?>
+				<p><?php print $resumen . "…"; ?> | <a href="<?php the_permalink(); ?>" title="Continuar leyendo <?php the_title() ?>"> Continuar leyendo » </a></p>
 			</div><!-- .entry-summary -->
-	<?php else : ?>
-			<div class="entry-content">
-				<?php the_content( __( 'Continuar leyendo <span class="meta-nav">&rarr;</span>', 'coraline' ) ); ?>
-				<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'coraline' ), 'after' => '</div>' ) ); ?>
-			</div><!-- .entry-content -->
-	<?php endif; ?>
+			
+	<?php //if ( is_search() ) : // Display excerpts for search. ?>
+			<!-- <div class="entry-summary">
+				<?php //the_excerpt(); ?>
+			</div>--><!-- .entry-summary -->
+	<?php //else : ?>
+			<!-- <div class="entry-content"> -->
+				<?php //the_content( __( 'Continuar leyendo <span class="meta-nav">&rarr;</span>', 'coraline' ) ); ?>
+				<?php //wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'coraline' ), 'after' => '</div>' ) ); ?>
+			<!-- </div>--><!-- .entry-content -->
+	<?php //endif; ?>
 
 			<div class="entry-info">
 					
@@ -146,10 +151,8 @@
 
 <?php endwhile; // End the loop. Whew. ?>
 
-<?php /* Display navigation to next/previous pages when applicable */ ?>
-<?php if (  $wp_query->max_num_pages > 1 ) : ?>
-				<div id="nav-below" class="navigation">
-					<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'coraline' ) ); ?></div>
-					<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'coraline' ) ); ?></div>
-				</div><!-- #nav-below -->
-<?php endif; ?>
+<?php /* Display navigation to next/previous pages when applicable */ 
+	if(function_exists('wp_pagenavi')) { 
+		wp_pagenavi(); 
+	}
+?>

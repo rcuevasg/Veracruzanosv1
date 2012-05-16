@@ -56,7 +56,7 @@ get_header(); ?>
 						endif;
 						?>
 						<a class="title" href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
-						<p><?php print substr(get_the_content(), 0, 300); ?></p>
+						<p><?php print substr(strip_tags(get_the_content()), 0, 300); ?></p>
 						
 						<span class="bottom">
 							<small class="date"><?php print get_the_time('d M, Y'); ?></small>
@@ -106,7 +106,7 @@ get_header(); ?>
 						 			endif;
 						 			?>
 								
-								<p><?php print substr(get_the_content(), 0, 140); ?>…</p>
+								<p><?php print substr(strip_tags(get_the_content()), 0, 140); ?>…</p>
 								
 								
 							</li>
@@ -137,7 +137,7 @@ get_header(); ?>
 						 			<?php
 						 			endif;
 						 			?>
-						 			<p><?php print substr(get_the_content(), 0, 140); ?>…</p>
+						 			<p><?php print substr(strip_tags(get_the_content()), 0, 140); ?>…</p>
 								
 							</li>
 						<?php
@@ -168,7 +168,7 @@ get_header(); ?>
 						 			<?php
 						 			endif;
 						 			?>
-						 			<p><?php print substr(get_the_content(), 0, 140); ?>…</p>
+						 			<p><?php print substr(strip_tags(get_the_content()), 0, 140); ?>…</p>
 							
 							</li>
 						</ul>
@@ -205,7 +205,7 @@ get_header(); ?>
 						 			endif;
 						 			?>
 								
-								<p><?php print substr(get_the_content(), 0, 90); ?>…</p>
+								<p><?php print substr(strip_tags(get_the_content()), 0, 90); ?>…</p>
 
 							</li>
 						<?php
@@ -235,7 +235,7 @@ get_header(); ?>
 						 			endif;
 						 			?>
 								
-								<p><?php print substr(get_the_content(), 0, 90); ?>…</p>
+								<p><?php print substr(strip_tags(get_the_content()), 0, 90); ?>…</p>
 
 							</li>
 						<?php
@@ -265,7 +265,7 @@ get_header(); ?>
 						 			endif;
 						 			?>
 								
-								<p><?php print substr(get_the_content(), 0, 90); ?>…</p>
+								<p><?php print substr(strip_tags(get_the_content()), 0, 90); ?>…</p>
 
 							</li>
 						</ul>

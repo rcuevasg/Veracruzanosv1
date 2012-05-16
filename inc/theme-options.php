@@ -281,7 +281,7 @@ function coraline_theme_options_validate( $input ) {
 
 	// Our gallery category option must actually be in our array of categories
 	if ( isset( $input['gallery_category'] ) && array_search( $input['gallery_category'], get_categories() ) != 0 )
-		$input['gallery_category'] = null;
+		$input['gallery_category'] = null; 
 
 	return $input;
 }

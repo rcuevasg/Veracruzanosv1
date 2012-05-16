@@ -3,7 +3,7 @@ Theme Name: Coraline
 Used to style the TinyMCE editor.
 */
 html .mceContentBody {
-	max-width: 500px;
+	max-width: 850px;/*500px;*/
 }
 * {
 	font-family: Georgia, "Bitstream Charter", serif;

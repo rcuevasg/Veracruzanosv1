@@ -47,17 +47,17 @@ get_header(); ?>
                 
            	<?php
            		if (function_exists("WebDevStudio_GeneralNews")):
-					print WebDevStudio_GeneralNews(array('categoria' => "zona-norte",
-														'layout' => "2News"));
-														
 					print WebDevStudio_GeneralNews(array('categoria' => "zona-centro",
 														'layout' => "2News"));
 														
+					print WebDevStudio_GeneralNews(array('categoria' => "politica-2",
+														'layout' => "3News"));
+														
 					print WebDevStudio_GeneralNews(array('categoria' => "zona-sur",
 														'layout' => "2News"));
-														
-					print WebDevStudio_GeneralNews(array('categoria' => "politica-politica",
-														'layout' => "3News"));
+					
+					print WebDevStudio_GeneralNews(array('categoria' => "zona-norte",
+														'layout' => "2News"));
 				endif
 			?>
 					

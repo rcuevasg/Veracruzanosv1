@@ -75,13 +75,13 @@ if ( ! function_exists( 'coraline_setup' ) ):
 function coraline_setup() {
 
 	// This theme has some pretty cool theme options
-	require_once ( get_template_directory() . '/inc/theme-options.php' );
+	//require_once ( get_template_directory() . '/inc/theme-options.php' );
 
 	// This theme styles the visual editor with editor-style.css to match the theme style.
 	add_editor_style();
 
 	// Post Format support. Legacy category chooser will display in Theme Options for sites that set a category before post formats were added.
-	add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
+	//add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
 
 	// This theme uses post thumbnails
 	add_theme_support( 'post-thumbnails' );
@@ -112,7 +112,7 @@ function coraline_setup() {
 	) );
 
 	// This theme allows users to set a custom background
-	add_custom_background();
+	//add_custom_background();
 
 	// Your changeable header business starts here
 	define( 'HEADER_TEXTCOLOR', '000' );
@@ -131,7 +131,7 @@ function coraline_setup() {
 
 	// Add a way for the custom header to be styled in the admin panel that controls
 	// custom headers. See coraline_admin_header_style(), below.
-	add_custom_image_header( 'coraline_header_style', 'coraline_admin_header_style', 'coraline_admin_header_image' );
+	//add_custom_image_header( 'coraline_header_style', 'coraline_admin_header_style', 'coraline_admin_header_image' );
 
 	// ... and thus ends the changeable header business.
 
