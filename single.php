@@ -59,7 +59,9 @@ get_header(); ?>
 					 			<?php
 					 				$image_post = get_post(get_post_thumbnail_id());
 					 				$caption= $image_post->post_excerpt;
-					 				print "<span>$caption</span>";
+					 				if (!empty($caption)):
+					 					print "<span>$caption</span>";
+					 				endif;
 					 			endif;
 					 			?>
 								
