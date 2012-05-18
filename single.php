@@ -57,6 +57,9 @@ get_header(); ?>
 								?>
 						 			<img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=378&h=240' border=0 />
 					 			<?php
+					 				$image_post = get_post(get_post_thumbnail_id());
+					 				$caption= $image_post->post_excerpt;
+					 				print "<span>$caption</span>";
 					 			endif;
 					 			?>
 								
