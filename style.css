@@ -1676,6 +1676,20 @@ h4.entry-title {
 .entry-content .img {
 	float: right;
 	margin-left: 15px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.entry-content .img span {
+    background-color: #ededed;
+    display: block;
+    float: left;
+    width: 368px;
+    position: absolute;
+    bottom: -15px;
+    padding-left: 10px;
+     font-size: 0.95em;
+     color: #555;
 }
 
 .entry-content .video { 
@@ -2504,15 +2518,15 @@ margin-bottom: 0.5em;
 	margin: 0px 0px 10px 20px;
 }
 
-#nav_avisos a.activeSlide {
+#navWDS_CarouselImagenes a.activeSlide {
     background-image: url("images/elements/nav_circle_oro.png");
     color: #FFFFFF;
     text-decoration: none;
 }
 
-#nav_avisos a {
+#navWDS_CarouselImagenes a {
     background-image: url("images/elements/nav_circle_clara.png");
-    background-position: 0px 0px;
+    background-position: 0 -1px;
     background-repeat: no-repeat;
     color: #8c895e;
     display: block;
