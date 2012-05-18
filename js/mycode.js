@@ -54,4 +54,18 @@ jQuery(function ($j) {
 }); 
 
 
+/* Mini banner rotations Cycle plugin (Banners del SIDEBAR)*/
+jQuery(function ($j) {
+	$('.WDS_CarouselImagenes')
+	.after('<div id="navWDS_CarouselImagenes">')
+	.cycle({
+	fx: 'scrollLeft',
+	speed: 'slow',
+	timeout: 10000,
+	pager:  '#navWDS_CarouselImagenes',
+	slideExpr: 'a'
+	});
+}); 
+
+
 
