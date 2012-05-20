@@ -1555,6 +1555,8 @@ nav.menu_social ul li.rss a, .icon_rss {
 	min-height: 300px;
 }
 
+
+
 .entrevista .entry-content .img {
 	float: right;
 	margin-left: 0px;
@@ -1702,7 +1704,7 @@ h4.entry-title {
 }
 .entry-meta {
 	color: #666;
-	font: 12px "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+	font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
 	font-weight: bold;
 }
 .entry-meta a {
@@ -1879,6 +1881,7 @@ h4.entry-title {
 .entry-info .edit-link {
 	clear: both;
 }
+
 
 
 /* =Attachments
